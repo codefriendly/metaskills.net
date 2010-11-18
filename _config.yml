@@ -1,0 +1,7 @@
+
+pygments: true
+exclude:
+- Gemfile
+- Gemfile.lock
+- NOTES
+
