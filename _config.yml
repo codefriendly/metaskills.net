@@ -5,3 +5,5 @@ exclude:
 - Gemfile.lock
 - README.txt
 - sass
+- z_metaskills
+- z_metatheme
