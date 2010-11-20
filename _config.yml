@@ -1,9 +1,10 @@
 
+permalink: /:year/:month/:day/:title
 pygments: true
 exclude:
 - Gemfile
 - Gemfile.lock
 - README.txt
 - sass
-- z_metaskills
+- z_metadata
 - z_metatheme

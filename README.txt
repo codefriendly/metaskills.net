@@ -6,7 +6,8 @@ Development Setup: Typically I have python26 installed.
 
   $ sass --watch sass:css
   
-  $ sass sass/site.scss:css/site.css && jekyll
+  $ setopt rmstarsilent
+  $ rm -rf _site/* && sass _sass/site.scss:css/site.css && jekyll
 
 
 TODO:
