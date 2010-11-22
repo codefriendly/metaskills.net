@@ -3,5 +3,5 @@ _drafts/
 _site/
 _sass/
 .bundle
-z_meta*
+z_metatheme
 .sass-cache
