@@ -11,7 +11,8 @@ categories:
 
 <p>This morning after 4 years of campfire, we were real close to our 1GB limit of uploads. Time for a clean up. I found no easy way of automating this, so I turned to the Tinder gem. It has a nice way interface to the campfire api using HTTParty as the backend. I found out that there was no easy way to delete uploads too. So after some good ole fashion DOM inspection and knowing rails application conventions, I found my own interface. Below is a little script I used to clean up our room this morning. It basically loops thru a rooms uploads, 5 at a time, and deletes them. Pausing for a quarter of a second between each so I don't freak out the new 37signals administrator :)</p>
 
-<macro:code lang="ruby">
+
+{% highlight ruby %}
 require 'rubygems'
 require 'tinder'
 
@@ -56,6 +57,7 @@ cleaner = CampfireUploadCleaner.new
 
 cleaner.delete_uploads  # => Deletes the top 5 uploads.
 cleaner.sweep_uploads   # => Deletes all uploads.
-</macro:code>
+{% endhighlight %}
+
 
 <p>The upload hash actually contains much more than just the id and name of the upload. There is a timestamp, filetype and other attributes. So if you wanted to extend this script, you could. I did not spent a lot of time with it, but I never figured out how to get more than the top 5 uploads too. I'm sure some param hacking would yield some good results.</p>

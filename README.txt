@@ -2,6 +2,8 @@
 Development Setup: Typically I have python26 installed.
 
   $ sudo port install py26-pygments
+    Add to PATH /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin
+  
   $ bundle install
 
   $ sass --watch sass:css
