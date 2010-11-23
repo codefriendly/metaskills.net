@@ -1,7 +1,8 @@
 filename: 2005-12-19-how-to-setup-a-simple-mysql-backup-script.html
          title: How To Setup a Simple MySQL Backup Script
-    categories: ["Database", "Heuristics", "Home", "Workflow"]
      disqus_id: /2005/12/19/how-to-setup-a-simple-mysql-backup-script
+  rewrite_rule: RewriteRule ^2005/12/19/how-to-setup-a-simple-mysql-backup-script$ /2005/12/19/how-to-setup-a-simple-mysql-backup-script/ [L]
+    categories: ["Database", "Heuristics", "Home", "Workflow"]
           body: 
 
 
@@ -46,8 +47,9 @@ timestamp="$(date -u +%Y-%m-%d_%a)"
 
 filename: 2005-12-22-textmate-by-programmers-for-efficiency-experts.html
          title: TextMate, by Programmers, for Efficiency Experts
-    categories: ["Apple/OSX", "Home", "TextMate"]
      disqus_id: /2005/12/22/textmate-by-programmers-for-efficiency-experts
+  rewrite_rule: RewriteRule ^2005/12/22/textmate-by-programmers-for-efficiency-experts$ /2005/12/22/textmate-by-programmers-for-efficiency-experts/ [L]
+    categories: ["Apple/OSX", "Home", "TextMate"]
           body: 
 
 
@@ -86,8 +88,9 @@ filename: 2005-12-22-textmate-by-programmers-for-efficiency-experts.html
 
 filename: 2006-01-06-ken-collins-resume.html
          title: Ken Collins' Resume
-    categories: ["Colophon"]
      disqus_id: /2006/1/6/ken-collins-resume
+  rewrite_rule: RewriteRule ^2006/1/6/ken-collins-resume$ /2006/01/06/ken-collins-resume/ [L]
+    categories: ["Colophon"]
           body: 
 
 
@@ -237,8 +240,9 @@ I am a ruby/rails specialist that thrives on providing elegant solutions to comp
 
 filename: 2006-01-08-who-is-to-blame-for-this.html
          title: Who Is To Blame For This ?
-    categories: ["Colophon"]
      disqus_id: /2006/1/8/who-is-to-blame-for-this
+  rewrite_rule: RewriteRule ^2006/1/8/who-is-to-blame-for-this$ /2006/01/08/who-is-to-blame-for-this/ [L]
+    categories: ["Colophon"]
           body: 
 
 
@@ -291,8 +295,9 @@ filename: 2006-01-08-who-is-to-blame-for-this.html
 
 filename: 2006-01-11-the-best-font-for-mac-programmers-profont.html
          title: The Best Font for Mac Programmers, ProFont
-    categories: ["Apple/OSX", "Home", "TextMate", "Workflow"]
      disqus_id: /2006/1/11/the-best-font-for-mac-programmers-profont
+  rewrite_rule: RewriteRule ^2006/1/11/the-best-font-for-mac-programmers-profont$ /2006/01/11/the-best-font-for-mac-programmers-profont/ [L]
+    categories: ["Apple/OSX", "Home", "TextMate", "Workflow"]
           body: 
 
 
@@ -322,8 +327,9 @@ filename: 2006-01-11-the-best-font-for-mac-programmers-profont.html
 
 filename: 2006-01-28-cooking-with-drupal.html
          title: Cooking with Drupal
-    categories: ["Home", "Miscellaneous"]
      disqus_id: /2006/1/28/cooking-with-drupal
+  rewrite_rule: RewriteRule ^2006/1/28/cooking-with-drupal$ /2006/01/28/cooking-with-drupal/ [L]
+    categories: ["Home", "Miscellaneous"]
           body: 
 
 
@@ -351,8 +357,9 @@ filename: 2006-01-28-cooking-with-drupal.html
 
 filename: 2006-02-05-mini-network-with-a-big-xserve-style.html
          title: Mini Network with a Big XServe Style
-    categories: ["Apple/OSX", "Heuristics", "Home"]
      disqus_id: /2006/2/5/mini-network-with-a-big-xserve-style
+  rewrite_rule: RewriteRule ^2006/2/5/mini-network-with-a-big-xserve-style$ /2006/02/05/mini-network-with-a-big-xserve-style/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home"]
           body: 
 
 
@@ -550,8 +557,9 @@ filename: 2006-02-05-mini-network-with-a-big-xserve-style.html
 
 filename: 2006-02-16-a-review-of-digg-com-traffic-and-cdns.html
          title: A Review of Digg.com Traffic and CDNs
-    categories: ["Heuristics", "Home", "Miscellaneous"]
      disqus_id: /2006/2/16/a-review-of-digg-com-traffic-and-cdns
+  rewrite_rule: RewriteRule ^2006/2/16/a-review-of-digg-com-traffic-and-cdns$ /2006/02/16/a-review-of-digg-com-traffic-and-cdns/ [L]
+    categories: ["Heuristics", "Home", "Miscellaneous"]
           body: 
 
 
@@ -620,8 +628,9 @@ filename: 2006-02-16-a-review-of-digg-com-traffic-and-cdns.html
 
 filename: 2006-02-19-how-to-control-browser-caching-with-apache-2.html
          title: How To Control Browser Caching with Apache 2
-    categories: ["Heuristics", "Home", "Miscellaneous"]
      disqus_id: /2006/2/19/how-to-control-browser-caching-with-apache-2
+  rewrite_rule: RewriteRule ^2006/2/19/how-to-control-browser-caching-with-apache-2$ /2006/02/19/how-to-control-browser-caching-with-apache-2/ [L]
+    categories: ["Heuristics", "Home", "Miscellaneous"]
           body: 
 
 
@@ -746,8 +755,9 @@ LoadModule headers_module modules/mod_headers.so
 
 filename: 2006-02-24-shell-script-to-delete-all-invisible-_-resource-files.html
          title: Shell Script To Delete All Invisible ._ Resource Files
-    categories: ["Apple/OSX", "Home", "Workflow"]
      disqus_id: /2006/2/24/shell-script-to-delete-all-invisible-_-resource-files
+  rewrite_rule: RewriteRule ^2006/2/24/shell-script-to-delete-all-invisible-_-resource-files$ /2006/02/24/shell-script-to-delete-all-invisible-_-resource-files/ [L]
+    categories: ["Apple/OSX", "Home", "Workflow"]
           body: 
 
 
@@ -805,8 +815,9 @@ find /Volumes/Your_NetworkVolume -name '._*' -print0 | xargs -t0 rm
 
 filename: 2006-03-02-if-microsoft-designed-the-ipod-packaging.html
          title: If Microsoft Designed The iPod Packaging
-    categories: ["Home", "Lifestyle"]
      disqus_id: /2006/3/2/if-microsoft-designed-the-ipod-packaging
+  rewrite_rule: RewriteRule ^2006/3/2/if-microsoft-designed-the-ipod-packaging$ /2006/03/02/if-microsoft-designed-the-ipod-packaging/ [L]
+    categories: ["Home", "Lifestyle"]
           body: 
 
 
@@ -832,8 +843,9 @@ filename: 2006-03-02-if-microsoft-designed-the-ipod-packaging.html
 
 filename: 2006-03-05-learn-to-program-in-ruby-and-basic-sql.html
          title: Learn To Program in Ruby and Basic SQL
-    categories: ["Database", "Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2006/3/5/learn-to-program-in-ruby-and-basic-sql
+  rewrite_rule: RewriteRule ^2006/3/5/learn-to-program-in-ruby-and-basic-sql$ /2006/03/05/learn-to-program-in-ruby-and-basic-sql/ [L]
+    categories: ["Database", "Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -924,8 +936,9 @@ end
 
 filename: 2006-03-19-getting-on-good-terms-with-the-os-x-shell.html
          title: Getting On Good Terms With The OS X Shell
-    categories: ["Heuristics", "Home", "Workflow"]
      disqus_id: /2006/3/19/getting-on-good-terms-with-the-os-x-shell
+  rewrite_rule: RewriteRule ^2006/3/19/getting-on-good-terms-with-the-os-x-shell$ /2006/03/19/getting-on-good-terms-with-the-os-x-shell/ [L]
+    categories: ["Heuristics", "Home", "Workflow"]
           body: 
 
 
@@ -990,8 +1003,9 @@ export PS1="${C2}(${C1}\u${C2}@${C4}\h${C2}) - (${C4}\A${C2}) - (${C4}\w${C2})\n
 
 filename: 2006-05-19-pragmatic-studio-alumni-member.html
          title: Pragmatic Studio Alumni Member
-    categories: ["Home", "Ruby/Rails"]
      disqus_id: /2006/5/19/pragmatic-studio-alumni-member
+  rewrite_rule: RewriteRule ^2006/5/19/pragmatic-studio-alumni-member$ /2006/05/19/pragmatic-studio-alumni-member/ [L]
+    categories: ["Home", "Ruby/Rails"]
           body: 
 
 
@@ -1008,8 +1022,9 @@ filename: 2006-05-19-pragmatic-studio-alumni-member.html
 
 filename: 2006-05-29-my-own-soup-to-nuts-recipe-for-ruby-on-rails-on-os-x.html
          title: My Own Soup to Nuts Recipe for Ruby on Rails on OS X
-    categories: ["Apple/OSX", "Database", "Home", "Ruby/Rails"]
      disqus_id: /2006/5/29/my-own-soup-to-nuts-recipe-for-ruby-on-rails-on-os-x
+  rewrite_rule: RewriteRule ^2006/5/29/my-own-soup-to-nuts-recipe-for-ruby-on-rails-on-os-x$ /2006/05/29/my-own-soup-to-nuts-recipe-for-ruby-on-rails-on-os-x/ [L]
+    categories: ["Apple/OSX", "Database", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -1124,8 +1139,9 @@ sudo gem install mysql -- --with-mysql-dir=/usr/local/mysql
 
 filename: 2006-06-06-back-in-black.html
          title: Back in Black
-    categories: ["Apple/OSX", "Home", "Lifestyle"]
      disqus_id: /2006/6/6/back-in-black
+  rewrite_rule: RewriteRule ^2006/6/6/back-in-black$ /2006/06/06/back-in-black/ [L]
+    categories: ["Apple/OSX", "Home", "Lifestyle"]
           body: 
 
 
@@ -1149,8 +1165,9 @@ filename: 2006-06-06-back-in-black.html
 
 filename: 2006-06-13-quake-style-terminal-window-on-os-x.html
          title: Quake Style Terminal Window on OS X
-    categories: ["Apple/OSX", "Heuristics", "Home", "Workflow"]
      disqus_id: /2006/6/13/quake-style-terminal-window-on-os-x
+  rewrite_rule: RewriteRule ^2006/6/13/quake-style-terminal-window-on-os-x$ /2006/06/13/quake-style-terminal-window-on-os-x/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home", "Workflow"]
           body: 
 
 
@@ -1184,8 +1201,9 @@ filename: 2006-06-13-quake-style-terminal-window-on-os-x.html
 
 filename: 2006-06-30-flying-light-configuring-drupal-and-lighttpd.html
          title: Flying Light - Configuring Drupal and LightTPD
-    categories: ["Home", "Miscellaneous"]
      disqus_id: /2006/6/30/flying-light-configuring-drupal-and-lighttpd
+  rewrite_rule: RewriteRule ^2006/6/30/flying-light-configuring-drupal-and-lighttpd$ /2006/06/30/flying-light-configuring-drupal-and-lighttpd/ [L]
+    categories: ["Home", "Miscellaneous"]
           body: 
 
 
@@ -1337,8 +1355,9 @@ cgi.fix_pathinfo = 1
 
 filename: 2006-10-02-custom-rake-task-to-unload-fixtures.html
          title: Custom Rake Task To Unload Fixtures
-    categories: ["Home", "Ruby/Rails", "Workflow"]
      disqus_id: /2006/10/2/custom-rake-task-to-unload-fixtures
+  rewrite_rule: RewriteRule ^2006/10/2/custom-rake-task-to-unload-fixtures$ /2006/10/02/custom-rake-task-to-unload-fixtures/ [L]
+    categories: ["Home", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -1371,8 +1390,9 @@ end
 
 filename: 2006-10-31-happy-halloween-from-textmate.html
          title: Happy Halloween from TextMate
-    categories: ["Home", "TextMate"]
      disqus_id: /2006/10/31/happy-halloween-from-textmate
+  rewrite_rule: RewriteRule ^2006/10/31/happy-halloween-from-textmate$ /2006/10/31/happy-halloween-from-textmate/ [L]
+    categories: ["Home", "TextMate"]
           body: 
 
 
@@ -1389,8 +1409,9 @@ filename: 2006-10-31-happy-halloween-from-textmate.html
 
 filename: 2006-12-21-homemarks-my-first-ruby-on-rails-pet-project.html
          title: HomeMarks, My First Ruby On Rails Pet Project
-    categories: ["Home"]
      disqus_id: /2006/12/21/homemarks-my-first-ruby-on-rails-pet-project
+  rewrite_rule: RewriteRule ^2006/12/21/homemarks-my-first-ruby-on-rails-pet-project$ /2006/12/21/homemarks-my-first-ruby-on-rails-pet-project/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -1415,8 +1436,9 @@ filename: 2006-12-21-homemarks-my-first-ruby-on-rails-pet-project.html
 
 filename: 2006-12-29-web-service-woes.html
          title: Web Service Woes
-    categories: ["Home", "Ruby/Rails"]
      disqus_id: /2006/12/29/web-service-woes
+  rewrite_rule: RewriteRule ^2006/12/29/web-service-woes$ /2006/12/29/web-service-woes/ [L]
+    categories: ["Home", "Ruby/Rails"]
           body: 
 
 
@@ -1446,8 +1468,9 @@ filename: 2006-12-29-web-service-woes.html
 
 filename: 2007-01-31-rake-task-to-read-and-write-the-activerecord-schema-version-table.html
          title: Rake task to read and write the ActiveRecord schema version table.
-    categories: ["Home", "Ruby/Rails", "Workflow"]
      disqus_id: /2007/1/31/rake-task-to-read-and-write-the-activerecord-schema-version-table
+  rewrite_rule: RewriteRule ^2007/1/31/rake-task-to-read-and-write-the-activerecord-schema-version-table$ /2007/01/31/rake-task-to-read-and-write-the-activerecord-schema-version-table/ [L]
+    categories: ["Home", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -1483,8 +1506,9 @@ end
 
 filename: 2008-03-19-photo-fancy-border-code-snippet-examples.html
          title: Photo Fancy Borders
-    categories: ["MetaTheme"]
      disqus_id: /2008/3/19/photo-fancy-border-code-snippet-examples
+  rewrite_rule: RewriteRule ^2008/3/19/photo-fancy-border-code-snippet-examples$ /2008/03/19/photo-fancy-border-code-snippet-examples/ [L]
+    categories: ["MetaTheme"]
           body: 
 
 
@@ -1607,8 +1631,9 @@ filename: 2008-03-19-photo-fancy-border-code-snippet-examples.html
 
 filename: 2008-03-19-png-support-for-ie6.html
          title: PNG Support for IE6
-    categories: ["MetaTheme"]
      disqus_id: /2008/3/19/png-support-for-ie6
+  rewrite_rule: RewriteRule ^2008/3/19/png-support-for-ie6$ /2008/03/19/png-support-for-ie6/ [L]
+    categories: ["MetaTheme"]
           body: 
 
 
@@ -1628,8 +1653,9 @@ filename: 2008-03-19-png-support-for-ie6.html
 
 filename: 2008-03-20-css-conventions.html
          title: CSS Conventions
-    categories: ["MetaTheme"]
      disqus_id: /2008/3/20/css-conventions
+  rewrite_rule: RewriteRule ^2008/3/20/css-conventions$ /2008/03/20/css-conventions/ [L]
+    categories: ["MetaTheme"]
           body: 
 
 
@@ -1670,8 +1696,9 @@ filename: 2008-03-20-css-conventions.html
 
 filename: 2008-03-20-general-information.html
          title: General Information
-    categories: ["MetaTheme"]
      disqus_id: /2008/3/20/general-information
+  rewrite_rule: RewriteRule ^2008/3/20/general-information$ /2008/03/20/general-information/ [L]
+    categories: ["MetaTheme"]
           body: 
 
 
@@ -1710,8 +1737,9 @@ filename: 2008-03-20-general-information.html
 
 filename: 2008-03-22-metaskills-net-reborn-on-mephisto.html
          title: MetaSkills.net Reborn on Mephisto
-    categories: ["Heuristics", "Home"]
      disqus_id: /2008/3/22/metaskills-net-reborn-on-mephisto
+  rewrite_rule: RewriteRule ^2008/3/22/metaskills-net-reborn-on-mephisto$ /2008/03/22/metaskills-net-reborn-on-mephisto/ [L]
+    categories: ["Heuristics", "Home"]
           body: 
 
 
@@ -1808,8 +1836,9 @@ end
 
 filename: 2008-03-26-don-t-be-a-plinko-programmer.html
          title: Don't Be A Plinko Programmer
-    categories: ["Home", "Lifestyle", "Miscellaneous", "Ruby/Rails"]
      disqus_id: /2008/3/26/don-t-be-a-plinko-programmer
+  rewrite_rule: RewriteRule ^2008/3/26/don-t-be-a-plinko-programmer$ /2008/03/26/don-t-be-a-plinko-programmer/ [L]
+    categories: ["Home", "Lifestyle", "Miscellaneous", "Ruby/Rails"]
           body: 
 
 
@@ -1907,8 +1936,9 @@ end
 
 filename: 2008-04-03-macbook-with-4gb-of-memory.html
          title: MacBook With 4GB Of Memory
-    categories: ["Apple/OSX", "Home"]
      disqus_id: /2008/4/3/macbook-with-4gb-of-memory
+  rewrite_rule: RewriteRule ^2008/4/3/macbook-with-4gb-of-memory$ /2008/04/03/macbook-with-4gb-of-memory/ [L]
+    categories: ["Apple/OSX", "Home"]
           body: 
 
 
@@ -1922,8 +1952,9 @@ filename: 2008-04-03-macbook-with-4gb-of-memory.html
 
 filename: 2008-04-03-how-to-stop-delivery-of-an-email-within-an-actionmailer-method.html
          title: How To Stop Delivery Of An Email Within An ActionMailer Method
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/4/3/how-to-stop-delivery-of-an-email-within-an-actionmailer-method
+  rewrite_rule: RewriteRule ^2008/4/3/how-to-stop-delivery-of-an-email-within-an-actionmailer-method$ /2008/04/03/how-to-stop-delivery-of-an-email-within-an-actionmailer-method/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -1973,8 +2004,9 @@ MyMailerClass.deliver_user_notification(@user)
 
 filename: 2008-04-06-autotest-infinite-loop-on-failure-error.html
          title: Autotest Infinite Loop On Failure & Error
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/4/6/autotest-infinite-loop-on-failure-error
+  rewrite_rule: RewriteRule ^2008/4/6/autotest-infinite-loop-on-failure-error$ /2008/04/06/autotest-infinite-loop-on-failure-error/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -2022,8 +2054,9 @@ end
 
 filename: 2008-04-06-autotest-playlist-for-red-green-feedback.html
          title: Autotest Playlist For Red/Green Feedback
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/4/6/autotest-playlist-for-red-green-feedback
+  rewrite_rule: RewriteRule ^2008/4/6/autotest-playlist-for-red-green-feedback$ /2008/04/06/autotest-playlist-for-red-green-feedback/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -2069,8 +2102,9 @@ require '~/.autotest_playlist/playlist'
 
 filename: 2008-04-13-now-on-passenger-mod_rails.html
          title: Now on Passenger (mod_rails)
-    categories: ["Apple/OSX", "Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/4/13/now-on-passenger-mod_rails
+  rewrite_rule: RewriteRule ^2008/4/13/now-on-passenger-mod_rails$ /2008/04/13/now-on-passenger-mod_rails/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -2098,8 +2132,9 @@ filename: 2008-04-13-now-on-passenger-mod_rails.html
 
 filename: 2008-04-22-how-to-use-passenger-mod_rails-with-rails-edge-2-1.html
          title: How to use Passenger (mod_rails) with rails edge 2.1
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/4/22/how-to-use-passenger-mod_rails-with-rails-edge-2-1
+  rewrite_rule: RewriteRule ^2008/4/22/how-to-use-passenger-mod_rails-with-rails-edge-2-1$ /2008/04/22/how-to-use-passenger-mod_rails-with-rails-edge-2-1/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -2134,8 +2169,9 @@ Exception class: ArgumentError
 
 filename: 2008-04-25-using-rubyamp-textmate-bundle-with-opt-ruby.html
          title: Using RubyAMP TextMate Bundle With /opt Ruby
-    categories: ["Apple/OSX", "Heuristics", "Home", "Ruby/Rails", "TextMate"]
      disqus_id: /2008/4/25/using-rubyamp-textmate-bundle-with-opt-ruby
+  rewrite_rule: RewriteRule ^2008/4/25/using-rubyamp-textmate-bundle-with-opt-ruby$ /2008/04/25/using-rubyamp-textmate-bundle-with-opt-ruby/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home", "Ruby/Rails", "TextMate"]
           body: 
 
 
@@ -2182,8 +2218,9 @@ mv ~/Desktop/environment.plist ~/.MacOSX
 
 filename: 2008-05-12-my-projects.html
          title: My Projects
-    categories: ["Projects"]
      disqus_id: /2008/5/12/my-projects
+  rewrite_rule: RewriteRule ^2008/5/12/my-projects$ /2008/05/12/my-projects/ [L]
+    categories: ["Projects"]
           body: 
 
 
@@ -2284,8 +2321,9 @@ filename: 2008-05-12-my-projects.html
 
 filename: 2008-05-24-the-ajax-head-br-design-pattern.html
          title: The "AJAX Head" Design Pattern
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/5/24/the-ajax-head-br-design-pattern
+  rewrite_rule: RewriteRule ^2008/5/24/the-ajax-head-br-design-pattern$ /2008/05/24/the-ajax-head-br-design-pattern/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -2604,8 +2642,9 @@ var HomeMarksSite = Class.create(HomeMarksBase,{
 
 filename: 2008-05-30-coulda-shoulda-woulda.html
          title: Coulda Shoulda Woulda
-    categories: ["Heuristics", "Home", "Ruby/Rails", "Workflow"]
      disqus_id: /2008/5/30/coulda-shoulda-woulda
+  rewrite_rule: RewriteRule ^2008/5/30/coulda-shoulda-woulda$ /2008/05/30/coulda-shoulda-woulda/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -2679,8 +2718,9 @@ end
 
 filename: 2008-06-18-restful-ajax-with-forgery-protection.html
          title: RESTful AJAX with Forgery Protection
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/6/18/restful-ajax-with-forgery-protection
+  rewrite_rule: RewriteRule ^2008/6/18/restful-ajax-with-forgery-protection$ /2008/06/18/restful-ajax-with-forgery-protection/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -2748,8 +2788,9 @@ end
 
 filename: 2008-07-06-stop-exception-notifications-with-the-zombieshotgun.html
          title: Stop Exception Notifications With The ZombieShotgun
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/7/6/stop-exception-notifications-with-the-zombieshotgun
+  rewrite_rule: RewriteRule ^2008/7/6/stop-exception-notifications-with-the-zombieshotgun$ /2008/07/06/stop-exception-notifications-with-the-zombieshotgun/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -2822,8 +2863,9 @@ end
 
 filename: 2008-08-18-in-hell-oo-for-homemarks.html
          title: Hell'OO HomeMarks
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/8/18/in-hell-oo-for-homemarks
+  rewrite_rule: RewriteRule ^2008/8/18/in-hell-oo-for-homemarks$ /2008/08/18/in-hell-oo-for-homemarks/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -2881,8 +2923,9 @@ filename: 2008-08-18-in-hell-oo-for-homemarks.html
 
 filename: 2008-09-14-going-horizontal-on-the-multicade.html
          title: Going Horizontal On The Multicade
-    categories: ["Home", "Lifestyle"]
      disqus_id: /2008/9/14/going-horizontal-on-the-multicade
+  rewrite_rule: RewriteRule ^2008/9/14/going-horizontal-on-the-multicade$ /2008/09/14/going-horizontal-on-the-multicade/ [L]
+    categories: ["Home", "Lifestyle"]
           body: 
 
 
@@ -2945,8 +2988,9 @@ filename: 2008-09-14-going-horizontal-on-the-multicade.html
 
 filename: 2008-09-19-using-autotest-for-rails-plugin-development.html
          title: Using Autotest For Rails Plugin Development
-    categories: ["Heuristics", "Home", "Ruby/Rails", "Workflow"]
      disqus_id: /2008/9/19/using-autotest-for-rails-plugin-development
+  rewrite_rule: RewriteRule ^2008/9/19/using-autotest-for-rails-plugin-development$ /2008/09/19/using-autotest-for-rails-plugin-development/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -3006,8 +3050,9 @@ $ autotest -railsplugin
 
 filename: 2008-09-28-jack-has_many-things.html
          title: Jack has_many :things
-    categories: ["Database", "Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/9/28/jack-has_many-things
+  rewrite_rule: RewriteRule ^2008/9/28/jack-has_many-things$ /2008/09/28/jack-has_many-things/ [L]
+    categories: ["Database", "Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -3192,8 +3237,9 @@ end
 
 filename: 2008-10-11-plug-it-in-plug-it-in.html
          title: Plug It In Plug It In
-    categories: ["Database", "Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/10/11/plug-it-in-plug-it-in
+  rewrite_rule: RewriteRule ^2008/10/11/plug-it-in-plug-it-in$ /2008/10/11/plug-it-in-plug-it-in/ [L]
+    categories: ["Database", "Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -3218,8 +3264,9 @@ filename: 2008-10-11-plug-it-in-plug-it-in.html
 
 filename: 2008-10-13-code-o-lanterns-what-scares-you.html
          title: Code-O-Lanterns: What Scares You?
-    categories: ["Apple/OSX", "Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/10/13/code-o-lanterns-what-scares-you
+  rewrite_rule: RewriteRule ^2008/10/13/code-o-lanterns-what-scares-you$ /2008/10/13/code-o-lanterns-what-scares-you/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -3262,8 +3309,9 @@ filename: 2008-10-13-code-o-lanterns-what-scares-you.html
 
 filename: 2008-11-23-sql-server-adapter-for-rails-2-2.html
          title: SQL Server Adapter For Rails 2.2
-    categories: ["Database", "Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/11/23/sql-server-adapter-for-rails-2-2
+  rewrite_rule: RewriteRule ^2008/11/23/sql-server-adapter-for-rails-2-2$ /2008/11/23/sql-server-adapter-for-rails-2-2/ [L]
+    categories: ["Database", "Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -3289,8 +3337,9 @@ filename: 2008-11-23-sql-server-adapter-for-rails-2-2.html
 
 filename: 2008-11-26-go-buy-envycasts-now.html
          title: Go Buy Envycasts Now!
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2008/11/26/go-buy-envycasts-now
+  rewrite_rule: RewriteRule ^2008/11/26/go-buy-envycasts-now$ /2008/11/26/go-buy-envycasts-now/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -3319,8 +3368,9 @@ filename: 2008-11-26-go-buy-envycasts-now.html
 
 filename: 2008-12-30-autotestify-brothers-and-sisters.html
          title: Autotestify Brothers and Sisters
-    categories: ["Heuristics", "Home", "Ruby/Rails", "Workflow"]
      disqus_id: /2008/12/30/autotestify-brothers-and-sisters
+  rewrite_rule: RewriteRule ^2008/12/30/autotestify-brothers-and-sisters$ /2008/12/30/autotestify-brothers-and-sisters/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -3340,8 +3390,9 @@ function autotestify () {
 
 filename: 2009-01-20-multiruby-the-macports-way-testing-your-rails-apps-with-ruby-1-9.html
          title: MultiRuby The MacPorts Way. Testing Your Rails Apps With Ruby 1.9
-    categories: ["Apple/OSX", "Heuristics", "Home", "Ruby/Rails", "Workflow"]
      disqus_id: /2009/1/20/multiruby-the-macports-way-testing-your-rails-apps-with-ruby-1-9
+  rewrite_rule: RewriteRule ^2009/1/20/multiruby-the-macports-way-testing-your-rails-apps-with-ruby-1-9$ /2009/01/20/multiruby-the-macports-way-testing-your-rails-apps-with-ruby-1-9/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -3487,8 +3538,9 @@ chruby () {
 
 filename: 2009-02-01-git-subversion-user-commit-reports.html
          title: Git & Subversion User Commit Reports
-    categories: ["Heuristics", "Home", "Miscellaneous", "Ruby/Rails", "Workflow"]
      disqus_id: /2009/2/1/git-subversion-user-commit-reports
+  rewrite_rule: RewriteRule ^2009/2/1/git-subversion-user-commit-reports$ /2009/02/01/git-subversion-user-commit-reports/ [L]
+    categories: ["Heuristics", "Home", "Miscellaneous", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -3540,8 +3592,9 @@ puts final_report
 
 filename: 2009-03-10-learning-objective-c-iphone-development.html
          title: Learning Objective-C & iPhone Development
-    categories: ["Apple/OSX", "Heuristics", "Home"]
      disqus_id: /2009/3/10/learning-objective-c-iphone-development
+  rewrite_rule: RewriteRule ^2009/3/10/learning-objective-c-iphone-development$ /2009/03/10/learning-objective-c-iphone-development/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home"]
           body: 
 
 
@@ -3568,8 +3621,9 @@ filename: 2009-03-10-learning-objective-c-iphone-development.html
 
 filename: 2009-05-14-pdf-writer-for-ruby-1-9.html
          title: PDF::Writer For Ruby 1.9
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2009/5/14/pdf-writer-for-ruby-1-9
+  rewrite_rule: RewriteRule ^2009/5/14/pdf-writer-for-ruby-1-9$ /2009/05/14/pdf-writer-for-ruby-1-9/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -3602,8 +3656,9 @@ sudo gem install metaskills-pdf-writer
 
 filename: 2009-07-18-757rb-memcached-talk.html
          title: 757rb Memcached Talk
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2009/7/18/757rb-memcached-talk
+  rewrite_rule: RewriteRule ^2009/7/18/757rb-memcached-talk$ /2009/07/18/757rb-memcached-talk/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -3633,8 +3688,9 @@ filename: 2009-07-18-757rb-memcached-talk.html
 
 filename: 2009-08-18-visor-terminal-on-snow-leopard.html
          title: Visor Terminal on Snow Leopard
-    categories: ["Apple/OSX", "Home"]
      disqus_id: /2009/8/18/visor-terminal-on-snow-leopard
+  rewrite_rule: RewriteRule ^2009/8/18/visor-terminal-on-snow-leopard$ /2009/08/18/visor-terminal-on-snow-leopard/ [L]
+    categories: ["Apple/OSX", "Home"]
           body: 
 
 
@@ -3742,8 +3798,9 @@ filename: 2009-08-18-visor-terminal-on-snow-leopard.html
 
 filename: 2009-09-05-the-ultimate-os-x-snow-leopard-stack-for-rails-development-x86_64-macports-ruby-1-8-1-9-sql-server-more.html
          title: The Ultimate OS X Snow Leopard Stack For Rails Development - x86_64, MacPorts, Ruby 1.8/1.9, SQL Server, SQLite3, MySQL & More
-    categories: ["Apple/OSX", "Database", "Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2009/9/5/the-ultimate-os-x-snow-leopard-stack-for-rails-development-x86_64-macports-ruby-1-8-1-9-sql-server-more
+  rewrite_rule: RewriteRule ^2009/9/5/the-ultimate-os-x-snow-leopard-stack-for-rails-development-x86_64-macports-ruby-1-8-1-9-sql-server-more$ /2009/09/05/the-ultimate-os-x-snow-leopard-stack-for-rails-development-x86_64-macports-ruby-1-8-1-9-sql-server-more/ [L]
+    categories: ["Apple/OSX", "Database", "Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -4129,8 +4186,9 @@ alias myconf="mate /opt/local/etc/mysql5/my.cnf"
 
 filename: 2009-09-21-perform-occupational-maintenance.html
          title: Perform Occupational Maintenance!
-    categories: ["Home"]
      disqus_id: /2009/9/21/perform-occupational-maintenance
+  rewrite_rule: RewriteRule ^2009/9/21/perform-occupational-maintenance$ /2009/09/21/perform-occupational-maintenance/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -4153,8 +4211,9 @@ If you have not done so already, do yourself a favor and go to the Pragmatic Boo
 
 filename: 2009-10-04-757-studio.html
          title: 757 Studio
-    categories: ["Home"]
      disqus_id: /2009/10/4/757-studio
+  rewrite_rule: RewriteRule ^2009/10/4/757-studio$ /2009/10/04/757-studio/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -4213,8 +4272,9 @@ filename: 2009-10-04-757-studio.html
 
 filename: 2009-10-11-the-zombie-shotgun-revisited.html
          title: The Zombie Shotgun Revisited 
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2009/10/11/the-zombie-shotgun-revisited
+  rewrite_rule: RewriteRule ^2009/10/11/the-zombie-shotgun-revisited$ /2009/10/11/the-zombie-shotgun-revisited/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -4241,8 +4301,9 @@ filename: 2009-10-11-the-zombie-shotgun-revisited.html
 
 filename: 2009-10-27-installing-ree-with-the-snow-leopard-sql-server-stack.html
          title: Installing REE With The Snow Leopard SQL Server Stack
-    categories: ["Database", "Heuristics", "Home", "Projects", "Ruby/Rails"]
      disqus_id: /2009/10/27/installing-ree-with-the-snow-leopard-sql-server-stack
+  rewrite_rule: RewriteRule ^2009/10/27/installing-ree-with-the-snow-leopard-sql-server-stack$ /2009/10/27/installing-ree-with-the-snow-leopard-sql-server-stack/ [L]
+    categories: ["Database", "Heuristics", "Home", "Projects", "Ruby/Rails"]
           body: 
 
 
@@ -4377,8 +4438,9 @@ $ sudo passenger-install-apache2-module
 
 filename: 2009-11-11-meta-programming-in.html
          title: Meta Programming In...
-    categories: ["Home"]
      disqus_id: /2009/11/11/meta-programming-in
+  rewrite_rule: RewriteRule ^2009/11/11/meta-programming-in$ /2009/11/11/meta-programming-in/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -4493,8 +4555,9 @@ o               # => #<MyClass:0x100171c80 @foo="bar">
 
 filename: 2009-11-23-authenticated-s3-gets-for-private-objects-using-paperclip.html
          title: Authenticated S3 GETs For Private Objects Using Paperclip
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2009/11/23/authenticated-s3-gets-for-private-objects-using-paperclip
+  rewrite_rule: RewriteRule ^2009/11/23/authenticated-s3-gets-for-private-objects-using-paperclip$ /2009/11/23/authenticated-s3-gets-for-private-objects-using-paperclip/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -4610,8 +4673,9 @@ end
 
 filename: 2010-01-05-rails-button-links-in-embedded-forms.html
          title: Rails Button Links In Embedded Forms
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2010/1/5/rails-button-links-in-embedded-forms
+  rewrite_rule: RewriteRule ^2010/1/5/rails-button-links-in-embedded-forms$ /2010/01/05/rails-button-links-in-embedded-forms/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -4642,8 +4706,9 @@ end
 
 filename: 2010-01-25-quickie-js-prototype-wrapper-for-quicktime.html
          title: Quickie.js - Prototype wrapper for QuickTime
-    categories: ["Apple/OSX", "Heuristics", "Home"]
      disqus_id: /2010/1/25/quickie-js-prototype-wrapper-for-quicktime
+  rewrite_rule: RewriteRule ^2010/1/25/quickie-js-prototype-wrapper-for-quicktime$ /2010/01/25/quickie-js-prototype-wrapper-for-quicktime/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home"]
           body: 
 
 
@@ -4806,8 +4871,9 @@ document.observe('dom:loaded', function(){
 
 filename: 2010-01-29-unobtrusive-js-in-rails-3-with-prototype.html
          title: Unobtrusive JS In Rails 3 With Prototype 
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2010/1/29/unobtrusive-js-in-rails-3-with-prototype
+  rewrite_rule: RewriteRule ^2010/1/29/unobtrusive-js-in-rails-3-with-prototype$ /2010/01/29/unobtrusive-js-in-rails-3-with-prototype/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -4863,8 +4929,9 @@ document.observe('dom:loaded', function(){
 
 filename: 2010-02-06-simple-script-console-function.html
          title: Simple Script/Console Function
-    categories: ["Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2010/2/6/simple-script-console-function
+  rewrite_rule: RewriteRule ^2010/2/6/simple-script-console-function$ /2010/02/06/simple-script-console-function/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -4902,8 +4969,9 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 filename: 2010-02-12-synchronizing-core-data-with-rails-3-0-0-pre.html
          title: Synchronizing Core Data With Rails (3.0.0.pre)
-    categories: ["Home"]
      disqus_id: /2010/2/12/synchronizing-core-data-with-rails-3-0-0-pre
+  rewrite_rule: RewriteRule ^2010/2/12/synchronizing-core-data-with-rails-3-0-0-pre$ /2010/02/12/synchronizing-core-data-with-rails-3-0-0-pre/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -4945,8 +5013,9 @@ filename: 2010-02-12-synchronizing-core-data-with-rails-3-0-0-pre.html
 
 filename: 2010-02-23-git-init-xcode-projects.html
          title: Git Init XCode Projects
-    categories: ["Apple/OSX", "Heuristics", "Home", "Workflow"]
      disqus_id: /2010/2/23/git-init-xcode-projects
+  rewrite_rule: RewriteRule ^2010/2/23/git-init-xcode-projects$ /2010/02/23/git-init-xcode-projects/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home", "Workflow"]
           body: 
 
 
@@ -4995,8 +5064,9 @@ build
 
 filename: 2010-03-19-textmate-theme-key-bindings-for-xcode.html
          title: TextMate Theme & Key Bindings For Xcode
-    categories: ["Home"]
      disqus_id: /2010/3/19/textmate-theme-key-bindings-for-xcode
+  rewrite_rule: RewriteRule ^2010/3/19/textmate-theme-key-bindings-for-xcode$ /2010/03/19/textmate-theme-key-bindings-for-xcode/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -5059,8 +5129,9 @@ filename: 2010-03-19-textmate-theme-key-bindings-for-xcode.html
 
 filename: 2010-04-13-restful-ajax-with-forgery-protection-with-rails-3.html
          title: RESTful AJAX with Forgery Protection (In Rails 3)
-    categories: ["Home"]
      disqus_id: /2010/4/13/restful-ajax-with-forgery-protection-with-rails-3
+  rewrite_rule: RewriteRule ^2010/4/13/restful-ajax-with-forgery-protection-with-rails-3$ /2010/04/13/restful-ajax-with-forgery-protection-with-rails-3/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -5130,8 +5201,9 @@ document.observe("dom:loaded", function() {
 
 filename: 2010-05-26-the-alias_method_chain-of-rake-override-rake-task.html
          title: The alias_method_chain of Rake - Override Rake Task 
-    categories: ["Heuristics", "Home", "Ruby/Rails", "Workflow"]
      disqus_id: /2010/5/26/the-alias_method_chain-of-rake-override-rake-task
+  rewrite_rule: RewriteRule ^2010/5/26/the-alias_method_chain-of-rake-override-rake-task$ /2010/05/26/the-alias_method_chain-of-rake-override-rake-task/ [L]
+    categories: ["Heuristics", "Home", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -5184,8 +5256,9 @@ end
 
 filename: 2010-07-06-custom-webrat-session-formatted_error-for-rails-with-nokogiri.html
          title: Custom Webrat::Session formatted_error For Rails With Nokogiri
-    categories: ["Home"]
      disqus_id: /2010/7/6/custom-webrat-session-formatted_error-for-rails-with-nokogiri
+  rewrite_rule: RewriteRule ^2010/7/6/custom-webrat-session-formatted_error-for-rails-with-nokogiri$ /2010/07/06/custom-webrat-session-formatted_error-for-rails-with-nokogiri/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -5222,8 +5295,9 @@ end
 
 filename: 2010-07-07-bit-fat-legacy-schema-inspection.html
          title: Bit Fat Legacy Schema Inspection
-    categories: ["Home"]
      disqus_id: /2010/7/7/bit-fat-legacy-schema-inspection
+  rewrite_rule: RewriteRule ^2010/7/7/bit-fat-legacy-schema-inspection$ /2010/07/07/bit-fat-legacy-schema-inspection/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -5255,8 +5329,9 @@ end
 
 filename: 2010-07-09-interactive-javascript-console-with-textmate.html
          title: Interactive JavaScript Console With TextMate
-    categories: ["Apple/OSX", "Heuristics", "Home", "TextMate"]
      disqus_id: /2010/7/9/interactive-javascript-console-with-textmate
+  rewrite_rule: RewriteRule ^2010/7/9/interactive-javascript-console-with-textmate$ /2010/07/09/interactive-javascript-console-with-textmate/ [L]
+    categories: ["Apple/OSX", "Heuristics", "Home", "TextMate"]
           body: 
 
 
@@ -5348,8 +5423,9 @@ open("|osascript", "w") { |io| io << terminal_script_filepath }
 
 filename: 2010-07-19-a-macport-rubyodbc-update.html
          title: A MacPort/RubyODBC Update
-    categories: ["Apple/OSX", "Database", "Heuristics", "Home", "Ruby/Rails"]
      disqus_id: /2010/7/19/a-macport-rubyodbc-update
+  rewrite_rule: RewriteRule ^2010/7/19/a-macport-rubyodbc-update$ /2010/07/19/a-macport-rubyodbc-update/ [L]
+    categories: ["Apple/OSX", "Database", "Heuristics", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -5457,8 +5533,9 @@ variant utf8 {
 
 filename: 2010-07-30-the-rvm-ruby-api.html
          title: The RVM Ruby API - Setting Up A CI System For The SQL Server Adapter
-    categories: ["Apple/OSX", "Home", "Ruby/Rails"]
      disqus_id: /2010/7/30/the-rvm-ruby-api
+  rewrite_rule: RewriteRule ^2010/7/30/the-rvm-ruby-api$ /2010/07/30/the-rvm-ruby-api/ [L]
+    categories: ["Apple/OSX", "Home", "Ruby/Rails"]
           body: 
 
 
@@ -5687,8 +5764,9 @@ end
 
 filename: 2010-08-06-protip-exclude-your-rvm-install-from-timemachine-backups.html
          title: Protip: Exclude Your RVM Install From Time Machine Backups
-    categories: ["Home"]
      disqus_id: /2010/8/6/protip-exclude-your-rvm-install-from-timemachine-backups
+  rewrite_rule: RewriteRule ^2010/8/6/protip-exclude-your-rvm-install-from-timemachine-backups$ /2010/08/06/protip-exclude-your-rvm-install-from-timemachine-backups/ [L]
+    categories: ["Home"]
           body: 
 
 
@@ -5725,8 +5803,9 @@ du -skh ~/.rvm/gems
 
 filename: 2010-08-19-how-to-clean-a-campfire-room-of-uploads.html
          title: How To Clean A Campfire Room Of Uploads
-    categories: ["Home", "Ruby/Rails", "Workflow"]
      disqus_id: /2010/8/19/how-to-clean-a-campfire-room-of-uploads
+  rewrite_rule: RewriteRule ^2010/8/19/how-to-clean-a-campfire-room-of-uploads$ /2010/08/19/how-to-clean-a-campfire-room-of-uploads/ [L]
+    categories: ["Home", "Ruby/Rails", "Workflow"]
           body: 
 
 
@@ -5789,8 +5868,9 @@ cleaner.sweep_uploads   # => Deletes all uploads.
 
 filename: 2010-10-18-tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library.html
          title: TinyTds - A modern, simple and fast FreeTDS library for Ruby using DB-Library 
-    categories: ["Database", "Home", "Ruby/Rails"]
      disqus_id: /2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library
+  rewrite_rule: RewriteRule ^2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library$ /2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library/ [L]
+    categories: ["Database", "Home", "Ruby/Rails"]
           body: 
 
 

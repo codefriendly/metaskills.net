@@ -20,6 +20,7 @@ class Article < Content
     %|filename: #{jekyll_filename}
          title: #{title}
      disqus_id: #{disqus_identifier2}
+  rewrite_rule: RewriteRule ^#{disqus_identifier2.from(1)}$ #{disqus_identifier} [L]
     categories: #{sections.map(&:name).inspect}
           body: \n\n\n#{body}\n\n\n\n|
   end
