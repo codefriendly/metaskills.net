@@ -1,0 +1,9 @@
+
+# Rewriting!
+Options +FollowSymlinks
+RewriteEngine On
+
+# Mephisto To Jekyll
+RewriteRule ^2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library$ /2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library/ [L]
+RewriteRule ^2010/8/19/how-to-clean-a-campfire-room-of-uploads$ /2010/08/19/how-to-clean-a-campfire-room-of-uploads/ [L]
+
