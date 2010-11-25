@@ -1,3 +1,6 @@
+body {
+  background: #cbd4e0 url("img/bg.png"); }
+
 /* Pygment Highlight */
 .highlight {
   background: #ffffff; }
