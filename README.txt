@@ -9,7 +9,7 @@ Development Setup: Typically I have python26 installed.
   $ sass --watch sass:css
   
   $ setopt rmstarsilent
-  $ rm -rf _site/* && sass _sass/site.scss:css/site.css && jekyll
+  $ rm -rf _site/* && sass _sass/site.scss:resource/site.css && jekyll
 
 
 TODO:
@@ -17,3 +17,6 @@ TODO:
   * Consider using feedburner vs my own alternate atom?
 
 
+TODO: (after launch)
+
+  * Turn on "Cross-domain Receiver URL" in DISQUS settings.
