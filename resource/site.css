@@ -1,5 +1,7 @@
 body {
-  background: #cbd4e0 url("img/bg.png"); }
+  color: #f2f2f2;
+  background-color: #0d0d0d;
+  background-image: url("/resource/bg.gif"); }
 
 /* Pygment Highlight */
 .highlight {
