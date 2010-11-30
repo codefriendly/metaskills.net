@@ -1,7 +1,6 @@
 .DS_Store
 _drafts/
 _site/
-_sass/
 .bundle
 z_metatheme
 .sass-cache

@@ -15,6 +15,7 @@ Development Setup: Typically I have python26 installed.
 TODO:
 
   * Consider using feedburner vs my own alternate atom?
+  * Make favicon.ico and apple-touch-icon.png.
 
 
 TODO: (after launch)
