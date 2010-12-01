@@ -14,8 +14,11 @@ Development Setup: Typically I have python26 installed.
 
 TODO:
 
+  * Design
+    - Fixed Left Nav / Fat Bottom Area
+    - Make favicon.ico and apple-touch-icon.png. (avatar wit jd hat)
   * Consider using feedburner vs my own alternate atom?
-  * Make favicon.ico and apple-touch-icon.png.
+  * Make a Tidy converter for jekyll
 
 
 TODO: (after launch)

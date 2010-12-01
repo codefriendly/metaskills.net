@@ -11,6 +11,32 @@
     <script src="/resource/site.js"></script>
   </head>
   <body>
-    {{ content }}
+    
+    <div class="row">
+    	<div class="column grid_3">
+    	  <header>
+    	   Logo
+    	  </header>
+    	  <nav>
+          <h2>Categories</h2>
+          <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+          </ul>
+        </nav>
+    	</div>
+    	<div class="column grid_7">
+        {{ content }}
+    	</div>
+    </div>
+    
+    <div class="row">
+    	<div class="column grid_10">
+    	  Footer Area
+    	</div>
+    </div>
+    
   </body>
 </html>
