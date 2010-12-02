@@ -9,8 +9,7 @@ Development Setup: Typically I have python26 installed.
   $ sass --scss --watch _sass:_site/resource --style compact --no-cache
   
   $ setopt rmstarsilent
-  $ rm -rf _site/* && sass _sass/site.scss:resource/site.css && jekyll
-  $ find _site -name "*.html" -exec tidy -config $(pwd)/tidy.conf {} \;
+  $ rm -rf _site/* && sass _sass/site.scss:resource/site.css && jekyll && find _site -name "*.html" -exec tidy -config $(pwd)/tidy.conf {} \;
 
 
 TODO:
