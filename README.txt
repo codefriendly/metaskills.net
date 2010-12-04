@@ -18,7 +18,6 @@ TODO:
   * Design
     - Fixed Left Nav / Fat Bottom Area
   * Consider using feedburner vs my own alternate atom?
-  * Make a Tidy converter for jekyll
 
 
 TODO: (after launch)

@@ -11,32 +11,23 @@
     <script src="/resource/site.js"></script>
   </head>
   <body>
-    
-    <section id="sec_main" class="row">
-    	<section id="sec_mainleft" class="column grid_3">
-    	  <header>
-    	   Logo
-    	  </header>
-    	  <nav>
-          <h2>Categories</h2>
-          <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
-          </ul>
-        </nav>
-    	</section>
-    	<section id="sec_mainright" class="column grid_7">
+    <section id="page">
+      <section id="content">
         {{ content }}
-    	</section>
+      </section>
+      <nav>
+  	    <header>Logo</header>
+        <h2>Categories</h2>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+        </ul>
+      </nav>
     </section>
-    
-    <section id="sec_footer" class="row">
-    	<footer class="column grid_10">
-    	  Footer Area
-    	</footer>
-    </section>
-    
+    <footer>
+  	  <section>{% include footer.html %}</section>
+  	</footer>
   </body>
 </html>

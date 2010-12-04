@@ -72,59 +72,32 @@ hr {
 input, select {
   vertical-align: middle; }
 
-/* The 1Kb Grid - 10 columns, 80 pixels each, with 20 pixel gutter */
-.grid_1 {
-  width: 80px; }
-
-.grid_2 {
-  width: 180px; }
-
-.grid_3 {
-  width: 280px; }
-
-.grid_4 {
-  width: 380px; }
-
-.grid_5 {
-  width: 480px; }
-
-.grid_6 {
-  width: 580px; }
-
-.grid_7 {
-  width: 680px; }
-
-.grid_8 {
-  width: 780px; }
-
-.grid_9 {
-  width: 880px; }
-
-.grid_10 {
-  width: 980px; }
-
-.column {
-  margin: 0 10px;
-  overflow: hidden;
-  float: left;
-  display: inline; }
-
-.row {
-  width: 1000px;
-  margin: 0 auto;
-  overflow: hidden; }
-
-.row .row {
-  margin: 0 -10px;
-  width: auto;
-  display: inline-block; }
-
-/* SCSS Features */
-/* Site Layout */
+/* SCSS - Features */
+/* SCSS - Site Layout */
 body {
   color: #f2f2f2;
   background-color: #0d0d0d;
   background-image: url("/resource/bg.gif"); }
+  body #page {
+    position: relative;
+    width: 980px;
+    margin: 0px auto; }
+    body #page nav {
+      position: absolute;
+      width: 280px;
+      top: 0px;
+      left: 0px; }
+    body #page #content {
+      position: relative;
+      width: 680px;
+      top: 0px;
+      left: 300px; }
+  body footer {
+    width: 100%;
+    background-color: black; }
+    body footer section {
+      width: 980px;
+      margin: 0px auto; }
 
 /* Pygment Highlight */
 .highlight {

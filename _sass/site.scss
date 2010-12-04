@@ -35,29 +35,27 @@ hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 
 input, select { vertical-align:middle; }
 
 
-/* The 1Kb Grid - 10 columns, 80 pixels each, with 20 pixel gutter */
+/* SCSS - Variables */
 
-.grid_1   { width:80px; }
-.grid_2   { width:180px; }
-.grid_3   { width:280px; }
-.grid_4   { width:380px; }
-.grid_5   { width:480px; }
-.grid_6   { width:580px; }
-.grid_7   { width:680px; }
-.grid_8   { width:780px; }
-.grid_9   { width:880px; }
-.grid_10  { width:980px; }
-.column   { margin: 0 10px; overflow: hidden; float: left; display: inline; }
-.row      { width: 1000px; margin: 0 auto; overflow: hidden; }
-.row .row { margin: 0 -10px; width: auto; display: inline-block; }
+$cols: 10;
+$colwidth: 80px;
+$gutterwidth: 20px;
 
+$c1width:  $colwidth * 1;
+$c2width:  ($colwidth * 2) + ($gutterwidth * 1);
+$c3width:  ($colwidth * 3) + ($gutterwidth * 2);
+$c4width:  ($colwidth * 4) + ($gutterwidth * 3);
+$c5width:  ($colwidth * 5) + ($gutterwidth * 4);
+$c6width:  ($colwidth * 6) + ($gutterwidth * 5);
+$c7width:  ($colwidth * 7) + ($gutterwidth * 6);
+$c8width:  ($colwidth * 8) + ($gutterwidth * 7);
+$c9width:  ($colwidth * 9) + ($gutterwidth * 8);
+$c10width: ($colwidth * 10) + ($gutterwidth * 9);
 
-/* SCSS Features */
-
-$blue: #3bbfce;
+$pagewidth: ($colwidth * $cols) + ($gutterwidth * ($cols - 1));
 
 
-/* Site Layout */
+/* SCSS - Site Layout */
 
 body { 
   color: #f2f2f2; 
@@ -65,7 +63,38 @@ body {
     color: #0d0d0d;
     image: url('/resource/bg.gif');
   }
+  #page { 
+    /*position: relative;*/
+    width: $pagewidth; 
+    margin: 0px auto;
+    nav {
+      float: left;
+      position: fixed;
+      width: $c3width;
+      /*top: 0px;*/
+      /*left: 0px;*/
+    }
+    #content {
+      float: right;
+      /*position: relative;*/
+      width: $c7width;
+      /*top: 0px;*/
+      /*left: $c3width + $gutterwidth;*/
+    }
+  }
+  footer {
+    width: 100%;
+    clear: both;
+    background-color: black;
+    section {
+      width: $pagewidth;
+      margin: 0px auto;
+    }
+  }
 }
+
+
+
 
 
 
