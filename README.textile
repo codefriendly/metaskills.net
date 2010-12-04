@@ -27,7 +27,7 @@ Remember to add /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin 
 
 h1. License
 
-All content, including images, are Copyright Kenneth Todd Collins. Only jekyll plugins and helpers are MIT Licensed. 
+All blog content and images are Copyright (c) 2006-2011, Kenneth Todd Collins. Only jekyll plugins and helpers are MIT Licensed. 
 
 
 
