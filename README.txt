@@ -18,6 +18,7 @@ TODO:
   * Design
     - Fixed Left Nav / Fat Bottom Area
   * Consider using feedburner vs my own alternate atom?
+  * Test &, <, > in content with Tidy.
 
 
 TODO: (after launch)

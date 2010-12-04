@@ -64,22 +64,16 @@ body {
     image: url('/resource/bg.gif');
   }
   #page { 
-    /*position: relative;*/
     width: $pagewidth; 
     margin: 0px auto;
     nav {
       float: left;
       position: fixed;
       width: $c3width;
-      /*top: 0px;*/
-      /*left: 0px;*/
     }
     #content {
       float: right;
-      /*position: relative;*/
       width: $c7width;
-      /*top: 0px;*/
-      /*left: $c3width + $gutterwidth;*/
     }
   }
   footer {
