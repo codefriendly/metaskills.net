@@ -4,7 +4,6 @@ pygments: true
 exclude:
 - Gemfile
 - Gemfile.lock
-- README.txt
-- sass
+- README.textile
 - z_metadata
 - z_metatheme

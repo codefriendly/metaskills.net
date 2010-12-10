@@ -72,36 +72,48 @@ hr {
 input, select {
   vertical-align: middle; }
 
-/* SCSS - Features */
+/* SCSS - Variables */
 /* SCSS - Site Layout */
+@font-face {
+  font-family: MetaMedRoman;
+  src: url("/resource/font-meta-med.ttf") format("truetype"); }
+
+@font-face {
+  font-family: MetaMono;
+  src: url("/resource/font-meta-mono.ttf") format("truetype"); }
+
 body {
   color: #f2f2f2;
   background-color: #0d0d0d;
   background-image: url("/resource/bg.gif"); }
-  body #page {
-    position: relative;
+  body header#mast {
+    width: 100%;
+    height: 117px;
+    font-family: MetaMedRoman, sans-serif;
+    font-size: 33px; }
+  body section#page {
     width: 980px;
     margin: 0px auto; }
-    body #page nav {
-      position: absolute;
-      width: 280px;
-      top: 0px;
-      left: 0px; }
-    body #page #content {
-      position: relative;
-      width: 680px;
-      top: 0px;
-      left: 300px; }
-  body footer {
+    body section#page nav {
+      float: left;
+      position: fixed;
+      width: 280px; }
+    body section#page #content {
+      float: right;
+      width: 680px; }
+  body footer#foot {
     width: 100%;
+    clear: both;
     background-color: black; }
-    body footer section {
+    body footer#foot section {
       width: 980px;
       margin: 0px auto; }
 
 /* Pygment Highlight */
 .highlight {
-  background: #ffffff; }
+  background: #ffffff;
+  font-family: MetaMono, courier, monospace;
+  font-size: 14px; }
 
 .highlight .c {
   color: #999988;

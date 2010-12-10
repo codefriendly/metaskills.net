@@ -9,6 +9,8 @@ h1. Todo
 * Think about google sitemap again.
 * Consider using feedburner vs my own alternate atom?
   - Consider this XML too. https://github.com/metajack/metajack.im/blob/master/atom.xml
+* Consider doing HP with summarize
+  http://intridea.com/2010/12/3/summarize-a-ruby-c-binding-for-open-text-summarizer
 
 
 h1. Development Setup
@@ -29,7 +31,7 @@ Remember to add /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin 
 
 h1. License
 
-All blog content and images are Copyright (c) 2006-2011, Kenneth Todd Collins. Use is strictly forbidden unless consent is given. Only jekyll plugins and helpers are MIT Licensed. 
+All blog content and images are Copyright (c) 2006-2011, Ken Collins. Use is strictly forbidden unless consent is given. Only jekyll plugins and helpers are MIT Licensed. 
 
 
 
