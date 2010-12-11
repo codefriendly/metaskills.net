@@ -1,40 +1,4 @@
 
-/* Reset - http://html5boilerplate.com/ */
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
-}                  
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
-nav ul { list-style:none; }
-blockquote, q { quotes:none; }
-blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
-ins { background-color:#ff9; color:#000; text-decoration:none; }
-mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
-del { text-decoration: line-through; }
-abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
-table { border-collapse:collapse; border-spacing:0; }
-hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
-input, select { vertical-align:middle; }
-
-
 /* SCSS - Variables */
 
 $cols: 10;
@@ -52,8 +16,13 @@ $c8width:  ($colwidth * 8) + ($gutterwidth * 7);
 $c9width:  ($colwidth * 9) + ($gutterwidth * 8);
 $c10width: ($colwidth * 10) + ($gutterwidth * 9);
 
-$hdrheight: 117px;
 $pagewidth: ($colwidth * $cols) + ($gutterwidth * ($cols - 1));
+
+$hdrheight: 117px;
+$hdrlogoheight: 72px;
+
+
+
 
 /* SCSS - Future Proof & Vendor Helpers */
 
@@ -69,6 +38,7 @@ $pagewidth: ($colwidth * $cols) + ($gutterwidth * ($cols - 1));
   -webkit-box-shadow: $hoff $voff $blur $color;
   box-shadow: $hoff $voff $blur $color;
 }
+
 
 
 /* SCSS - Site Layout */
@@ -95,7 +65,15 @@ body {
     section {
       width: $pagewidth;
       margin: 0px auto;
-      @include font-metamed(33px);
+      position: relative;
+      #mast_logo {
+        height: $hdrlogoheight;
+        position: absolute;
+        top: $hdrheight - $hdrlogoheight + 13px;
+        left: -15px;
+        @include font-metamed(33px);
+        * { vertical-align: middle; }
+      }
     }
   }
   section#page { 
@@ -125,10 +103,7 @@ body {
 
 
 
-
-
 /* Pygment Highlight */
-
 
 .highlight        { background: #ffffff; @include font-metamono(14px); }
 .highlight span   { @include font-metamono(14px); }

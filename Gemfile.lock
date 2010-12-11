@@ -14,6 +14,7 @@ GEM
     liquid (2.2.2)
     maruku (0.6.0)
       syntax (>= 1.0.0)
+    nokogiri (1.4.4)
     syntax (1.0.0)
 
 PLATFORMS
@@ -22,3 +23,4 @@ PLATFORMS
 DEPENDENCIES
   RedCloth (= 4.2.3)
   jekyll (= 0.7.0)
+  nokogiri (= 1.4.4)
