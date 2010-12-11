@@ -55,6 +55,21 @@ $c10width: ($colwidth * 10) + ($gutterwidth * 9);
 $hdrheight: 117px;
 $pagewidth: ($colwidth * $cols) + ($gutterwidth * ($cols - 1));
 
+/* SCSS - Future Proof & Vendor Helpers */
+
+@mixin background-gradient($from, $to) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: linear-gradient(top, $from, $to);
+  
+}
+
+@mixin box-shadow($hoff, $voff, $blur, $color) {
+  -moz-box-shadow: $hoff $voff $blur $color;
+  -webkit-box-shadow: $hoff $voff $blur $color;
+  box-shadow: $hoff $voff $blur $color;
+}
+
 
 /* SCSS - Site Layout */
 
@@ -73,7 +88,15 @@ body {
   header#mast {
     width: 100%;
     height: $hdrheight;
-    @include font-metamed(33px);
+    background-color: #121319;
+    border-bottom: 1px solid #303030;
+    @include background-gradient(#1c1e26, #121319);
+    @include box-shadow(0, 1px, 0, #000);
+    section {
+      width: $pagewidth;
+      margin: 0px auto;
+      @include font-metamed(33px);
+    }
   }
   section#page { 
     width: $pagewidth; 
