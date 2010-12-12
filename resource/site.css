@@ -28,22 +28,26 @@ body {
       width: 980px;
       margin: 0px auto;
       position: relative; }
-      body header#mast section #mast_logo {
-        height: 72px;
-        position: absolute;
-        top: 58px;
-        left: 0;
-        font-family: MetaMedRoman, sans-serif;
-        font-size: 33px; }
-        body header#mast section #mast_logo * {
-          vertical-align: middle; }
   body section#page {
     width: 980px;
     margin: 0px auto; }
     body section#page nav {
       float: left;
       position: fixed;
-      width: 280px; }
+      width: 280px;
+      top: 64px; }
+      body section#page nav header#logo {
+        height: 72px;
+        white-space: nowrap;
+        overflow: visible;
+        /* position: relative;*/
+        /** { vertical-align: bottom; }*/ }
+        body section#page nav header#logo * {
+          display: block;
+          position: absolute; }
+        body section#page nav header#logo div {
+          font-family: MetaMedRoman, sans-serif;
+          font-size: 33px; }
     body section#page #content {
       float: right;
       width: 680px; }
@@ -55,6 +59,14 @@ body {
       width: 980px;
       margin: 0px auto; }
 
+/*#mast_logo {
+  height: $hdrlogoheight;
+  position: absolute;
+  top: $hdrheight - $hdrlogoheight + 13px;
+  left: -15px;
+  
+
+}*/
 /* Pygment Highlight */
 .highlight {
   background: #ffffff;

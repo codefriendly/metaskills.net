@@ -22,15 +22,12 @@ $hdrheight: 117px;
 $hdrlogoheight: 72px;
 
 
-
-
 /* SCSS - Future Proof & Vendor Helpers */
 
 @mixin background-gradient($from, $to) {
   background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
   background-image: -moz-linear-gradient(top, $from, $to);
   background-image: linear-gradient(top, $from, $to);
-  
 }
 
 @mixin box-shadow($hoff, $voff, $blur, $color) {
@@ -66,14 +63,6 @@ body {
       width: $pagewidth;
       margin: 0px auto;
       position: relative;
-      #mast_logo {
-        height: $hdrlogoheight;
-        position: absolute;
-        top: $hdrheight - $hdrlogoheight + 13px;
-        left: -15px;
-        @include font-metamed(33px);
-        * { vertical-align: middle; }
-      }
     }
   }
   section#page { 
@@ -83,6 +72,15 @@ body {
       float: left;
       position: fixed;
       width: $c3width;
+      top: $hdrheight - 53px;
+      header#logo {
+        height: $hdrlogoheight;
+        white-space: nowrap;
+        overflow: visible;
+        * { display:block; position:absolute; }
+        img {  }
+        div { @include font-metamed(33px); top:10px; left:80px; }
+      }
     }
     #content {
       float: right;
@@ -99,7 +97,6 @@ body {
     }
   }
 }
-
 
 
 
