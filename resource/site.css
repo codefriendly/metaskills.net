@@ -1,6 +1,4 @@
-/* SCSS - Variables */
-/* SCSS - Future Proof & Vendor Helpers */
-/* SCSS - Site Layout */
+/* SCSS - Fonts */
 @font-face {
   font-family: MetaMedRoman;
   src: url("/resource/font-meta-med.ttf") format("truetype"); }
@@ -9,7 +7,28 @@
   font-family: MetaMono;
   src: url("/resource/font-meta-mono.ttf") format("truetype"); }
 
+@font-face {
+  font-family: MetaDroidSans;
+  src: url("/resource/font-goog-dsr.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: MetaDroidSans;
+  src: url("/resource/font-goog-dsb.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold; }
+
+@font-face {
+  font-family: MetaInconsolata;
+  src: url("/resource/font-inconsolata.ttf") format("truetype"); }
+
+/* SCSS - Variables */
+/* SCSS - Future Proof & Vendor Helpers */
+/* SCSS - Site Layout */
 body {
+  font-family: MetaInconsolata, Helvetica sans-serif;
+  font-size: 16px;
   color: #f2f2f2;
   background-color: #0d0d0d;
   background-image: url("/resource/bg.gif"); }
@@ -39,18 +58,28 @@ body {
       body section#page nav header#logo {
         height: 72px;
         white-space: nowrap;
-        overflow: visible;
-        /* position: relative;*/
-        /** { vertical-align: bottom; }*/ }
+        overflow: visible; }
         body section#page nav header#logo * {
           display: block;
           position: absolute; }
         body section#page nav header#logo div {
           font-family: MetaMedRoman, sans-serif;
-          font-size: 33px; }
+          font-size: 29px;
+          top: 13px;
+          left: 81px; }
     body section#page #content {
       float: right;
       width: 680px; }
+      body section#page #content h1, body section#page #content h2, body section#page #content h3, body section#page #content h4 {
+        font-family: MetaDroidSans, Helvetica sans-serif;
+        font-size: 32px;
+        line-height: 1em; }
+      body section#page #content h1 {
+        font-size: 32px;
+        width: 60%; }
+      body section#page #content p {
+        margin: 10px 0;
+        line-height: 1em; }
   body footer#foot {
     width: 100%;
     clear: both;
@@ -59,14 +88,19 @@ body {
       width: 980px;
       margin: 0px auto; }
 
-/*#mast_logo {
-  height: $hdrlogoheight;
-  position: absolute;
-  top: $hdrheight - $hdrlogoheight + 13px;
-  left: -15px;
-  
+/* Article Styles Pubdate */
+article header {
+  /*clear: both;*/
+  /*display: block;*/
+  background-color: red; }
+  article header time {
+    width: 50px;
+    height: 60px;
+    float: left;
+    background-color: yellow; }
+  article header h1 {
+    float: left; }
 
-}*/
 /* Pygment Highlight */
 .highlight {
   background: #ffffff;

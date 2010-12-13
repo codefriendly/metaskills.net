@@ -1,4 +1,18 @@
 
+/* SCSS - Fonts */
+
+@font-face  { font-family: MetaMedRoman; src: url('/resource/font-meta-med.ttf') format('truetype'); }
+@font-face  { font-family: MetaMono; src: url('/resource/font-meta-mono.ttf') format('truetype'); }
+@font-face  { font-family: MetaDroidSans; src: url('/resource/font-goog-dsr.ttf') format('truetype'); font-style: normal; font-weight: normal; }
+@font-face  { font-family: MetaDroidSans; src: url('/resource/font-goog-dsb.ttf') format('truetype'); font-style: normal; font-weight: bold; }
+@font-face  { font-family: MetaInconsolata; src: url('/resource/font-inconsolata.ttf') format('truetype'); }
+
+@mixin font-metamed($size)  { font-family: MetaMedRoman, sans-serif; font-size: $size; }
+@mixin font-metamono($size) { font-family: MetaMono, courier, monospace; font-size: $size; }
+@mixin font-droidsans($size)  { font-family: MetaDroidSans, Helvetica sans-serif; font-size: $size; }
+@mixin font-inconsolata($size)  { font-family: MetaInconsolata, Helvetica sans-serif; font-size: $size; }
+
+
 /* SCSS - Variables */
 
 $cols: 10;
@@ -37,16 +51,12 @@ $hdrlogoheight: 72px;
 }
 
 
-
 /* SCSS - Site Layout */
 
-@font-face                  { font-family: MetaMedRoman; src: url('/resource/font-meta-med.ttf') format('truetype'); }
-@font-face                  { font-family: MetaMono; src: url('/resource/font-meta-mono.ttf') format('truetype'); }
-@mixin font-metamed($size)  { font-family: MetaMedRoman, sans-serif; font-size: $size; }
-@mixin font-metamono($size) { font-family: MetaMono, courier, monospace; font-size: $size; }
+@mixin clearfix { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
-
-body { 
+body {
+  @include font-inconsolata(16px);
   color: #f2f2f2; 
   background: {
     color: #0d0d0d;
@@ -79,12 +89,15 @@ body {
         overflow: visible;
         * { display:block; position:absolute; }
         img {  }
-        div { @include font-metamed(33px); top:10px; left:80px; }
+        div { @include font-metamed(29px); top:13px; left:81px; }
       }
     }
     #content {
       float: right;
       width: $c7width;
+      h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; }
+      h1 { font-size: 32px; width: 60%;  }
+      p { margin: 10px 0; line-height: 1em; }
     }
   }
   footer#foot {
@@ -98,6 +111,26 @@ body {
   }
 }
 
+
+/* Article Styles Pubdate */
+
+article {
+  header {
+    &:after { @include clearfix; }
+    time {
+      width: 50px;
+      height: 60px;
+      display: block;
+      float: left;
+      background-color: yellow;
+    }
+    h1 {
+      width: 200px;
+      float: left;
+    }
+  }
+  footer { }
+}
 
 
 /* Pygment Highlight */

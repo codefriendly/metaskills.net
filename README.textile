@@ -11,6 +11,7 @@ h1. Todo
   - Consider this XML too. https://github.com/metajack/metajack.im/blob/master/atom.xml
 * Consider doing HP with summarize
   http://intridea.com/2010/12/3/summarize-a-ruby-c-binding-for-open-text-summarizer
+* Make sure I have good content types from apache for .ttf true type fonts.
 
 
 h1. Development Setup

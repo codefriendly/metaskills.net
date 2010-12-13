@@ -7,9 +7,9 @@ categories:
   - Ruby/Rails
 ---
 
-<p>For us at work, our uploads to campfire are really transitory. Most of the time they are simple screenshots around a current topic. Every now and then vacation photos or even movies. And the end of the day none of it has value to us as the real value of campfire is our textual transcripts.</p>
+<p>For us at work, our uploads to campfire are really transitory. Most of the time they are simple screenshots around a current topic. Every now and then vacation photos or even movies, at the end of the day, none of it has value after a certain amount of time. To us as the real value of campfire is our textual transcripts.</p>
 
-<p>This morning after 4 years of campfire, we were real close to our 1GB limit of uploads. Time for a clean up. I found no easy way of automating this, so I turned to the Tinder gem. It has a nice way interface to the campfire api using HTTParty as the backend. I found out that there was no easy way to delete uploads too. So after some good ole fashion DOM inspection and knowing rails application conventions, I found my own interface. Below is a little script I used to clean up our room this morning. It basically loops thru a rooms uploads, 5 at a time, and deletes them. Pausing for a quarter of a second between each so I don't freak out the new 37signals administrator :)</p>
+<p>This morning after 4 years of campfire, we were real close to our 1GB limit of uploads. Time for a clean up. I found no easy way of automating this, so I turned to the Tinder gem. It has a nice interface to the campfire API using HTTParty as the backend. I found out that there was no easy way to delete uploads too. So after some good ole fashion DOM inspection and knowing rails application conventions, I found my own interface. Below is a little script I used to clean up our room this morning. It basically loops thru a rooms uploads, 5 at a time, and deletes them. Pausing for a quarter of a second between each so I don't freak out the new 37signals administrator :)</p>
 
 
 {% highlight ruby %}
