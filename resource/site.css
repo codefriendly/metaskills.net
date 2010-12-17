@@ -34,7 +34,7 @@ body {
   background-image: url("/resource/bg.gif"); }
   body header#mast {
     width: 100%;
-    height: 117px;
+    height: 80px;
     background-color: #121319;
     border-bottom: 1px solid #303030;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#1c1e26), to(#121319));
@@ -47,6 +47,11 @@ body {
       width: 980px;
       margin: 0px auto;
       position: relative; }
+      body header#mast section nav {
+        float: right;
+        padding: 8px 0 0 0; }
+        body header#mast section nav li {
+          display: inline; }
   body section#page {
     width: 980px;
     margin: 0px auto; }
@@ -54,7 +59,7 @@ body {
       float: left;
       position: fixed;
       width: 280px;
-      top: 64px; }
+      top: 27px; }
       body section#page nav header#logo {
         height: 72px;
         white-space: nowrap;
@@ -69,7 +74,8 @@ body {
           left: 81px; }
     body section#page #content {
       float: right;
-      width: 680px; }
+      width: 680px;
+      padding-top: 15px; }
       body section#page #content h1, body section#page #content h2, body section#page #content h3, body section#page #content h4 {
         font-family: MetaDroidSans, Helvetica sans-serif;
         font-size: 32px;
@@ -88,18 +94,119 @@ body {
       width: 980px;
       margin: 0px auto; }
 
-/* Article Styles Pubdate */
-article header {
-  /*clear: both;*/
-  /*display: block;*/
-  background-color: red; }
-  article header time {
-    width: 50px;
-    height: 60px;
-    float: left;
-    background-color: yellow; }
-  article header h1 {
-    float: left; }
+/* Article Styles (pubdate/etc) */
+article header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+article header time {
+  width: 50px;
+  height: 60px;
+  display: block;
+  float: left;
+  padding-bottom: 2px;
+  margin-right: 15px;
+  background-color: #666;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -moz-box-shadow: 2px 2px 1px black;
+  -webkit-box-shadow: 2px 2px 1px black;
+  box-shadow: 2px 2px 1px black; }
+  article header time span {
+    display: block;
+    text-align: center;
+    font-family: MetaMedRoman, sans-serif;
+    font-size: 14px;
+    text-transform: lowercase; }
+  article header time span.day {
+    font-size: 26px;
+    line-height: 26px; }
+  article header time span.month {
+    font-size: 15px;
+    line-height: 21px; }
+  article header time span.year {
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #900;
+    -moz-border-radius-bottomleft: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px; }
+article header h1 {
+  width: 200px;
+  float: left;
+  margin: 0 0 10px 0; }
+
+/* Fancy Buttons - http://lab.simurai.com/css/buttons/*/
+a.button {
+  /* text */
+  text-decoration: none;
+  font: 12px/1em "MetaDroidSans", sans-serif;
+  font-weight: bold;
+  text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  /* layout */
+  padding: .5em .6em .4em .6em;
+  display: inline-block;
+  position: relative;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  /* effects */
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7))), url("/resource/noise.png");
+  background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("/resource/noise.png");
+  background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7))), url("/resource/noise.png");
+  -webkit-transition: background .2s ease-in-out;
+  -moz-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  /* color */
+  color: #666666 !important;
+  background-color: gray;
+  -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, #999999 0 0.1em 3px, #737373 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+  /* drop shadow */
+  -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, #999999 0 0.1em 3px, #737373 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+  /* drop shadow */
+  box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, #999999 0 0.1em 3px, #737373 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+  /* drop shadow */
+  /* icon usage */
+  /* states */ }
+  a.button:before {
+    font: 1.2em/0 "Pictos", sans-serif;
+    content: attr(data-icon);
+    margin-right: 0.4em; }
+  a.button:hover {
+    background-color: #d4d4d4; }
+  a.button:active {
+    background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("/resource/noise.png");
+    background-image: -moz-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("/resource/noise.png");
+    background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("/resource/noise.png");
+    -webkit-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px;
+    /* drop shadow */
+    -moz-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px;
+    /* drop shadow */
+    box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px, rgba(0, 0, 0, 0.2) 0 0.2em 6px;
+    /* drop shadow */
+    -webkit-transform: translateY(0.2em);
+    -moz-transform: translateY(0.2em);
+    transform: translateY(0.2em); }
+  a.button:focus {
+    outline: none;
+    color: rgba(254, 255, 255, 0.9) !important;
+    text-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px; }
+
+@-moz-document url-prefix() {
+  a.button {
+    text-align: center;
+    background-color: #b3b3b3; } }
 
 /* Pygment Highlight */
 .highlight {
