@@ -191,9 +191,10 @@ a.button {
   a.button:before {
     font-family: MetaPictos;
     font-size: 1.2em;
+    font-weight: 100;
     line-height: 0;
     content: attr(data-icon);
-    margin-right: 0.4em; }
+    margin-right: 0.2em; }
   a.button:hover {
     background-color: #d4d4d4; }
   a.button:active {
