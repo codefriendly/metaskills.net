@@ -1,16 +1,19 @@
 
 /* SCSS - Fonts */
+/* Pictos Font - Copyright © 2010 Drew Wilson http://www.drewwilson.com - This font is NOT free! */
 
 @font-face  { font-family: MetaMedRoman; src: url('/resource/font-meta-med.ttf') format('truetype'); }
 @font-face  { font-family: MetaMono; src: url('/resource/font-meta-mono.ttf') format('truetype'); }
 @font-face  { font-family: MetaDroidSans; src: url('/resource/font-goog-dsr.ttf') format('truetype'); font-style: normal; font-weight: normal; }
 @font-face  { font-family: MetaDroidSans; src: url('/resource/font-goog-dsb.ttf') format('truetype'); font-style: normal; font-weight: bold; }
 @font-face  { font-family: MetaInconsolata; src: url('/resource/font-inconsolata.ttf') format('truetype'); }
+@font-face  { font-family: MetaPictos; src: url('/resource/font-pictos-web.ttf') format('truetype'); font-style: normal; font-weight: normal; }
 
 @mixin font-metamed($size)  { font-family: MetaMedRoman, sans-serif; font-size: $size; }
 @mixin font-metamono($size) { font-family: MetaMono, courier, monospace; font-size: $size; }
 @mixin font-droidsans($size)  { font-family: MetaDroidSans, Helvetica sans-serif; font-size: $size; }
 @mixin font-inconsolata($size)  { font-family: MetaInconsolata, Helvetica sans-serif; font-size: $size; }
+@mixin font-pictos($size)  { font-family: MetaPictos; font-size: $size; }
 
 
 /* SCSS - Variables */
@@ -160,7 +163,8 @@ article {
 a.button {
   /* text */
 	text-decoration: none;
-	font: 13px/1em 'MetaDroidSans', sans-serif;
+	@include font-droidsans(13px);
+	line-height: 1em;
 	font-weight: bold;
 	text-shadow: rgba(255,255,255,.5) 0 1px 0;
 	-webkit-user-select: none;
@@ -196,9 +200,11 @@ a.button {
 						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
 	/* icon usage */
 	&:before {
-	  font: 1.2em/0 'Pictos', sans-serif; 
+	  @include font-pictos(1.2em);
+	  font-weight: 100;
+	  line-height: 0; 
     content: attr(data-icon); 
-    margin-right: 0.4em;
+    margin-right: 0.2em;
 	}
 	/* states */
 	&:hover {
@@ -232,16 +238,9 @@ a.button {
   a.button { 
     text-align: center;
     background-color: hsl(0, 0%, 70%);
+    padding: .5em .4em .4em .4em;
   }
 }
-
-
-
-
-
-
-
-
 
 
 /* Pygment Highlight */
