@@ -124,15 +124,18 @@ body {
           -webkit-box-shadow: 0 0 4px #0066ff;
           box-shadow: 0 0 4px #0066ff;
           background: none; }
-        body section#page nav ul li a span {
-          display: block !important;
+        body section#page nav ul li a span:before {
+          display: block;
           width: 16px;
           height: 16px;
           float: right;
-          background-color: yellow;
-          /*content: "\00a0";*/
+          content: "\00a0";
           background-image: url("/resource/sprite.png");
           background-position: -0px -0px;
+          background-repeat: no-repeat; }
+        body section#page nav ul li a:hover span:before {
+          background-image: url("/resource/sprite.png");
+          background-position: -20px -0px;
           background-repeat: no-repeat; }
     body section#page #content {
       float: right;

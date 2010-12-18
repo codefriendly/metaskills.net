@@ -17,7 +17,8 @@ h1. Todo
 h1. Development Setup
 
 Misc notes on setting up a development environment. Rarely needs to be done, but wanted to document my personal setup.
-
+  
+  $ sudo port install tidy
   $ sudo port install py26-pygments
   $ bundle install
 

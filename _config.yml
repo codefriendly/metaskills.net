@@ -7,3 +7,4 @@ exclude:
 - README.textile
 - z_metadata
 - z_metatheme
+- tidy.conf
