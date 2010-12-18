@@ -38,6 +38,8 @@ $pagewidth: ($colwidth * $cols) + ($gutterwidth * ($cols - 1));
 $hdrheight: 70px;
 $hdrlogoheight: 57px;
 
+$sprite_grid: 20;
+
 
 /* SCSS - Future Proof & Vendor Helpers */
 
@@ -57,6 +59,7 @@ $hdrlogoheight: 57px;
 /* SCSS - Site Layout */
 
 @mixin clearfix { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+@mixin sprite($x, $y) { background-image: url('/resource/sprite.png'); background-position: -#{$x * $sprite_grid}px -#{$y * $sprite_grid}px; background-repeat: no-repeat; }
 
 body {
   @include font-inconsolata(16px);
@@ -104,7 +107,6 @@ body {
         li {
           position: relative; 
           a, a:link, a:visited, a:hover, a:active { 
-            /*position: relative;*/
             display: block; 
             color: #fff; 
             background-color: none; 
@@ -114,6 +116,7 @@ body {
             letter-spacing: 1px;
             padding: 5px 8px 6px 12px;
             border: 1px solid rgba(0,0,0,0);
+            /*span { display:none; }*/
           }
           a:hover {
             border: 1px solid rgba(0,0,0,1.0);
@@ -135,6 +138,7 @@ body {
             height: 100%;
             border: 1px solid rgba(0,102,255,0.6);
             @include border-radius-all(1px);
+            background: none;
           }
           a:hover:after {
             content: ""; 
@@ -146,8 +150,19 @@ body {
             border: 2px solid rgba(0,102,255,0.4);
             @include border-radius-all(2px);
             @include box-shadow(0, 0, 4px, rgb(0,102,255));
+            background: none;
           }
-          
+          a span:before {
+            display: block;
+            width: 16px;
+            height: 16px;
+            float: right;
+            content: "\00a0";
+            @include sprite(0,0);
+          }
+          a:hover span:before {
+            @include sprite(1,0);
+          }
         }
       }
     }

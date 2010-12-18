@@ -82,7 +82,6 @@ body {
       body section#page nav ul li {
         position: relative; }
         body section#page nav ul li a, body section#page nav ul li a:link, body section#page nav ul li a:visited, body section#page nav ul li a:hover, body section#page nav ul li a:active {
-          /*position: relative;*/
           display: block;
           color: #fff;
           background-color: none;
@@ -92,7 +91,8 @@ body {
           font-weight: 100;
           letter-spacing: 1px;
           padding: 5px 8px 6px 12px;
-          border: 1px solid rgba(0, 0, 0, 0); }
+          border: 1px solid rgba(0, 0, 0, 0);
+          /*span { display:none; }*/ }
         body section#page nav ul li a:hover {
           border: 1px solid black;
           background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(0.43, #313131), color-stop(0.44, black), color-stop(0.82, black), color-stop(0.83, #0b0b0b), color-stop(1, #393939));
@@ -107,7 +107,8 @@ body {
           border: 1px solid rgba(0, 102, 255, 0.6);
           -moz-border-radius: 1px;
           -webkit-border-radius: 1px;
-          border-radius: 1px; }
+          border-radius: 1px;
+          background: none; }
         body section#page nav ul li a:hover:after {
           content: "";
           position: absolute;
@@ -121,7 +122,18 @@ body {
           border-radius: 2px;
           -moz-box-shadow: 0 0 4px #0066ff;
           -webkit-box-shadow: 0 0 4px #0066ff;
-          box-shadow: 0 0 4px #0066ff; }
+          box-shadow: 0 0 4px #0066ff;
+          background: none; }
+        body section#page nav ul li a span {
+          display: block !important;
+          width: 16px;
+          height: 16px;
+          float: right;
+          background-color: yellow;
+          /*content: "\00a0";*/
+          background-image: url("/resource/sprite.png");
+          background-position: -0px -0px;
+          background-repeat: no-repeat; }
     body section#page #content {
       float: right;
       width: 780px;
