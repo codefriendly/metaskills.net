@@ -1,5 +1,5 @@
 
-/* SCSS - Fonts */
+/* Fonts */
 /* Pictos Font - Copyright © 2010 Drew Wilson http://www.drewwilson.com - This font is NOT free! */
 
 @font-face  { font-family: MetaMedRoman; src: url('/resource/font-meta-med.ttf') format('truetype'); }
@@ -16,7 +16,7 @@
 @mixin font-pictos($size)  { font-family: MetaPictos; font-size: $size; }
 
 
-/* SCSS - Variables */
+/* Variables */
 
 $cols: 10;
 $colwidth: 80px;
@@ -41,7 +41,7 @@ $hdrlogoheight: 57px;
 $sprite_grid: 20;
 
 
-/* SCSS - Future Proof & Vendor Helpers */
+/* Vendor Helpers */
 
 @mixin background-gradient($from, $to) {
   background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
@@ -49,17 +49,98 @@ $sprite_grid: 20;
   background-image: linear-gradient(top, $from, $to);
 }
 
-@mixin box-shadow($hoff, $voff, $blur, $color) { -moz-box-shadow: $hoff $voff $blur $color; -webkit-box-shadow: $hoff $voff $blur $color; box-shadow: $hoff $voff $blur $color; }
+@mixin box-shadow($hoff, $voff, $blur, $color) { 
+  -moz-box-shadow: $hoff $voff $blur $color; 
+  -webkit-box-shadow: $hoff $voff $blur $color;
+  box-shadow: $hoff $voff $blur $color;
+}
+
 @mixin global-shadow { @include box-shadow(2px, 2px, 1px, #000); }
 
-@mixin border-radius-all($radius) { -moz-border-radius: $radius; -webkit-border-radius: $radius; border-radius: $radius; }
-@mixin border-radius($side, $mozside, $radius) { -moz-border-radius-#{$mozside}: $radius; -webkit-border-#{$side}-radius: $radius; border-#{$side}-radius: $radius; }
+@mixin border-radius-all($radius) { 
+  -moz-border-radius: $radius; 
+  -webkit-border-radius: $radius; 
+  border-radius: $radius;
+}
+
+@mixin border-radius($side, $mozside, $radius) { 
+  -moz-border-radius-#{$mozside}: $radius; 
+  -webkit-border-#{$side}-radius: $radius; 
+  border-#{$side}-radius: $radius;
+}
 
 
-/* SCSS - Site Layout */
+/* My Helpers */
 
 @mixin clearfix { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 @mixin sprite($x, $y) { background-image: url('/resource/sprite.png'); background-position: -#{$x * $sprite_grid}px -#{$y * $sprite_grid}px; background-repeat: no-repeat; }
+
+
+/* Component - AppleTV Left Navigation */
+
+@mixin appletv_links {
+  a, a:link, a:visited, a:hover, a:active { 
+    display: block; 
+    color: #fff; 
+    background-color: none; 
+    text-decoration: none;
+    @include font-metamed(14px);
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding: 5px 8px 6px 12px;
+    border: 1px solid rgba(0,0,0,0);
+    /*span { display:none; }*/
+  }
+  a:hover {
+    border: 1px solid rgba(0,0,0,1.0);
+    background: -webkit-gradient(linear, left top, left bottom, 
+                color-stop(0, #666666), color-stop(0.43, #313131), 
+                color-stop(0.44, #000), color-stop(0.82, #000),
+                color-stop(0.83, #0b0b0b), color-stop(1.0, #393939));
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.4), 
+                #666666 0%, #313131 43%,
+                #000 44%, #000 82%,
+                #0b0b0b 83%, #393939 100%);
+  }
+  a:hover:before {
+    content: ""; 
+    position: absolute; 
+    left: -1px;
+    top: -1px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0,102,255,0.6);
+    @include border-radius-all(1px);
+    background: none;
+  }
+  a:hover:after {
+    content: ""; 
+    position: absolute; 
+    left: -2px;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0,102,255,0.4);
+    @include border-radius-all(2px);
+    @include box-shadow(0, 0, 4px, rgb(0,102,255));
+    background: none;
+  }
+  a span:before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: right;
+    content: "\00a0";
+    /* Default disclosure chevron to right. */
+    /* @include sprite(0,0); */
+  }
+  a:hover span:before {
+    @include sprite(1,0);
+  }
+}
+
+
+/* Site Layout */
 
 body {
   @include font-inconsolata(16px);
@@ -106,63 +187,7 @@ body {
       ul {
         li {
           position: relative; 
-          a, a:link, a:visited, a:hover, a:active { 
-            display: block; 
-            color: #fff; 
-            background-color: none; 
-            text-decoration: none;
-            @include font-metamed(14px);
-            font-weight: 100;
-            letter-spacing: 1px;
-            padding: 5px 8px 6px 12px;
-            border: 1px solid rgba(0,0,0,0);
-            /*span { display:none; }*/
-          }
-          a:hover {
-            border: 1px solid rgba(0,0,0,1.0);
-            background: -webkit-gradient(linear, left top, left bottom, 
-                        color-stop(0, #666666), color-stop(0.43, #313131), 
-                        color-stop(0.44, #000), color-stop(0.82, #000),
-                        color-stop(0.83, #0b0b0b), color-stop(1.0, #393939));
-            background: -moz-linear-gradient(top, rgba(0,0,0,0.4), 
-                        #666666 0%, #313131 43%,
-                        #000 44%, #000 82%,
-                        #0b0b0b 83%, #393939 100%);
-          }
-          a:hover:before {
-            content: ""; 
-            position: absolute; 
-            left: -1px;
-            top: -1px;
-            width: 100%;
-            height: 100%;
-            border: 1px solid rgba(0,102,255,0.6);
-            @include border-radius-all(1px);
-            background: none;
-          }
-          a:hover:after {
-            content: ""; 
-            position: absolute; 
-            left: -2px;
-            top: -2px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid rgba(0,102,255,0.4);
-            @include border-radius-all(2px);
-            @include box-shadow(0, 0, 4px, rgb(0,102,255));
-            background: none;
-          }
-          a span:before {
-            display: block;
-            width: 16px;
-            height: 16px;
-            float: right;
-            content: "\00a0";
-            /*@include sprite(0,0);*/
-          }
-          a:hover span:before {
-            @include sprite(1,0);
-          }
+          @include appletv_links;
         }
       }
     }
@@ -185,6 +210,7 @@ body {
     }
   }
 }
+
 
 
 /* Article Styles (pubdate/etc) */

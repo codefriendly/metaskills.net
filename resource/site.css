@@ -1,4 +1,4 @@
-/* SCSS - Fonts */
+/* Fonts */
 /* Pictos Font - Copyright © 2010 Drew Wilson http://www.drewwilson.com - This font is NOT free! */
 @font-face {
   font-family: MetaMedRoman;
@@ -30,9 +30,11 @@
   font-style: normal;
   font-weight: normal; }
 
-/* SCSS - Variables */
-/* SCSS - Future Proof & Vendor Helpers */
-/* SCSS - Site Layout */
+/* Variables */
+/* Vendor Helpers */
+/* My Helpers */
+/* Component - AppleTV Left Navigation */
+/* Site Layout */
 body {
   font-family: MetaInconsolata, Helvetica sans-serif;
   font-size: 16px;
@@ -130,9 +132,8 @@ body {
           height: 16px;
           float: right;
           content: "\00a0";
-          background-image: url("/resource/sprite.png");
-          background-position: -0px -0px;
-          background-repeat: no-repeat; }
+          /* Default disclosure chevron to right. */
+          /* @include sprite(0,0); */ }
         body section#page nav ul li a:hover span:before {
           background-image: url("/resource/sprite.png");
           background-position: -20px -0px;
