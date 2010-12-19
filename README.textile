@@ -22,6 +22,10 @@ Misc notes on setting up a development environment. Rarely needs to be done, but
   $ sudo port install py26-pygments
   $ bundle install
 
+  1) Use this SCSS bundle. Uses nokigiri which is in Gemfile - https://github.com/kuroir/SCSS.tmbundle
+     cd ~/Library/Application\ Support/TextMate/Bundles
+     git clone git://github.com/kuroir/SCSS.tmbundle.git "SCSS.tmbundle"
+
 Remember to add /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin to my $PATH so that pygmentize can be found. After all things are installed, here are some development helpers. The first is handy to watch SASS changes while writing CSS, the second will create the site and tidy it.
 
   $ sass --scss --watch _sass:_site/resource --style compact --no-cache
