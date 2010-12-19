@@ -205,10 +205,12 @@ body {
     image: url('/resource/bg.gif');
   }
   header#mast {
+    z-index: 100;
     width: 100%;
     height: $hdrheight;
     background-color: #121319;
     border-bottom: 1px solid #303030;
+    position: absolute;
     @include vndr-background-gradient(#1c1e26, #121319);
     @include vndr-box-shadow(0, 1px, 0, #000);
     div.content {
@@ -216,10 +218,18 @@ body {
       margin: 0px auto;
       position: relative;
       section#identity {
-        height: $hdrlogoheight;
         float: left;
+        width: $hdrlogoheight;
+        height: $hdrheight + 2px + 8px;
+        div#avatar {
+          position: fixed;
+          width: $hdrlogoheight;
+          height: $hdrheight + 2px + 8px;
+          background-image: url('/apple-touch-icon-57x57-precomposed.png'); 
+          background-position: left bottom;
+          background-repeat: no-repeat;
+        }
         * { display:block; position:absolute;  }
-        img { top:23px; left:0; }
         div:nth-child(2) { top:21px; left:63px; @include font-metamed(28px); letter-spacing:-1px;  }
         div:nth-child(3) { top:52px; left:64px; font-size:11px; }
       }
@@ -237,14 +247,24 @@ body {
     section#content {
       float: right;
       width: $c8width;
-      padding-top: 20px;
+      padding-top: $hdrheight + 20px;
       @include layout-post
     }
     nav {
+      z-index: 90;
       float: left;
       position: fixed;
       width: $c2width;
-      top: $hdrheight + 22px;
+      top: $hdrheight - $hdrlogoheight + 10px;
+      padding-top: $hdrlogoheight + 10px;
+      div {
+        font-size: 11px;
+        position: absolute;
+        width: $c2width - 64px;
+        top: 5px;
+        left: 64px;
+        a, a:link, a:visited, a:hover, a:active { color:#fff; background-color:none; text-decoration:none; }
+      }
       ul {
         li {
           position: relative; 
