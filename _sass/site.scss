@@ -1,4 +1,6 @@
 
+@charset "UTF-8";
+
    /*---------------------------------------------------------------------------------------------*\ 
   +-------------------------------------------------------------------------------------------------+
   |    \  |        |          / ___|| | __(_) | | ___   _ __   ___| |_                              |
@@ -7,6 +9,7 @@
   |  _|  _| \___| \__| \__,_| |____/|_|\_\|_|_|_||___/_)_| |_|\___|\__|  |  Copyright (c) 2006-2011 |
   |  C o d i n g   t h i n g s   u n d e r   o t h e r   t h i n g s !!  |  By: Ken Collins         |
   +------------------------------------------------------------------------------------------------*/
+
 
 
 /* Fonts */
@@ -56,25 +59,50 @@ $sprite_grid: 20;
 @mixin vndr-background-gradient($from, $to) {
   background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
   background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: -ms-linear-gradient(top, $from, $to);
   background-image: linear-gradient(top, $from, $to);
 }
 
-@mixin vndr-box-shadow($hoff, $voff, $blur, $color) { 
-  -moz-box-shadow: $hoff $voff $blur $color; 
-  -webkit-box-shadow: $hoff $voff $blur $color;
-  box-shadow: $hoff $voff $blur $color;
+@mixin vndr-box-shadow($hoff, $voff, $blur, $color, $type:"") { 
+  -webkit-box-shadow: $hoff $voff $blur $color $type;
+  -moz-box-shadow: $hoff $voff $blur $color $type; 
+  -ms-box-shadow: $hoff $voff $blur $color $type; 
+  box-shadow: $hoff $voff $blur $color $type;
+}
+
+@mixin vndr-box-shadow2($blob) { 
+  -webkit-box-shadow: $blob;
+  -moz-box-shadow: $blob; 
+  -ms-box-shadow: $blob; 
+  box-shadow: $blob;
 }
 
 @mixin vndr-border-radius-all($radius) { 
-  -moz-border-radius: $radius; 
   -webkit-border-radius: $radius; 
+  -moz-border-radius: $radius; 
+  -ms-border-radius: $radius; 
   border-radius: $radius;
 }
 
 @mixin vndr-border-radius($side, $mozside, $radius) { 
-  -moz-border-radius-#{$mozside}: $radius; 
   -webkit-border-#{$side}-radius: $radius; 
+  -moz-border-radius-#{$mozside}: $radius; 
+  -ms-border-radius-#{$mozside}: $radius; 
   border-#{$side}-radius: $radius;
+}
+
+@mixin vndr-box-sizing($model) {
+  -moz-box-sizing: $model;
+  -webkit-box-sizing: $model;
+  -ms-box-sizing: $model;
+  box-sizing: $model;
+}
+
+@mixin vndr-background-clip($behavior) {
+  -webkit-background-clip: $behavior;
+  -moz-background-clip: $behavior;
+  -ms-background-clip: $behavior;
+  background-clip: $behavior;
 }
 
 
@@ -174,6 +202,19 @@ $sprite_grid: 20;
       /*@include global_shadow;*/
     }
   }
+}
+
+
+/* Component - Pre/Code */
+
+@mixin cmpnt-code {
+  width: 100%;
+  @include vndr-box-sizing(border-box);
+  @include vndr-border-radius-all(5px);
+  @include vndr-background-clip(padding-box);
+  @include vndr-box-shadow2(inset 1px 1px 4px 2px rgba(0,0,0,0.8));
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
 }
 
 
@@ -381,7 +422,7 @@ a.button {
 
 /* Pygment Highlight */
 
-.highlight        { background: #ffffff; @include font-metamono(14px); }
+.highlight        { @include font-metamono(14px); }
 .highlight span   { @include font-metamono(14px); }
 .highlight .c     { color: #999988; font-style: italic } /* Comment */
 .highlight .err   { color: #a61717; background-color: #e3d2d2 } /* Error */
@@ -443,4 +484,7 @@ a.button {
 .highlight .vi    { color: #008080 } /* Name.Variable.Instance */
 .highlight .il    { color: #009999 } /* Literal.Number.Integer.Long */
 
-
+div.highlight pre {
+  @include cmpnt-code;
+  padding: 14px;
+}
