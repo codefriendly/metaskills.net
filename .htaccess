@@ -1,4 +1,14 @@
 
+# HTML5 Boilerplate http://html5boilerplate.com/
+<FilesMatch "\.(ttf|otf|eot|woff|font.css)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+# Only works in main http.conf
+AddDefaultCharset utf-8
+AddCharset utf-8 .html .css .js .xml .json .rss
+
 # Rewriting!
 Options +FollowSymlinks
 RewriteEngine On

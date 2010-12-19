@@ -158,7 +158,7 @@ body {
             height: 16px;
             float: right;
             content: "\00a0";
-            @include sprite(0,0);
+            /*@include sprite(0,0);*/
           }
           a:hover span:before {
             @include sprite(1,0);
