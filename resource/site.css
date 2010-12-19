@@ -34,7 +34,9 @@
 /* Vendor Helpers */
 /* My Helpers */
 /* Component - AppleTV Left Navigation */
-/* Site Layout */
+/* Component - Data badge for pubdate */
+/* Layout - Post */
+/* Layout - Default */
 body {
   font-family: MetaInconsolata, Helvetica sans-serif;
   font-size: 16px;
@@ -152,6 +154,52 @@ body {
       body section#page #content p {
         margin: 10px 0;
         line-height: 1em; }
+      body section#page #content article#post header:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+      body section#page #content article#post header h1 {
+        width: 400px;
+        float: left;
+        margin: 0 0 10px 0; }
+      body section#page #content article#post header time {
+        width: 50px;
+        height: 60px;
+        display: block;
+        float: left;
+        padding-bottom: 2px;
+        margin-right: 15px;
+        background-color: #666;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        -moz-box-shadow: 2px 2px 1px black;
+        -webkit-box-shadow: 2px 2px 1px black;
+        box-shadow: 2px 2px 1px black; }
+        body section#page #content article#post header time span {
+          display: block;
+          text-align: center;
+          font-family: MetaMedRoman, sans-serif;
+          font-size: 14px;
+          text-transform: lowercase; }
+        body section#page #content article#post header time span.day {
+          font-size: 26px;
+          line-height: 26px; }
+        body section#page #content article#post header time span.month {
+          font-size: 15px;
+          line-height: 21px; }
+        body section#page #content article#post header time span.year {
+          font-size: 16px;
+          line-height: 19px;
+          background-color: #900;
+          -moz-border-radius-bottomleft: 6px;
+          -webkit-border-bottom-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+          -moz-border-radius-bottomright: 6px;
+          -webkit-border-bottom-right-radius: 6px;
+          border-bottom-right-radius: 6px; }
   body footer#foot {
     width: 100%;
     clear: both;
@@ -159,54 +207,6 @@ body {
     body footer#foot section {
       width: 980px;
       margin: 0px auto; }
-
-/* Article Styles (pubdate/etc) */
-article header:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
-article header time {
-  width: 50px;
-  height: 60px;
-  display: block;
-  float: left;
-  padding-bottom: 2px;
-  margin-right: 15px;
-  background-color: #666;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  -moz-box-shadow: 2px 2px 1px black;
-  -webkit-box-shadow: 2px 2px 1px black;
-  box-shadow: 2px 2px 1px black; }
-  article header time span {
-    display: block;
-    text-align: center;
-    font-family: MetaMedRoman, sans-serif;
-    font-size: 14px;
-    text-transform: lowercase; }
-  article header time span.day {
-    font-size: 26px;
-    line-height: 26px; }
-  article header time span.month {
-    font-size: 15px;
-    line-height: 21px; }
-  article header time span.year {
-    font-size: 16px;
-    line-height: 19px;
-    background-color: #900;
-    -moz-border-radius-bottomleft: 6px;
-    -webkit-border-bottom-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    -moz-border-radius-bottomright: 6px;
-    -webkit-border-bottom-right-radius: 6px;
-    border-bottom-right-radius: 6px; }
-article header h1 {
-  width: 200px;
-  float: left;
-  margin: 0 0 10px 0; }
 
 /* Fancy Buttons - http://lab.simurai.com/css/buttons/*/
 a.button {

@@ -43,27 +43,25 @@ $sprite_grid: 20;
 
 /* Vendor Helpers */
 
-@mixin background-gradient($from, $to) {
+@mixin vndr-background-gradient($from, $to) {
   background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
   background-image: -moz-linear-gradient(top, $from, $to);
   background-image: linear-gradient(top, $from, $to);
 }
 
-@mixin box-shadow($hoff, $voff, $blur, $color) { 
+@mixin vndr-box-shadow($hoff, $voff, $blur, $color) { 
   -moz-box-shadow: $hoff $voff $blur $color; 
   -webkit-box-shadow: $hoff $voff $blur $color;
   box-shadow: $hoff $voff $blur $color;
 }
 
-@mixin global-shadow { @include box-shadow(2px, 2px, 1px, #000); }
-
-@mixin border-radius-all($radius) { 
+@mixin vndr-border-radius-all($radius) { 
   -moz-border-radius: $radius; 
   -webkit-border-radius: $radius; 
   border-radius: $radius;
 }
 
-@mixin border-radius($side, $mozside, $radius) { 
+@mixin vndr-border-radius($side, $mozside, $radius) { 
   -moz-border-radius-#{$mozside}: $radius; 
   -webkit-border-#{$side}-radius: $radius; 
   border-#{$side}-radius: $radius;
@@ -73,12 +71,13 @@ $sprite_grid: 20;
 /* My Helpers */
 
 @mixin clearfix { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+@mixin global_shadow { @include vndr-box-shadow(2px, 2px, 1px, #000); }
 @mixin sprite($x, $y) { background-image: url('/resource/sprite.png'); background-position: -#{$x * $sprite_grid}px -#{$y * $sprite_grid}px; background-repeat: no-repeat; }
 
 
 /* Component - AppleTV Left Navigation */
 
-@mixin appletv_links {
+@mixin cmpnt-appletv_links {
   a, a:link, a:visited, a:hover, a:active { 
     display: block; 
     color: #fff; 
@@ -110,7 +109,7 @@ $sprite_grid: 20;
     width: 100%;
     height: 100%;
     border: 1px solid rgba(0,102,255,0.6);
-    @include border-radius-all(1px);
+    @include vndr-border-radius-all(1px);
     background: none;
   }
   a:hover:after {
@@ -121,8 +120,8 @@ $sprite_grid: 20;
     width: 100%;
     height: 100%;
     border: 2px solid rgba(0,102,255,0.4);
-    @include border-radius-all(2px);
-    @include box-shadow(0, 0, 4px, rgb(0,102,255));
+    @include vndr-border-radius-all(2px);
+    @include vndr-box-shadow(0, 0, 4px, rgb(0,102,255));
     background: none;
   }
   a span:before {
@@ -140,7 +139,52 @@ $sprite_grid: 20;
 }
 
 
-/* Site Layout */
+/* Component - Data badge for pubdate */
+
+@mixin cmpnt-datebadge {
+  time {
+    width: 50px;
+    height: 60px;
+    display: block;
+    float: left;
+    padding-bottom: 2px;
+    margin-right: 15px;
+    background-color: #666;
+    @include vndr-border-radius-all(6px);
+    @include global_shadow;
+    span { display: block; text-align: center; @include font-metamed(14px); text-transform: lowercase; }
+    span.day { font-size: 26px; line-height: 26px;  }
+    span.month { font-size: 15px; line-height: 21px;  }
+    span.year { 
+      font-size: 16px; 
+      line-height: 19px; 
+      background-color: #900;
+      @include vndr-border-radius('bottom-left', 'bottomleft', 6px);
+      @include vndr-border-radius('bottom-right', 'bottomright', 6px);
+    }
+  }
+}
+
+
+/* Layout - Post */
+
+@mixin layout-post {
+  article#post {
+    header {
+      &:after { @include clearfix; }
+      h1 {
+        width: 400px;
+        float: left;
+        margin: 0 0 10px 0;
+      }
+      @include cmpnt-datebadge;
+    }
+    footer { }
+  }
+}
+
+
+/* Layout - Default */
 
 body {
   @include font-inconsolata(16px);
@@ -154,8 +198,8 @@ body {
     height: $hdrheight;
     background-color: #121319;
     border-bottom: 1px solid #303030;
-    @include background-gradient(#1c1e26, #121319);
-    @include box-shadow(0, 1px, 0, #000);
+    @include vndr-background-gradient(#1c1e26, #121319);
+    @include vndr-box-shadow(0, 1px, 0, #000);
     section {
       width: $pagewidth;
       margin: 0px auto;
@@ -187,7 +231,7 @@ body {
       ul {
         li {
           position: relative; 
-          @include appletv_links;
+          @include cmpnt-appletv_links;
         }
       }
     }
@@ -198,6 +242,7 @@ body {
       h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; }
       h1 { font-size: 32px; width: 60%;  }
       p { margin: 10px 0; line-height: 1em; }
+      @include layout-post
     }
   }
   footer#foot {
@@ -213,40 +258,7 @@ body {
 
 
 
-/* Article Styles (pubdate/etc) */
 
-article {
-  header {
-    &:after { @include clearfix; }
-    time {
-      width: 50px;
-      height: 60px;
-      display: block;
-      float: left;
-      padding-bottom: 2px;
-      margin-right: 15px;
-      background-color: #666;
-      @include border-radius-all(6px);
-      @include global-shadow;
-      span { display: block; text-align: center; @include font-metamed(14px); text-transform: lowercase; }
-      span.day { font-size: 26px; line-height: 26px;  }
-      span.month { font-size: 15px; line-height: 21px;  }
-      span.year { 
-        font-size: 16px; 
-        line-height: 19px; 
-        background-color: #900;
-        @include border-radius('bottom-left', 'bottomleft', 6px);
-        @include border-radius('bottom-right', 'bottomright', 6px);
-      }
-    }
-    h1 {
-      width: 200px;
-      float: left;
-      margin: 0 0 10px 0;
-    }
-  }
-  footer { }
-}
 
 
 /* Fancy Buttons - http://lab.simurai.com/css/buttons/*/
