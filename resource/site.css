@@ -1,3 +1,11 @@
+ /*---------------------------------------------------------------------------------------------*\ 
++-------------------------------------------------------------------------------------------------+
+|    \  |        |          / ___|| | __(_) | | ___   _ __   ___| |_                              |
+|   |\/ |   _ \  __|   _` | \___ \| |/ /| | | |/ __| | '_ \ / _ \ __|  |  Meta Theme for Jekyll   |
+|   |   |   __/  |    (   |  ___) |   < | | | |\__ \_| | | |  __/ |_   |  ----------------------- |
+|  _|  _| \___| \__| \__,_| |____/|_|\_\|_|_|_||___/_)_| |_|\___|\__|  |  Copyright (c) 2006-2011 |
+|  C o d i n g   t h i n g s   u n d e r   o t h e r   t h i n g s !!  |  By: Ken Collins         |
++------------------------------------------------------------------------------------------------*/
 /* Fonts */
 /* Pictos Font - Copyright © 2010 Drew Wilson http://www.drewwilson.com - This font is NOT free! */
 @font-face {
@@ -54,35 +62,103 @@ body {
     -moz-box-shadow: 0 1px 0 black;
     -webkit-box-shadow: 0 1px 0 black;
     box-shadow: 0 1px 0 black; }
-    body header#mast section {
+    body header#mast div.content {
       width: 980px;
       margin: 0px auto;
       position: relative; }
-      body header#mast section nav {
+      body header#mast div.content section#identity {
+        height: 57px;
+        float: left; }
+        body header#mast div.content section#identity * {
+          display: block;
+          position: absolute; }
+        body header#mast div.content section#identity img {
+          top: 23px;
+          left: 0; }
+        body header#mast div.content section#identity div:nth-child(2) {
+          top: 21px;
+          left: 63px;
+          font-family: MetaMedRoman, sans-serif;
+          font-size: 28px;
+          letter-spacing: -1px; }
+        body header#mast div.content section#identity div:nth-child(3) {
+          top: 52px;
+          left: 64px;
+          font-size: 11px; }
+      body header#mast div.content nav {
         float: right;
         padding: 10px 0 0 0; }
-        body header#mast section nav li {
+        body header#mast div.content nav li {
           display: inline; }
   body section#page {
     width: 980px;
     margin: 0px auto; }
+    body section#page section#content {
+      float: right;
+      width: 780px;
+      padding-top: 20px; }
+      body section#page section#content h1, body section#page section#content h2, body section#page section#content h3, body section#page section#content h4 {
+        font-family: MetaDroidSans, Helvetica sans-serif;
+        font-size: 32px;
+        line-height: 1em; }
+      body section#page section#content h1 {
+        font-size: 34px;
+        width: 60%; }
+      body section#page section#content p {
+        margin: 10px 0;
+        line-height: 1em; }
+      body section#page section#content article#post header:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+      body section#page section#content article#post header h1 {
+        width: 450px;
+        float: left;
+        margin: 0 0 10px 0; }
+      body section#page section#content article#post header time {
+        width: 50px;
+        height: 64px;
+        display: block;
+        float: left;
+        padding-bottom: 2px;
+        margin-right: 15px;
+        background-color: #666;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        -moz-box-shadow: 2px 2px 1px black;
+        -webkit-box-shadow: 2px 2px 1px black;
+        box-shadow: 2px 2px 1px black; }
+        body section#page section#content article#post header time span {
+          display: block;
+          text-align: center;
+          font-family: MetaMedRoman, sans-serif;
+          font-size: 14px;
+          text-transform: lowercase; }
+        body section#page section#content article#post header time span.day {
+          font-size: 26px;
+          line-height: 26px; }
+        body section#page section#content article#post header time span.month {
+          font-size: 15px;
+          line-height: 21px; }
+        body section#page section#content article#post header time span.year {
+          font-size: 16px;
+          line-height: 19px;
+          background-color: #900;
+          -moz-border-radius-bottomleft: 6px;
+          -webkit-border-bottom-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+          -moz-border-radius-bottomright: 6px;
+          -webkit-border-bottom-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          /*@include global_shadow;*/ }
     body section#page nav {
       float: left;
       position: fixed;
       width: 180px;
-      top: 25px; }
-      body section#page nav header#logo {
-        height: 57px;
-        white-space: nowrap;
-        overflow: visible; }
-        body section#page nav header#logo * {
-          display: block;
-          position: absolute; }
-        body section#page nav header#logo div {
-          font-family: MetaMedRoman, sans-serif;
-          font-size: 28px;
-          top: 7px;
-          left: 65px; }
+      top: 80px; }
       body section#page nav ul li {
         position: relative; }
         body section#page nav ul li a, body section#page nav ul li a:link, body section#page nav ul li a:visited, body section#page nav ul li a:hover, body section#page nav ul li a:active {
@@ -140,66 +216,6 @@ body {
           background-image: url("/resource/sprite.png");
           background-position: -20px -0px;
           background-repeat: no-repeat; }
-    body section#page #content {
-      float: right;
-      width: 780px;
-      padding-top: 20px; }
-      body section#page #content h1, body section#page #content h2, body section#page #content h3, body section#page #content h4 {
-        font-family: MetaDroidSans, Helvetica sans-serif;
-        font-size: 32px;
-        line-height: 1em; }
-      body section#page #content h1 {
-        font-size: 32px;
-        width: 60%; }
-      body section#page #content p {
-        margin: 10px 0;
-        line-height: 1em; }
-      body section#page #content article#post header:after {
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden; }
-      body section#page #content article#post header h1 {
-        width: 400px;
-        float: left;
-        margin: 0 0 10px 0; }
-      body section#page #content article#post header time {
-        width: 50px;
-        height: 60px;
-        display: block;
-        float: left;
-        padding-bottom: 2px;
-        margin-right: 15px;
-        background-color: #666;
-        -moz-border-radius: 6px;
-        -webkit-border-radius: 6px;
-        border-radius: 6px;
-        -moz-box-shadow: 2px 2px 1px black;
-        -webkit-box-shadow: 2px 2px 1px black;
-        box-shadow: 2px 2px 1px black; }
-        body section#page #content article#post header time span {
-          display: block;
-          text-align: center;
-          font-family: MetaMedRoman, sans-serif;
-          font-size: 14px;
-          text-transform: lowercase; }
-        body section#page #content article#post header time span.day {
-          font-size: 26px;
-          line-height: 26px; }
-        body section#page #content article#post header time span.month {
-          font-size: 15px;
-          line-height: 21px; }
-        body section#page #content article#post header time span.year {
-          font-size: 16px;
-          line-height: 19px;
-          background-color: #900;
-          -moz-border-radius-bottomleft: 6px;
-          -webkit-border-bottom-left-radius: 6px;
-          border-bottom-left-radius: 6px;
-          -moz-border-radius-bottomright: 6px;
-          -webkit-border-bottom-right-radius: 6px;
-          border-bottom-right-radius: 6px; }
   body footer#foot {
     width: 100%;
     clear: both;
@@ -213,7 +229,7 @@ a.button {
   /* text */
   text-decoration: none;
   font-family: MetaDroidSans, Helvetica sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1em;
   font-weight: bold;
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;

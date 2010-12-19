@@ -14,18 +14,28 @@
   </head>
   <body>
     <header id="mast">
-      <section>{% include header.html %}</section>
+      <div class="content">
+        <section id="identity" >
+          <img width="57" height="57" src="/apple-touch-icon-57x57-precomposed.png" />
+          <div>MetaSkills.net</div>
+          <div>Coding things under other things!</div>
+        </section>
+        <nav>
+          <ul>
+            <li><a href="#" class="button" data-icon="H">Home</a></li>
+            <li><a href="#" class="button" data-icon="i">Colophon</a></li>
+            <li><a href="#" class="button" data-icon="x">Projects</a></li>
+            <li><a href="http://twitter.com/metaskills" class="button" data-icon="B">Follow</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <section id="page">
       <section id="content">
         {{ content }}
       </section>
       <nav>
-        <header id="logo" >
-          <img width="57" height="57" src="/apple-touch-icon-57x57-precomposed.png" />
-          <div>MetaSkills.net</div>
-        </header>
-        <h2>Categories</h2>
+        <h3>Categories</h3>
         <ul>
           <li><a href="/heuristics">Heuristics</a></li>
           <li><a href="/workflow">Workflow</a></li>

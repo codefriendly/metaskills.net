@@ -12,6 +12,7 @@
 * Consider doing HP with summarize
   http://intridea.com/2010/12/3/summarize-a-ruby-c-binding-for-open-text-summarizer
 * Make sure I have good content types from apache for .ttf true type fonts.
+  "Resource interpreted as font but transferred with MIME type text/html."
 
 
 = Development Setup
@@ -30,7 +31,7 @@ Misc notes on setting up a development environment. Rarely needs to be done, but
      $ git clone git://github.com/kuroir/SCSS.tmbundle.git "SCSS.tmbundle"
   
   3) Clone zepto.
-     $ cd ~/Repositories && git clone git://github.com/madrobby/zepto.git
+     $ cd ~/Repositories && git clone git://github.com/madrobby/zepto.git && cd zepto
      $ git checkout v0.3
 
 

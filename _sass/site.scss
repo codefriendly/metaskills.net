@@ -1,4 +1,14 @@
 
+   /*---------------------------------------------------------------------------------------------*\ 
+  +-------------------------------------------------------------------------------------------------+
+  |    \  |        |          / ___|| | __(_) | | ___   _ __   ___| |_                              |
+  |   |\/ |   _ \  __|   _` | \___ \| |/ /| | | |/ __| | '_ \ / _ \ __|  |  Meta Theme for Jekyll   |
+  |   |   |   __/  |    (   |  ___) |   < | | | |\__ \_| | | |  __/ |_   |  ----------------------- |
+  |  _|  _| \___| \__| \__,_| |____/|_|\_\|_|_|_||___/_)_| |_|\___|\__|  |  Copyright (c) 2006-2011 |
+  |  C o d i n g   t h i n g s   u n d e r   o t h e r   t h i n g s !!  |  By: Ken Collins         |
+  +------------------------------------------------------------------------------------------------*/
+
+
 /* Fonts */
 /* Pictos Font - Copyright © 2010 Drew Wilson http://www.drewwilson.com - This font is NOT free! */
 
@@ -144,7 +154,7 @@ $sprite_grid: 20;
 @mixin cmpnt-datebadge {
   time {
     width: 50px;
-    height: 60px;
+    height: 64px;
     display: block;
     float: left;
     padding-bottom: 2px;
@@ -161,6 +171,7 @@ $sprite_grid: 20;
       background-color: #900;
       @include vndr-border-radius('bottom-left', 'bottomleft', 6px);
       @include vndr-border-radius('bottom-right', 'bottomright', 6px);
+      /*@include global_shadow;*/
     }
   }
 }
@@ -173,7 +184,7 @@ $sprite_grid: 20;
     header {
       &:after { @include clearfix; }
       h1 {
-        width: 400px;
+        width: 450px;
         float: left;
         margin: 0 0 10px 0;
       }
@@ -200,10 +211,18 @@ body {
     border-bottom: 1px solid #303030;
     @include vndr-background-gradient(#1c1e26, #121319);
     @include vndr-box-shadow(0, 1px, 0, #000);
-    section {
+    div.content {
       width: $pagewidth;
       margin: 0px auto;
       position: relative;
+      section#identity {
+        height: $hdrlogoheight;
+        float: left;
+        * { display:block; position:absolute;  }
+        img { top:23px; left:0; }
+        div:nth-child(2) { top:21px; left:63px; @include font-metamed(28px); letter-spacing:-1px;  }
+        div:nth-child(3) { top:52px; left:64px; font-size:11px; }
+      }
       nav {
         float: right;
         padding: 10px 0 0 0;
@@ -215,19 +234,17 @@ body {
   section#page { 
     width: $pagewidth; 
     margin: 0px auto;
+    section#content {
+      float: right;
+      width: $c8width;
+      padding-top: 20px;
+      @include layout-post
+    }
     nav {
       float: left;
       position: fixed;
       width: $c2width;
-      top: $hdrheight - 45px;
-      header#logo {
-        height: $hdrlogoheight;
-        white-space: nowrap;
-        overflow: visible;
-        * { display:block; position:absolute; }
-        img {  }
-        div { @include font-metamed(28px); top:7px; left:65px; }
-      }
+      top: $hdrheight + 22px;
       ul {
         li {
           position: relative; 
@@ -235,15 +252,11 @@ body {
         }
       }
     }
-    #content {
-      float: right;
-      width: $c8width;
-      padding-top: 20px;
-      h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; }
-      h1 { font-size: 32px; width: 60%;  }
-      p { margin: 10px 0; line-height: 1em; }
-      @include layout-post
-    }
+    h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; }
+    h1 { font-size: 34px; width: 60%;  }
+    h2 { font-size: 30px; }
+    h3 { font-size: 18px; line-height:1.3em; border-top: 1px dashed rgba(255,255,255,0.2); border-bottom: 1px dashed rgba(255,255,255,0.2); margin-bottom:5px; }
+    p { margin: 10px 0; line-height: 1em; }
   }
   footer#foot {
     width: 100%;
