@@ -252,8 +252,9 @@ body {
       border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
       margin-bottom: 5px; }
     body section#page p {
-      margin: 10px 0;
-      line-height: 1em; }
+      font-size: 17px;
+      margin: 15px 0;
+      line-height: 1.25em; }
   body footer#foot {
     width: 100%;
     clear: both;
@@ -373,7 +374,7 @@ a.button {
 
 /* Comment.Preproc */
 .highlight .c1 {
-  color: #999988;
+  color: #c00ed1;
   font-style: italic; }
 
 /* Comment.Single */

@@ -63,11 +63,11 @@ $sprite_grid: 20;
   background-image: linear-gradient(top, $from, $to);
 }
 
-@mixin vndr-box-shadow($hoff, $voff, $blur, $color, $type:"") { 
-  -webkit-box-shadow: $hoff $voff $blur $color $type;
-  -moz-box-shadow: $hoff $voff $blur $color $type; 
-  -ms-box-shadow: $hoff $voff $blur $color $type; 
-  box-shadow: $hoff $voff $blur $color $type;
+@mixin vndr-box-shadow($hoff, $voff, $blur, $color) { 
+  -webkit-box-shadow: $hoff $voff $blur $color;
+  -moz-box-shadow: $hoff $voff $blur $color; 
+  -ms-box-shadow: $hoff $voff $blur $color; 
+  box-shadow: $hoff $voff $blur $color;
 }
 
 @mixin vndr-box-shadow2($blob) { 
@@ -252,7 +252,7 @@ body {
     background-color: #121319;
     border-bottom: 1px solid #303030;
     position: absolute;
-    @include vndr-background-gradient(#1c1e26, #121319);
+    @include vndr-background-gradient(#1c1e26, #0a0a0a); /* #1c1e26, #121319 */
     @include vndr-box-shadow(0, 1px, 0, #000);
     div.content {
       width: $pagewidth;
@@ -289,6 +289,7 @@ body {
       float: right;
       width: $c8width;
       padding-top: $hdrheight + 20px;
+      padding-bottom: 20px;
       @include layout-post
     }
     nav {
@@ -317,12 +318,23 @@ body {
     h1 { font-size: 34px; width: 60%;  }
     h2 { font-size: 30px; }
     h3 { font-size: 18px; line-height:1.3em; border-top: 1px dashed rgba(255,255,255,0.2); border-bottom: 1px dashed rgba(255,255,255,0.2); margin-bottom:5px; }
-    p { margin: 10px 0; line-height: 1em; }
+    p { font-size: 17px; margin: 15px 0; line-height: 1.25em; }
   }
   footer#foot {
+    &:before {
+      display: block;
+      content: "\00a0";
+      width: 100%;
+      height: 37px - 10px;
+      background-image: url('/resource/footer.png'); 
+      background-position: 0px -10px; 
+      background-repeat: repeat-x;
+      background-color: #000;
+      @include vndr-box-shadow(0, 5px, 5px, #000);
+    }
     width: 100%;
     clear: both;
-    background-color: black;
+    background-color: #0a0a0a;
     section {
       width: $pagewidth;
       margin: 0px auto;
