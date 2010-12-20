@@ -255,10 +255,10 @@ $sprite_grid: 20;
       .dsq-comment-header { }
       .dsq-comment-body {
         position: relative;
-      	padding: 0 15px;
-      	margin: 5px 0 0 0;
-      	color: #fff;
-      	font-size: 14px;
+        padding: 0 15px;
+        margin: 5px 0 0 0;
+        color: #fff;
+        font-size: 14px;
         @include vndr-border-radius-all(10px);
         @include vndr-background-clip(border-box);
         @include vndr-background-origin(border-box);
@@ -268,32 +268,32 @@ $sprite_grid: 20;
         /* Larger Triangle */
         &:before {
           content: "";
-        	display: block;
-        	position: absolute;
-        	width: 0;
-        	height: 0;
-        	top: -#{($dsq-bubsize * 2) + ($dsq-brdwdth / 2)};
-        	right: auto;
-        	bottom: auto;
-        	left: $dsq-bubleft;
-        	border-top-color: $dsq-brdclr;
-        	border: $dsq-bubsize solid transparent;
-        	border-bottom-color: $dsq-brdclr;
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          top: -#{($dsq-bubsize * 2) + ($dsq-brdwdth / 2)};
+          right: auto;
+          bottom: auto;
+          left: $dsq-bubleft;
+          border-top-color: $dsq-brdclr;
+          border: $dsq-bubsize solid transparent;
+          border-bottom-color: $dsq-brdclr;
         }
         /* Smaller Triangle */
         &:after {
           content: "";
-        	display: block;
-        	position:absolute;
-        	width: 0;
-        	height: 0;
-        	top: -#{($dsq-bubsize * 2) - ($dsq-brdwdth * 2)};
-        	right: auto;
-        	bottom: auto;
-        	left: $dsq-bubleft + $dsq-brdwdth;
-        	border-top-color: $dsq-gradtop;
-        	border: #{$dsq-bubsize - $dsq-brdwdth} solid transparent;
-        	border-bottom-color: $dsq-gradtop;
+          display: block;
+          position:absolute;
+          width: 0;
+          height: 0;
+          top: -#{($dsq-bubsize * 2) - ($dsq-brdwdth * 2)};
+          right: auto;
+          bottom: auto;
+          left: $dsq-bubleft + $dsq-brdwdth;
+          border-top-color: $dsq-gradtop;
+          border: #{$dsq-bubsize - $dsq-brdwdth} solid transparent;
+          border-bottom-color: $dsq-gradtop;
         }
       }
       .dsq-editedtxt { display:none; }
@@ -447,75 +447,75 @@ body {
 
 a.button {
   /* text */
-	text-decoration: none;
-	@include font-droidsans(12px);
-	line-height: 1em;
-	font-weight: bold;
-	text-shadow: rgba(255,255,255,.5) 0 1px 0;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
+  text-decoration: none;
+  @include font-droidsans(12px);
+  line-height: 1em;
+  font-weight: bold;
+  text-shadow: rgba(255,255,255,.5) 0 1px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   /* layout */
-	padding: .5em .6em .4em .6em;
-	display: inline-block;
-	position: relative;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
+  padding: .5em .6em .4em .6em;
+  display: inline-block;
+  position: relative;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   /* effects */
-	border-top: 1px solid rgba(255,255,255,0.8);
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-	background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url('/resource/noise.png');
-	background-image: -moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%), url('/resource/noise.png');
-	background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url('/resource/noise.png');
-	-webkit-transition: background .2s ease-in-out;
-	-moz-transition: background .2s ease-in-out;
-	transition: background .2s ease-in-out;
+  border-top: 1px solid rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url('/resource/noise.png');
+  background-image: -moz-radial-gradient(top, ellipse cover, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%), url('/resource/noise.png');
+  background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0.7) )), url('/resource/noise.png');
+  -webkit-transition: background .2s ease-in-out;
+  -moz-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
   /* color */
-	color: #000 !important;
-	background-color: hsl(0, 0%, 50%);
-	-webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
-						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
-						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
-	-moz-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
-						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
-						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
-	box-shadow:	inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
-						hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
-						rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
-	/* icon usage */
-	&:before {
-	  @include font-pictos(1.2em);
-	  font-weight: 100;
-	  line-height: 0; 
+  color: #000 !important;
+  background-color: hsl(0, 0%, 50%);
+  -webkit-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+            hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+            rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+  -moz-box-shadow: inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+            hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+            rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+  box-shadow:  inset rgba(255,254,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.15) 0 -0.1em .3em, /* inner shadow */ 
+            hsl(0, 0%, 60%) 0 .1em 3px, hsl(0, 0%, 45%) 0 .3em 1px, /* color border */
+            rgba(0,0,0,0.2) 0 .5em 5px; /* drop shadow */
+  /* icon usage */
+  &:before {
+    @include font-pictos(1.2em);
+    font-weight: 100;
+    line-height: 0; 
     content: attr(data-icon); 
     margin-right: 0.2em;
-	}
-	/* states */
-	&:hover {
-	  background-color: hsl(0, 0%, 83%);
-	}
-	&:active {
-  	background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url('/resource/noise.png');
-  	background-image: -moz-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url('/resource/noise.png');
-  	background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url('/resource/noise.png');
-  	-webkit-box-shadow: inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
-  							rgba(0,0,0,0.4) 0 .1em 1px, /* border */
-  							rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
-  	-moz-box-shadow: inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
-  							rgba(0,0,0,0.4) 0 .1em 1px, /* border */
-  							rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
-  	box-shadow: inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
-  							rgba(0,0,0,0.4) 0 .1em 1px, /* border */
-  							rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
-  	-webkit-transform: translateY(.2em);
-  	-moz-transform: translateY(.2em);
-  	transform: translateY(.2em);
+  }
+  /* states */
+  &:hover {
+    background-color: hsl(0, 0%, 83%);
+  }
+  &:active {
+    background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url('/resource/noise.png');
+    background-image: -moz-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url('/resource/noise.png');
+    background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(255,255,255,0) ), to( rgba(255,255,255,0) )), url('/resource/noise.png');
+    -webkit-box-shadow: inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
+                rgba(0,0,0,0.4) 0 .1em 1px, /* border */
+                rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
+    -moz-box-shadow: inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
+                rgba(0,0,0,0.4) 0 .1em 1px, /* border */
+                rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
+    box-shadow: inset rgba(255,255,255,0.6) 0 0.3em .3em, inset rgba(0,0,0,0.2) 0 -0.1em .3em, /* inner shadow */ 
+                rgba(0,0,0,0.4) 0 .1em 1px, /* border */
+                rgba(0,0,0,0.2) 0 .2em 6px; /* drop shadow */
+    -webkit-transform: translateY(.2em);
+    -moz-transform: translateY(.2em);
+    transform: translateY(.2em);
   }
   &:focus {
-  	outline: none;
-  	color: rgba(254,255,255,0.9) !important;
-  	text-shadow: rgba(0,0,0,0.2) 0 1px 2px;
+    outline: none;
+    color: rgba(254,255,255,0.9) !important;
+    text-shadow: rgba(0,0,0,0.2) 0 1px 2px;
   }
 }
 
