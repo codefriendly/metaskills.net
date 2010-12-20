@@ -105,12 +105,33 @@ $sprite_grid: 20;
   background-clip: $behavior;
 }
 
+@mixin vndr-background-origin($behavior) {
+  -webkit-background-origin: $behavior;
+  -moz-background-origin: $behavior;
+  -ms-background-origin: $behavior;
+  background-origin: $behavior;
+}
+
 
 /* My Helpers */
 
 @mixin clearfix { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 @mixin global_shadow { @include vndr-box-shadow(2px, 2px, 1px, #000); }
 @mixin sprite($x, $y) { background-image: url('/resource/sprite.png'); background-position: -#{$x * $sprite_grid}px -#{$y * $sprite_grid}px; background-repeat: no-repeat; }
+
+
+/* Component - Global Links */
+
+@mixin cmpnt-links {
+  a, a:link, a:visited, a:hover, a:active { 
+    color: rgb(255,255,102);
+    background-color: none; 
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255,255,255,0.7); 
+  }
+  a:hover { border-bottom: none;}
+  a:active { color: rgb(0,216,60); }
+}
 
 
 /* Component - AppleTV Left Navigation */
@@ -126,7 +147,6 @@ $sprite_grid: 20;
     letter-spacing: 1px;
     padding: 5px 8px 6px 12px;
     border: 1px solid rgba(0,0,0,0);
-    /*span { display:none; }*/
   }
   a:hover {
     border: 1px solid rgba(0,0,0,1.0);
@@ -218,7 +238,79 @@ $sprite_grid: 20;
 }
 
 
+/* Component - Disqus Formatting */
+
+@mixin cmpnt-disqus {
+  footer#disqus_thread {
+    a, a:link, a:visited, a:hover, a:active { 
+      color: rgb(255,255,102);
+      background-color: none; 
+      text-decoration: none;
+      border-bottom: none;
+      font-weight: bold;
+    }
+    #dsq-toolbar-dropdown-wrap h4 { font-size:14px; }
+    #dsq-comments-title { margin-top:15px; }
+    .dsq-full-comment {
+      .dsq-comment-header { }
+      .dsq-comment-body {
+        position: relative;
+      	padding: 0 15px;
+      	margin: 5px 0 0 0;
+      	color: #fff;
+      	font-size: 14px;
+        @include vndr-border-radius-all(10px);
+        @include vndr-background-clip(border-box);
+        @include vndr-background-origin(border-box);
+        @include vndr-background-gradient($dsq-gradtop, $dsq-gradbtm);
+        @include vndr-box-shadow(2px, 4px, 5px, #000);
+        border: $dsq-brdwdth solid $dsq-brdclr;
+        /* Larger Triangle */
+        &:before {
+          content: "";
+        	display: block;
+        	position: absolute;
+        	width: 0;
+        	height: 0;
+        	top: -#{($dsq-bubsize * 2) + ($dsq-brdwdth / 2)};
+        	right: auto;
+        	bottom: auto;
+        	left: $dsq-bubleft;
+        	border-top-color: $dsq-brdclr;
+        	border: $dsq-bubsize solid transparent;
+        	border-bottom-color: $dsq-brdclr;
+        }
+        /* Smaller Triangle */
+        &:after {
+          content: "";
+        	display: block;
+        	position:absolute;
+        	width: 0;
+        	height: 0;
+        	top: -#{($dsq-bubsize * 2) - ($dsq-brdwdth * 2)};
+        	right: auto;
+        	bottom: auto;
+        	left: $dsq-bubleft + $dsq-brdwdth;
+        	border-top-color: $dsq-gradtop;
+        	border: #{$dsq-bubsize - $dsq-brdwdth} solid transparent;
+        	border-bottom-color: $dsq-gradtop;
+        }
+      }
+      .dsq-editedtxt { display:none; }
+      .dsq-comment-footer { }
+    }
+  }
+}
+
+
 /* Layout - Post */
+
+$dsq-brdclr: #0a0a0a;
+$dsq-brdwdth: 4px;
+$dsq-gradtop: #1c1e26;
+$dsq-gradbtm: #0a0a0a;
+$dsq-bubsize: 15px;
+$dsq-bubleft: 40px;
 
 @mixin layout-post {
   article#post {
@@ -232,7 +324,7 @@ $sprite_grid: 20;
       }
       @include cmpnt-datebadge;
     }
-    footer { }
+    @include cmpnt-disqus;
   }
 }
 
@@ -284,6 +376,7 @@ body {
     }
   }
   section#page { 
+    @include cmpnt-links;
     width: $pagewidth; 
     margin: 0px auto;
     section#content {
@@ -443,6 +536,7 @@ $tmc_s: rgb(0,216,60);
 $tmc_c: rgb(249,204,177);
 $tmc_i: rgb(0,136,254);
 $tmc_p: rgb(192,14,209);
+$tmc_y: rgb(255,255,102);
 
 .highlight        { @include font-metamono(14px); }
 .highlight span   { @include font-metamono(14px); }

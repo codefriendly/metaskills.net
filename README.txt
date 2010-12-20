@@ -13,7 +13,8 @@
   http://intridea.com/2010/12/3/summarize-a-ruby-c-binding-for-open-text-summarizer
 * Make sure I have good content types from apache for .ttf true type fonts.
   "Resource interpreted as font but transferred with MIME type text/html."
-
+* Post Launch
+  Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
 
 = Development Setup
 
