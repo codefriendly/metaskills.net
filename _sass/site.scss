@@ -259,7 +259,10 @@ $dsq-bubleft: 50px;
     #dsq-toolbar-dropdown-wrap h4 { font-size:14px; }
     #dsq-comments-title { margin-top:15px; }
     .dsq-full-comment {
-      .dsq-comment-header { }
+      .dsq-comment-header {
+        .dsq-header-avatar { padding-left:8px; }
+        .dsq-comment-cite { @include font-metamed(16px); }
+      }
       .dsq-comment-body {
         position: relative;
         padding: 0 15px;
@@ -302,8 +305,8 @@ $dsq-bubleft: 50px;
           border: #{$dsq-bubsize - $dsq-brdwdth} solid transparent;
           border-bottom-color: $dsq-gradtop;
         }
+        .dsq-editedtxt { display:none; }
       }
-      .dsq-editedtxt { display:none; }
       .dsq-comment-footer { }
     }
   }
