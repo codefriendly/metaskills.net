@@ -42,9 +42,11 @@
 /* Variables */
 /* Vendor Helpers */
 /* My Helpers */
+/* Component - Global Links */
 /* Component - AppleTV Left Navigation */
 /* Component - Data badge for pubdate */
 /* Component - Pre/Code */
+/* Component - Disqus Formatting */
 /* Layout - Post */
 /* Layout - Default */
 body {
@@ -105,6 +107,15 @@ body {
   body section#page {
     width: 980px;
     margin: 0px auto; }
+    body section#page a, body section#page a:link, body section#page a:visited, body section#page a:hover, body section#page a:active {
+      color: #ffff66;
+      background-color: none;
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.7); }
+    body section#page a:hover {
+      border-bottom: none; }
+    body section#page a:active {
+      color: #00d83c; }
     body section#page section#content {
       float: right;
       width: 780px;
@@ -162,6 +173,73 @@ body {
           -ms-border-radius-bottomright: 6px;
           border-bottom-right-radius: 6px;
           /*@include global_shadow;*/ }
+      body section#page section#content article#post footer#disqus_thread a, body section#page section#content article#post footer#disqus_thread a:link, body section#page section#content article#post footer#disqus_thread a:visited, body section#page section#content article#post footer#disqus_thread a:hover, body section#page section#content article#post footer#disqus_thread a:active {
+        color: #ffff66;
+        background-color: none;
+        text-decoration: none;
+        border-bottom: none;
+        font-weight: bold; }
+      body section#page section#content article#post footer#disqus_thread #dsq-toolbar-dropdown-wrap h4 {
+        font-size: 14px; }
+      body section#page section#content article#post footer#disqus_thread #dsq-comments-title {
+        margin-top: 15px; }
+      body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-comment-body {
+        position: relative;
+        padding: 0 15px;
+        margin: 5px 0 0 0;
+        color: #fff;
+        font-size: 14px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-background-clip: border-box;
+        -moz-background-clip: border-box;
+        -ms-background-clip: border-box;
+        background-clip: border-box;
+        -webkit-background-origin: border-box;
+        -moz-background-origin: border-box;
+        -ms-background-origin: border-box;
+        background-origin: border-box;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#1c1e26), to(#0a0a0a));
+        background-image: -moz-linear-gradient(top, #1c1e26, #0a0a0a);
+        background-image: -ms-linear-gradient(top, #1c1e26, #0a0a0a);
+        background-image: linear-gradient(top, #1c1e26, #0a0a0a);
+        -webkit-box-shadow: 2px 4px 5px black;
+        -moz-box-shadow: 2px 4px 5px black;
+        -ms-box-shadow: 2px 4px 5px black;
+        box-shadow: 2px 4px 5px black;
+        border: 4px solid #0a0a0a;
+        /* Larger Triangle */
+        /* Smaller Triangle */ }
+        body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-comment-body:before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          top: -32px;
+          right: auto;
+          bottom: auto;
+          left: 50px;
+          border-top-color: #0a0a0a;
+          border: 15px solid transparent;
+          border-bottom-color: #0a0a0a; }
+        body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-comment-body:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          top: -22px;
+          right: auto;
+          bottom: auto;
+          left: 54px;
+          border-top-color: #1c1e26;
+          border: 11px solid transparent;
+          border-bottom-color: #1c1e26; }
+      body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-editedtxt {
+        display: none; }
     body section#page nav {
       z-index: 90;
       float: left;
@@ -191,8 +269,7 @@ body {
           font-weight: 100;
           letter-spacing: 1px;
           padding: 5px 8px 6px 12px;
-          border: 1px solid rgba(0, 0, 0, 0);
-          /*span { display:none; }*/ }
+          border: 1px solid rgba(0, 0, 0, 0); }
         body section#page nav ul li a:hover {
           border: 1px solid black;
           background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(0.43, #313131), color-stop(0.44, black), color-stop(0.82, black), color-stop(0.83, #0b0b0b), color-stop(1, #393939));
