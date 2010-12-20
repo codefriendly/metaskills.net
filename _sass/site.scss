@@ -228,6 +228,7 @@ $sprite_grid: 20;
         width: 450px;
         float: left;
         margin: 0 0 10px 0;
+        text-shadow: 2px 2px 1px #000;
       }
       @include cmpnt-datebadge;
     }
@@ -318,7 +319,7 @@ body {
     h1 { font-size: 34px; width: 60%;  }
     h2 { font-size: 30px; }
     h3 { font-size: 18px; line-height:1.3em; border-top: 1px dashed rgba(255,255,255,0.2); border-bottom: 1px dashed rgba(255,255,255,0.2); margin-bottom:5px; }
-    p { font-size: 17px; margin: 15px 0; line-height: 1.25em; }
+    p { margin: 15px 0; @include font-droidsans(16px); line-height: 1.4em; }
   }
   footer#foot {
     &:before {
@@ -335,6 +336,8 @@ body {
     width: 100%;
     clear: both;
     background-color: #0a0a0a;
+    z-index: 110;
+    position: relative;
     section {
       width: $pagewidth;
       margin: 0px auto;
