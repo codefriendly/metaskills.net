@@ -71,6 +71,20 @@ body {
     -moz-box-shadow: 0 1px 0 black;
     -ms-box-shadow: 0 1px 0 black;
     box-shadow: 0 1px 0 black; }
+    body header#mast:before {
+      display: block;
+      content: "\00a0";
+      width: 100%;
+      height: 8px;
+      background-image: url("/resource/footer.png");
+      background-position: left top;
+      background-repeat: repeat-x;
+      background-color: #000;
+      border-bottom: 1px solid #000;
+      -webkit-box-shadow: 0 1px 0 #303030;
+      -moz-box-shadow: 0 1px 0 #303030;
+      -ms-box-shadow: 0 1px 0 #303030;
+      box-shadow: 0 1px 0 #303030; }
     body header#mast div.content {
       width: 980px;
       margin: 0px auto;
@@ -78,11 +92,11 @@ body {
       body header#mast div.content section#identity {
         float: left;
         width: 57px;
-        height: 80px; }
+        height: 70px; }
         body header#mast div.content section#identity div#avatar {
           position: fixed;
           width: 57px;
-          height: 80px;
+          height: 70px;
           background-image: url("/apple-touch-icon-57x57-precomposed.png");
           background-position: left bottom;
           background-repeat: no-repeat; }
@@ -90,13 +104,13 @@ body {
           display: block;
           position: absolute; }
         body header#mast div.content section#identity div:nth-child(2) {
-          top: 21px;
+          top: 11px;
           left: 63px;
           font-family: MetaMedRoman, sans-serif;
           font-size: 28px;
           letter-spacing: -1px; }
         body header#mast div.content section#identity div:nth-child(3) {
-          top: 52px;
+          top: 42px;
           left: 64px;
           font-size: 11px; }
       body header#mast div.content nav {
@@ -183,6 +197,11 @@ body {
         font-size: 14px; }
       body section#page section#content article#post footer#disqus_thread #dsq-comments-title {
         margin-top: 15px; }
+      body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-comment-header .dsq-header-avatar {
+        padding-left: 8px; }
+      body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-comment-header .dsq-comment-cite {
+        font-family: MetaMedRoman, sans-serif;
+        font-size: 16px; }
       body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-comment-body {
         position: relative;
         padding: 0 15px;
@@ -238,8 +257,8 @@ body {
           border-top-color: #1c1e26;
           border: 11px solid transparent;
           border-bottom-color: #1c1e26; }
-      body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-editedtxt {
-        display: none; }
+        body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-comment-body .dsq-editedtxt {
+          display: none; }
     body section#page nav {
       z-index: 90;
       float: left;

@@ -13,8 +13,11 @@
   http://intridea.com/2010/12/3/summarize-a-ruby-c-binding-for-open-text-summarizer
 * Make sure I have good content types from apache for .ttf true type fonts.
   "Resource interpreted as font but transferred with MIME type text/html."
-* Post Launch
+
+* Blog Post On Move!
   Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
+  Talk about zepto with "this" and "that" (backbone) examples.
+
 
 = Development Setup
 
@@ -55,9 +58,9 @@ After all things are installed, here are some development helpers.
 
 = License
 
-All blog content and images are Copyright (c) 2006-2011, Ken Collins. 
+Blog content and design are Copyright (c) 2006-2011, Ken Collins. 
 Use is strictly forbidden unless consent is given!
-Only jekyll plugins and helpers are MIT Licensed. 
+Only jekyll plugins and helpers are MIT Licensed.
 
 
 
