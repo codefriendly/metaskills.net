@@ -50,7 +50,41 @@
       </nav>
     </section>
     <footer id="foot">
-  	  <section id="footer">{% include footer.html %}</section>
+  	  <section id="footer">
+        <section id="recentposts">
+          <h3>Recent Posts</h3>
+          {% for post in site.posts limit:3 %}
+            <article>
+              <h4>{{ post.title }}</h4> 
+              <p><a href="{{ post.url }}">{{ post.content | strip_html | truncatewords:30 }}</a></p>
+            </article>
+          {% endfor %}
+        </section>
+        <section id="badges">
+          <!-- <h3>Meta Info</h3> -->
+          <ul>
+            <li><a id="badge_ios" href="http://developer.apple.com/"></a></li>
+            <li><a id="badge_railscore" href="http://contributors.rubyonrails.org/contributors/ken-collins/commits"></a></li>
+            <li><a id="badge_pragalumni" href="http://alumni.pragmaticstudio.com/users/128"></a></li>
+            <li><a id="badge_linkedin" href="http://www.linkedin.com/in/metaskills"></a></li>
+            <li><a id="badge_slideshare" href="http://www.slideshare.net/metaskills"></a></li>
+            <li><a id="badge_757rb" href="http://757rb.org/"></a></li>
+          </ul>
+        </section>
+        <section id="blogroll">
+          <h3>Blogroll</h3>
+          <ul>
+            <li><a href="http://ryan.mcgeary.org/">Ryan McGeary</a></li>
+            <li><a href="http://www.linkedin.com/in/imbriaco">Mark Imbriaco</a></li>
+            <li><a href="http://mwhuss.com/">Marshall Huss</a></li>
+            <li><a href="http://fun3d.larc.nasa.gov/">Bil Kleb</a></li>
+            <li><a href="http://huikau.com/">Mike McKinney</a></li>
+            <li><a href="http://www.candescence.org/">Geoff Parsons</a></li>
+            <li><a href="http://www.wearetitans.net/">Brennan Dunn</a></li>
+            <li><a href="http://techiferous.com/">Wyatt Greene</a></li>
+          </ul>
+        </section>
+  	  </section>
   	</footer>
   </body>
 </html>

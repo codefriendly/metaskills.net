@@ -370,10 +370,25 @@ body {
         visibility: hidden; }
       body footer#foot section#footer h3 {
         margin-bottom: 10px; }
-      body footer#foot section#footer section#foottbd {
+      body footer#foot section#footer section#recentposts {
         float: left;
         width: 580px;
         margin-right: 20px; }
+        body footer#foot section#footer section#recentposts article {
+          margin-bottom: 10px; }
+          body footer#foot section#footer section#recentposts article a, body footer#foot section#footer section#recentposts article a:link, body footer#foot section#footer section#recentposts article a:visited, body footer#foot section#footer section#recentposts article a:hover, body footer#foot section#footer section#recentposts article a:active {
+            color: #fff;
+            background-color: none;
+            text-decoration: none;
+            border: none; }
+          body footer#foot section#footer section#recentposts article h4 {
+            font-size: 14px;
+            width: 70%; }
+          body footer#foot section#footer section#recentposts article p {
+            font-size: 12px;
+            margin-top: 0px; }
+          body footer#foot section#footer section#recentposts article a:hover {
+            color: #ffff66; }
       body footer#foot section#footer section#badges {
         float: left;
         width: 180px;
@@ -430,6 +445,7 @@ body {
         body footer#foot section#footer section#blogroll a:hover {
           color: #ffff66; }
         body footer#foot section#footer section#blogroll ul {
+          font-size: 14px;
           padding-left: 18px; }
         body footer#foot section#footer section#blogroll ul li {
           margin: 2px 0; }
@@ -447,6 +463,10 @@ body {
     line-height: 1.3em;
     border-top: 1px dashed rgba(255, 255, 255, 0.2);
     border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    margin-bottom: 5px; }
+  body h4 {
+    font-size: 16px;
+    line-height: 1.3em;
     margin-bottom: 5px; }
   body p {
     margin: 15px 0;
