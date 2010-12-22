@@ -117,8 +117,8 @@ $sprite_grid: 20;
 
 @mixin clearfix { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 @mixin global_shadow { @include vndr-box-shadow(2px, 2px, 1px, #000); }
-@mixin sprite($x, $y) { background-image: url('/resource/sprite.png'); background-position: -#{$x * $sprite_grid}px -#{$y * $sprite_grid}px; background-repeat: no-repeat; }
-
+@mixin sprite($y, $x) { background-image: url('/resource/sprite.png'); background-position: -#{$x * $sprite_grid}px -#{$y * $sprite_grid}px; background-repeat: no-repeat; }
+@mixin resetanchors { a, a:link, a:visited, a:hover, a:active { color:#fff; background-color:none; text-decoration:none; border:none; } }
 
 /* Component - Global Links */
 
@@ -192,7 +192,7 @@ $sprite_grid: 20;
     /* @include sprite(0,0); */
   }
   a:hover span:before {
-    @include sprite(1,0);
+    @include sprite(0,1);
   }
 }
 
@@ -313,6 +313,30 @@ $dsq-bubleft: 50px;
 }
 
 
+/* Component - Footer Badges */
+
+@mixin cmpnt-badges {
+  section#honors {
+    @include resetanchors;
+    ul { list-style:none; }
+    a { display:block; width:180px; margin-bottom:12px; }
+    #badge_ios { height:32px; @include sprite(1,0); }
+    #badge_railscore { height:32px; @include sprite(3,0); }
+    #badge_pragalumni { height:58px; @include sprite(5,0); }
+    #badge_linkedin { height:23px; @include sprite(8,0); }
+    #badge_slideshare { height:27px; @include sprite(10,0); }
+    #badge_757rb { height:32px; @include sprite(12,0); }
+  }
+}
+
+@mixin cmpnt-blogroll {
+  section#blogroll {
+    
+  }
+}
+
+
+
 /* Layout - Post */
 
 @mixin layout-post {
@@ -414,7 +438,7 @@ body {
         width: $c2width - 64px;
         top: 5px;
         left: 64px;
-        a, a:link, a:visited, a:hover, a:active { color:#fff; background-color:none; text-decoration:none; }
+        @include resetanchors;
       }
       ul {
         li {
@@ -422,12 +446,7 @@ body {
           @include cmpnt-appletv_links;
         }
       }
-    }
-    h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; }
-    h1 { font-size: 34px; width: 60%;  }
-    h2 { font-size: 30px; }
-    h3 { font-size: 18px; line-height:1.3em; border-top: 1px dashed rgba(255,255,255,0.2); border-bottom: 1px dashed rgba(255,255,255,0.2); margin-bottom:5px; }
-    p { margin: 15px 0; @include font-droidsans(16px); line-height: 1.4em; }
+    }    
   }
   footer#foot {
     &:before {
@@ -446,11 +465,18 @@ body {
     background-color: #0a0a0a;
     z-index: 110;
     position: relative;
-    section {
+    section#footer {
       width: $pagewidth;
       margin: 0px auto;
+      @include cmpnt-badges;
+      @include cmpnt-blogroll;
     }
   }
+  h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; }
+  h1 { font-size: 34px; width: 60%;  }
+  h2 { font-size: 30px; }
+  h3 { font-size: 18px; line-height:1.3em; border-top: 1px dashed rgba(255,255,255,0.2); border-bottom: 1px dashed rgba(255,255,255,0.2); margin-bottom:5px; }
+  p { margin: 15px 0; @include font-droidsans(16px); line-height: 1.4em; }
 }
 
 

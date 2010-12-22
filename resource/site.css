@@ -47,6 +47,7 @@
 /* Component - Data badge for pubdate */
 /* Component - Pre/Code */
 /* Component - Disqus Formatting */
+/* Component - Footer Badges */
 /* Layout - Post */
 /* Layout - Default */
 body {
@@ -275,7 +276,8 @@ body {
         body section#page nav div a, body section#page nav div a:link, body section#page nav div a:visited, body section#page nav div a:hover, body section#page nav div a:active {
           color: #fff;
           background-color: none;
-          text-decoration: none; }
+          text-decoration: none;
+          border: none; }
       body section#page nav ul li {
         position: relative; }
         body section#page nav ul li a, body section#page nav ul li a:link, body section#page nav ul li a:visited, body section#page nav ul li a:hover, body section#page nav ul li a:active {
@@ -335,26 +337,6 @@ body {
           background-image: url("/resource/sprite.png");
           background-position: -20px -0px;
           background-repeat: no-repeat; }
-    body section#page h1, body section#page h2, body section#page h3, body section#page h4 {
-      font-family: MetaDroidSans, Helvetica sans-serif;
-      font-size: 32px;
-      line-height: 1em; }
-    body section#page h1 {
-      font-size: 34px;
-      width: 60%; }
-    body section#page h2 {
-      font-size: 30px; }
-    body section#page h3 {
-      font-size: 18px;
-      line-height: 1.3em;
-      border-top: 1px dashed rgba(255, 255, 255, 0.2);
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
-      margin-bottom: 5px; }
-    body section#page p {
-      margin: 15px 0;
-      font-family: MetaDroidSans, Helvetica sans-serif;
-      font-size: 16px;
-      line-height: 1.4em; }
   body footer#foot {
     width: 100%;
     clear: both;
@@ -374,9 +356,70 @@ body {
       -moz-box-shadow: 0 5px 5px black;
       -ms-box-shadow: 0 5px 5px black;
       box-shadow: 0 5px 5px black; }
-    body footer#foot section {
+    body footer#foot section#footer {
       width: 980px;
       margin: 0px auto; }
+      body footer#foot section#footer section#honors a, body footer#foot section#footer section#honors a:link, body footer#foot section#footer section#honors a:visited, body footer#foot section#footer section#honors a:hover, body footer#foot section#footer section#honors a:active {
+        color: #fff;
+        background-color: none;
+        text-decoration: none;
+        border: none; }
+      body footer#foot section#footer section#honors ul {
+        list-style: none; }
+      body footer#foot section#footer section#honors a {
+        display: block;
+        width: 180px;
+        margin-bottom: 12px; }
+      body footer#foot section#footer section#honors #badge_ios {
+        height: 32px;
+        background-image: url("/resource/sprite.png");
+        background-position: -0px -20px;
+        background-repeat: no-repeat; }
+      body footer#foot section#footer section#honors #badge_railscore {
+        height: 32px;
+        background-image: url("/resource/sprite.png");
+        background-position: -0px -60px;
+        background-repeat: no-repeat; }
+      body footer#foot section#footer section#honors #badge_pragalumni {
+        height: 58px;
+        background-image: url("/resource/sprite.png");
+        background-position: -0px -100px;
+        background-repeat: no-repeat; }
+      body footer#foot section#footer section#honors #badge_linkedin {
+        height: 23px;
+        background-image: url("/resource/sprite.png");
+        background-position: -0px -160px;
+        background-repeat: no-repeat; }
+      body footer#foot section#footer section#honors #badge_slideshare {
+        height: 27px;
+        background-image: url("/resource/sprite.png");
+        background-position: -0px -200px;
+        background-repeat: no-repeat; }
+      body footer#foot section#footer section#honors #badge_757rb {
+        height: 32px;
+        background-image: url("/resource/sprite.png");
+        background-position: -0px -240px;
+        background-repeat: no-repeat; }
+  body h1, body h2, body h3, body h4 {
+    font-family: MetaDroidSans, Helvetica sans-serif;
+    font-size: 32px;
+    line-height: 1em; }
+  body h1 {
+    font-size: 34px;
+    width: 60%; }
+  body h2 {
+    font-size: 30px; }
+  body h3 {
+    font-size: 18px;
+    line-height: 1.3em;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    margin-bottom: 5px; }
+  body p {
+    margin: 15px 0;
+    font-family: MetaDroidSans, Helvetica sans-serif;
+    font-size: 16px;
+    line-height: 1.4em; }
 
 /* Fancy Buttons - http://lab.simurai.com/css/buttons/*/
 a.button {

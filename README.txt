@@ -1,8 +1,6 @@
 
 = Todo
 
-* Design
-  - Fixed Left Nav / Fat Bottom Area
 * Test &, <, > in content with Tidy.
 * Turn on "Cross-domain Receiver URL" in DISQUS settings.
 * Make sure to use "--style compressed" with sass.
