@@ -113,7 +113,9 @@ $sprite_grid: 20;
 }
 
 
-/* My Helpers */
+/* My Variables & Helpers */
+
+$color-link: rgb(255,255,102);
 
 @mixin clearfix { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 @mixin global_shadow { @include vndr-box-shadow(2px, 2px, 1px, #000); }
@@ -124,7 +126,7 @@ $sprite_grid: 20;
 
 @mixin cmpnt-links {
   a, a:link, a:visited, a:hover, a:active { 
-    color: rgb(255,255,102);
+    color: $color-link;
     background-color: none; 
     text-decoration: none;
     border-bottom: 1px dashed rgba(255,255,255,0.7); 
@@ -250,7 +252,7 @@ $dsq-bubleft: 50px;
 @mixin cmpnt-disqus {
   footer#disqus_thread {
     a, a:link, a:visited, a:hover, a:active { 
-      color: rgb(255,255,102);
+      color: $color-link;
       background-color: none; 
       text-decoration: none;
       border-bottom: none;
@@ -313,10 +315,21 @@ $dsq-bubleft: 50px;
 }
 
 
-/* Component - Footer Badges */
+/* Component - Footers */
+
+@mixin cmpnt-tbd {
+  section#foottbd {
+    float: left;
+    width: $c6width;
+    margin-right: $gutterwidth;
+  }
+}
 
 @mixin cmpnt-badges {
-  section#honors {
+  section#badges {
+    float: left;
+    width: $c2width;
+    margin-right: $gutterwidth;
     @include resetanchors;
     ul { list-style:none; }
     a { display:block; width:180px; margin-bottom:12px; }
@@ -331,10 +344,14 @@ $dsq-bubleft: 50px;
 
 @mixin cmpnt-blogroll {
   section#blogroll {
-    
+    float: left;
+    width: $c2width;
+    @include resetanchors;
+    a:hover { color: $color-link; }
+    ul { padding-left: 18px; }
+    ul li { margin: 2px 0; }
   }
 }
-
 
 
 /* Layout - Post */
@@ -418,6 +435,7 @@ body {
     @include cmpnt-links;
     width: $pagewidth; 
     margin: 0px auto;
+    min-height: 800px;
     section#content {
       float: right;
       width: $c8width;
@@ -466,8 +484,13 @@ body {
     z-index: 110;
     position: relative;
     section#footer {
+      &:after { @include clearfix; }
       width: $pagewidth;
       margin: 0px auto;
+      padding: 20px 0;
+      position: relative;
+      h3 { margin-bottom: 10px; }
+      @include cmpnt-tbd;
       @include cmpnt-badges;
       @include cmpnt-blogroll;
     }
