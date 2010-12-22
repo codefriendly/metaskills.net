@@ -1,0 +1,124 @@
+--- 
+layout: post
+title: Photo Fancy Borders
+disqus_id: /2008/3/19/photo-fancy-border-code-snippet-examples
+categories: 
+  - metatheme
+---
+
+
+<p>If you want a fancy border that mimics a photo with a white border and shadowed edges, use this code snippet around your image tag. Since this snipped is styled using PNG images with CSS, the shadows are not compatible with version 6 or below of Windows Internet Explorer. In this circumstance the meta theme will substitute a gif file instead and hence get rid of the shadow effect.</p>
+
+<macro:code lang="html">
+<div class="photobounding">
+	<div class="tl"></div>
+	<div class="tr"></div>
+	<div class="bl"></div>
+	<div class="br"></div>
+	<div class="photoborder"></div>
+	<div class="phototime">
+		<img src="/files/yourpicture.jpg" alt="" width="" height="" />
+	</div>
+</div>
+</macro:code>
+
+<p>When using the snippet, please follow the rules below:</p>
+
+<ul>
+	<li>Width of image can not exceed 523 pixels</li>
+	<li>Width of image is less than 523, must use inline style on bounding +28 pixels.</li>
+	<li>Width of image can not be less than 143 pixels</li>
+	<li>Width has to be specified in the image tag</li>
+	<li>Height of image can not be less than 220 pixels</li>
+</ul>
+
+<h2>Max Allowed Width - 523px</h2>
+
+<p>Here is an image styled using the photo fancy border snippet. In this example the width of the image has been specified to the max number of 523 pixels. The height has also been specified, but this is optional. When using the MetaTool width preferences above, this image will stay centered in the content area. Again, the image will stay centered in the page.</p> 
+
+<div class="photobounding">
+	<div class="tl"></div>
+	<div class="tr"></div>
+	<div class="bl"></div>
+	<div class="br"></div>
+	<div class="photoborder"></div>
+	<div class="phototime">
+		<img src="/files/metatheme/meta-home.jpg" alt="Meta Home" width="523" height="268" />
+	</div>
+</div>
+
+<macro:code lang="html">
+<div class="photobounding">
+	<div class="tl"></div>
+	<div class="tr"></div>
+	<div class="bl"></div>
+	<div class="br"></div>
+	<div class="photoborder"></div>
+	<div class="phototime">
+		<img src="/files/meta-home.jpg" alt="Meta Home" width="523" height="268" />
+	</div>
+</div>
+</macro:code>
+
+<h2>Less Than Maximum Width - 300px</h2>
+
+<p>Here is an image that is only 300 pixels wide. In this case we have to use a little bit of inline CSS to control the width of the bounding box. The width of the bounding box has to be 28 pixels larger than the image.</p> 
+
+<div class="photobounding" style="width:328px">
+	<div class="tl"></div>
+	<div class="tr"></div>
+	<div class="bl"></div>
+	<div class="br"></div>
+	<div class="photoborder"></div>
+	<div class="phototime">
+		<img src="/files/metatheme/puppylove.jpg" alt="Puppy Love" width="300" />
+	</div>
+</div>
+
+<macro:code lang="html">
+<div class="photobounding" style="width:328px">
+	<div class="tl"></div>
+	<div class="tr"></div>
+	<div class="bl"></div>
+	<div class="br"></div>
+	<div class="photoborder"></div>
+	<div class="phototime">
+		<img src="/files/puppylove.jpg" alt="Puppy Love" width="300" />
+	</div>
+</div>
+</macro:code>
+
+<h2>Less Than Maximum Width - 300px (aligned left)</h2>
+
+<p>Here is the exact same image as above, but this time its been floated left and put right before a paragraph tag. The inline CSS now also includes the float command and a margin-right command to keep the paragraph text from running into the image. If you want to, you can float the image right but the margin command should be changed to 'margin-left' to match.</p>
+
+<div class="photobounding" style="width:328px; float:left; margin-right:20px;">
+	<div class="tl"></div>
+	<div class="tr"></div>
+	<div class="bl"></div>
+	<div class="br"></div>
+	<div class="photoborder"></div>
+	<div class="phototime">
+		<img src="/files/metatheme/puppylove.jpg" alt="Puppy Love" width="300" />
+	</div>
+</div>
+
+<p>Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec porttitor ligula eu dolor. Maecenas vitae nulla consequat libero cursus venenatis. Nam magna enim, accumsan eu, blandit sed, blandit a, eros.</p>
+
+<p>Quisque facilisis erat a dui. Nam malesuada ornare dolor. Cras gravida, diam sit amet rhoncus ornare, erat elit consectetuer erat, id egestas pede nibh eget odio. Proin tincidunt, velit vel porta elementum, magna diam molestie sapien, non aliquet massa pede eu diam. Aliquam iaculis. Fusce et ipsum et nulla tristique facilisis. Donec eget sem sit amet ligula viverra gravida. Etiam vehicula urna vel turpis.</p>
+
+<macro:code lang="html">
+<div class="photobounding" style="width:328px; float:left; margin-right:20px;">
+	<div class="tl"></div>
+	<div class="tr"></div>
+	<div class="bl"></div>
+	<div class="br"></div>
+	<div class="photoborder"></div>
+	<div class="phototime">
+		<img src="/files/puppylove.jpg" alt="Puppy Love" width="300" />
+	</div>
+</div>
+</macro:code>
+
+
+

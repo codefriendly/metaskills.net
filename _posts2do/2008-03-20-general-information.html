@@ -1,0 +1,40 @@
+--- 
+layout: post
+title: General Information
+disqus_id: /2008/3/20/general-information
+categories: 
+  - metatheme
+---
+
+
+<p><img src="/files/metatheme/meta_drax2.png" alt="Drax" style="float:left;margin-right:4px;" />The Meta theme was originally written for <a href="http://drupal.org/" class="external-link">Drupal</a> in late 2005 and converted to <a href="http://mephistoblog.com/" class="external-link">Mephisto</a> in March 2008 for version 0.8, the Drax Edition. The theme incorporates quite a few publishing conventions which are listed below and in the section pages listed to the right. I must say that the Meta theme is not a web 2.0 accomplishment. The CSS and presentation is very '05. That said the theme is a technical accomplishment in that it uses zero tables for layout, on the down side, it does use a lot of PNG background images in the CSS to accomplish the soft edges and translucent effects. Be warned, if you choose to use the Meta theme, make sure your Apache expires settings are set right!</p>
+
+<p>I would love feedback and will happily accept revisions and/or feature requests. The source for the theme can be found on <a href="http://github.com/metaskills/metatheme/tree/master" class="external-link">my Github page</a>.</p>
+
+<ul style="margin: 10px 0 0 40px;">
+  <li><strong>UPDATE:</strong> 03/21/2008 Added reddit link to blogosphere partial.</li>
+  <li><strong>UPDATE:</strong> 03/26/2008 Adding an attached image div on articles/pages.</li>
+  <li><strong>UPDATE:</strong> 06/02/2008 Update right content to show recent posts.</li>
+  <li><strong>UPDATE:</strong> 09/26/2008 Added CSS for paged articles. See below.</li>
+</ul>
+
+
+
+<h2>The MetaTools</h2>
+
+<p>The MetaTools at the top of the page are just some simple user preference switches. They can choose to customize the width, font size and presentation color of your site. When a user option is selected a cookie is set that controls which stylesheets are on/off right before the body section of the page is loaded. The default values for these are set in the meta.js file at the top of the page. Feel free to customize these with the options listed.</p>
+
+
+<h2>Lightbox JS</h2>
+
+<p>The theme includes the <a href="http://www.huddletogether.com/projects/lightbox2/" class="external-link">lightbox</a> image display javascript. For usage please visit the author's website at <a href="http://www.huddletogether.com/projects/lightbox2/" class="external-link">huddletogether.com</a>. For an example, see my old <a href="/2006/2/5/mini-network-with-a-big-xserve-style">Mac Mini NOC</a> article.</p>
+
+
+<h2>Paged Articles</h2>
+
+<p>Art Web has a great article titled <a href="http://www.artweb-design.de/projects/mephisto-plugin-paged-article-lists" class="external-link">Mephisto Plugin: Paged Article Lists</a> that walks you through installing the needed plugins. Use the liquid snippet below in the <code>_list.liquid</code> template to get pagination links as seen on my home page.</p><br/>
+
+<macro:code lang="ruby">
+  {{ articles | will_paginate: path_info }}
+</macro:code>
+

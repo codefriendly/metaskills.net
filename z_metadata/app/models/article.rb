@@ -17,12 +17,22 @@ class Article < Content
   end
   
   def puttable_content
-    %|filename: #{jekyll_filename}
-         title: #{title}
-     disqus_id: #{disqus_identifier2}
-  rewrite_rule: RewriteRule ^#{disqus_identifier2.from(1)}$ #{disqus_identifier} [L]
-    categories: #{sections.map(&:name).map(&:downcase).inspect}
-          body: \n\n\n#{body}\n\n\n\n|
+%|--- 
+layout: post
+title: #{title}
+disqus_id: #{disqus_identifier2}
+categories: 
+#{categories.to_yaml.from(4).strip.insert(0,"\n").gsub("\n","\n  ").from(1)}
+---
+\n\n#{body}\n\n|
+  end
+  
+  def categories
+    sections.map(&:name).map(&:downcase) - ['home']
+  end
+  
+  def rewrite_rule
+    "RewriteRule ^#{disqus_identifier2.from(1)}$ #{disqus_identifier} [L]"
   end
   
   def jekyll_filename
@@ -52,8 +62,16 @@ class Article < Content
   end
   
   def self.jekyll
-    data = Article.ordered.all.map{ |article| article.puttable_content }
-    File.open(File.join(Rails.root,'tmp','metaskills_jekyll.txt'),'w') { |f| f.write(data.join) }
+    rewrite_rules = []
+    process_folder = Rails.root + '..' + '_posts2do'
+    FileUtils.rm_rf(process_folder.to_s)
+    FileUtils.mkdir_p(process_folder.to_s)
+    Article.ordered.all.each do |article|
+      post_file = (process_folder + article.jekyll_filename).to_s
+      rewrite_rules << article.rewrite_rule
+      File.open(post_file,'w') { |f| f.write(article.puttable_content) }
+    end
+    File.open((process_folder+'_rewrites.txt'),'w') { |f| f.write(rewrite_rules.join("\n")) }
   end
   
   def self.jskit
