@@ -1,9 +1,9 @@
 --- 
 layout: post
-title: Protip: Exclude Your RVM Install From Time Machine Backups
+title: "Protip: Exclude Your RVM Install From Time Machine Backups"
 disqus_id: /2010/8/6/protip-exclude-your-rvm-install-from-timemachine-backups
 categories: 
-  []
+  -- heuristics
 ---
 
 
@@ -24,15 +24,10 @@ du -skh ~/.rvm/gems
   First, open up your System Preferences, then open up the Time Machine pref pane. From here click on the "Options...". Within this window you will be able to add a folder to be excluded from backup. Hit the "+" button to add a directory. Now here is the tricky part, your rvm directory is prefixed with a period and hence is invisible to the normal finder windows. Thankfully all Mac file windows can use a keyboard shortcut. Hit <code>Command+Shift G</code>. That will blind down a "Go to the folder:" window. Simply type in <code>~/.rvm</code> here and hit "Go". Now choose "Exclude" from the main file window. Your done!
 </p>
 
-<div class="photobounding" style="width:491px;">
-  <div class="tl"></div>
-  <div class="tr"></div>
-  <div class="bl"></div>
-  <div class="br"></div>
-  <div class="photoborder"></div>
-  <div class="phototime">
-    <img src="/assets/2010/8/6/exclude_from_timemachine.gif" alt="" width="463" height="320" />
-  </div>
+<div class="center">
+  <span class="photofancy">
+    <img src="/assets/exclude_from_timemachine.gif" alt="Time Machine Exclude Window" width="463" height="320" />
+  </span>
 </div>
 
 

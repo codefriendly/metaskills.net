@@ -75,6 +75,5 @@ RewriteRule ^2010/7/7/bit-fat-legacy-schema-inspection$ /2010/07/07/bit-fat-lega
 RewriteRule ^2010/7/9/interactive-javascript-console-with-textmate$ /2010/07/09/interactive-javascript-console-with-textmate/ [L]
 RewriteRule ^2010/7/19/a-macport-rubyodbc-update$ /2010/07/19/a-macport-rubyodbc-update/ [L]
 RewriteRule ^2010/7/30/the-rvm-ruby-api$ /2010/07/30/the-rvm-ruby-api/ [L]
-RewriteRule ^2010/8/6/protip-exclude-your-rvm-install-from-timemachine-backups$ /2010/08/06/protip-exclude-your-rvm-install-from-timemachine-backups/ [L]
-RewriteRule ^2010/8/19/how-to-clean-a-campfire-room-of-uploads$ /2010/08/19/how-to-clean-a-campfire-room-of-uploads/ [L]
-RewriteRule ^2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library$ /2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library/ [L]
+
+

@@ -7,6 +7,8 @@
 * Think about google sitemap again.
 * Consider using feedburner vs my own alternate atom?
   - Consider this XML too. https://github.com/metajack/metajack.im/blob/master/atom.xml
+* Add png crush to pre deploy or asset stuff.
+  pngcrush -reduce -brute sprite.png sprite2.png
 * Consider doing HP with summarize
   http://intridea.com/2010/12/3/summarize-a-ruby-c-binding-for-open-text-summarizer
 * Make sure I have good content types from apache for .ttf true type fonts.
@@ -22,6 +24,7 @@
 Misc notes on setting up a development environment. Rarely needs to be done, but wanted to document my personal setup.
   
   1) Install some deps.
+     $ sudo port install pngcrush
      $ sudo port install tidy
      $ sudo port install py26-pygments
        Add /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin 
