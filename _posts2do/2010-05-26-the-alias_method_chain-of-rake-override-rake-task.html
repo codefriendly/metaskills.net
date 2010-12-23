@@ -10,7 +10,7 @@ categories:
 
 
 <p>
-  Rake is cool. It is built so that multiple tasks with the same name run in a reverse defined series. This is great, but sometimes you want to override a task with your own behavior and conditionally call the earlier task. Especially if that task is defined deep somewhere else, like in a rails gem. I have had to solve this problem before in Rake. Awhile back I hacked something up that would totally trump a predefined rake task and allow you to replace it with a new one. Lately while <a href="http://wiki.github.com/rails-sqlserver/2000-2005-adapter/rails-db-rake-tasks" class="external-link">working on the SQL Server adapter</a>, I had a need to method chain some core rails :db namespaced tasks. So once again I googled others work and again resorted to hacking Rake. Below is what I was left with.
+  Rake is cool. It is built so that multiple tasks with the same name run in a reverse defined series. This is great, but sometimes you want to override a task with your own behavior and conditionally call the earlier task. Especially if that task is defined deep somewhere else, like in a rails gem. I have had to solve this problem before in Rake. Awhile back I hacked something up that would totally trump a predefined rake task and allow you to replace it with a new one. Lately while <a href="http://wiki.github.com/rails-sqlserver/2000-2005-adapter/rails-db-rake-tasks">working on the SQL Server adapter</a>, I had a need to method chain some core rails :db namespaced tasks. So once again I googled others work and again resorted to hacking Rake. Below is what I was left with.
 </p>
 
 <macro:code lang="ruby">
@@ -51,6 +51,6 @@ end
 </macro:code>
 
 <p>
-  Lastly, thanks to <a href="http://www.taknado.com/" class="external-link">Eugene Bolshakov</a>, <a href="http://github.com/jwood" class="external-link">John Wood</a>, and <a href="http://github.com/markwfoster" class="external-link">Mark Foster</a> whom have tackled this rake problem before. My version above was based on their work, but correctly works with namespaces which was critical for my needs.
+  Lastly, thanks to <a href="http://www.taknado.com/">Eugene Bolshakov</a>, <a href="http://github.com/jwood">John Wood</a>, and <a href="http://github.com/markwfoster">Mark Foster</a> whom have tackled this rake problem before. My version above was based on their work, but correctly works with namespaces which was critical for my needs.
 </p>
 

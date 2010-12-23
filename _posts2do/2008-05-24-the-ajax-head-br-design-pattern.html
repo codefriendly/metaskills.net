@@ -13,16 +13,16 @@ categories:
 </div>
 
 <p>
-  This is the first of a few articles covering the total rewrite of the <a href="http://homemarks.com/" class="external-link">HomeMarks.com</a> code base as I upgrade it to Rails 2.1. The "AJAX Head" pattern is the moniker I have assigned to methodology that has come about during said rewrite and the design decisions I choose early on. The rules were simple.
+  This is the first of a few articles covering the total rewrite of the <a href="http://homemarks.com/">HomeMarks.com</a> code base as I upgrade it to Rails 2.1. The "AJAX Head" pattern is the moniker I have assigned to methodology that has come about during said rewrite and the design decisions I choose early on. The rules were simple.
 </p>
 
 <ul class="mt20">
-  <li>Total Unobtrusive JavaScript (<a href="http://en.wikipedia.org/wiki/Tag_soup" class="external-link">No Tag Soup</a>)</li>
+  <li>Total Unobtrusive JavaScript (<a href="http://en.wikipedia.org/wiki/Tag_soup">No Tag Soup</a>)</li>
   <li>No RJS Controller Responses</li>
 </ul>
 
 <p>
-  Rails makes it very easy to generate JavaScript with Ruby. The generator methods are extensive and cover both the Prototype and Scriptaculous libraries. The first version of HomeMarks used the generators exclusively to augment both the views and controller responses. In fact, I used a technique that is covered in the latest <a href="http://www.pragprog.com/titles/fr_arr/advanced-rails-recipes" class="external-link"><em>Advanced Rails Recipes</em></a> (way before it came out) under the "Replace In-View Raw JavaScript" chapter. Basically I created helper methods that generated JavaScript shared by both the views and controllers. It was a great technique but things <a href="http://github.com/metaskills/homemarks/tree/d33dab1405537db2d2dab86d79db415d9e7f56e5/app/helpers/application_helper.rb" class="external-link">got messy quick</a>. So life was good back then, I had a lot of Ruby code and a very dynamic site, but something did not seem right...
+  Rails makes it very easy to generate JavaScript with Ruby. The generator methods are extensive and cover both the Prototype and Scriptaculous libraries. The first version of HomeMarks used the generators exclusively to augment both the views and controller responses. In fact, I used a technique that is covered in the latest <a href="http://www.pragprog.com/titles/fr_arr/advanced-rails-recipes"><em>Advanced Rails Recipes</em></a> (way before it came out) under the "Replace In-View Raw JavaScript" chapter. Basically I created helper methods that generated JavaScript shared by both the views and controllers. It was a great technique but things <a href="http://github.com/metaskills/homemarks/tree/d33dab1405537db2d2dab86d79db415d9e7f56e5/app/helpers/application_helper.rb">got messy quick</a>. So life was good back then, I had a lot of Ruby code and a very dynamic site, but something did not seem right...
 </p>
 
 <h2>What Is The AJAX Head Pattern?</h2>
@@ -60,7 +60,7 @@ categories:
 <h2>2) Head And Status Codes</h2>
 
 <p>
-  The <a href="http://api.rubyonrails.com/classes/ActionController/Base.html#M000454" class="external-link">ActionController::Base#head</a> method and <a href="http://dev.rubyonrails.org/browser/trunk/actionpack/lib/action_controller/status_codes.rb" class="external-link">HTTP status codes</a> are the second item on the list. The head method is very useful when you just want to respond with HTTP headers and no body content. This is typical behavior when an app responds to external web services requests. This is important to note, I chose to rely on head responses as a way to meet my design decision of not using any RJS responses from the controller.
+  The <a href="http://api.rubyonrails.com/classes/ActionController/Base.html#M000454">ActionController::Base#head</a> method and <a href="http://dev.rubyonrails.org/browser/trunk/actionpack/lib/action_controller/status_codes.rb">HTTP status codes</a> are the second item on the list. The head method is very useful when you just want to respond with HTTP headers and no body content. This is typical behavior when an app responds to external web services requests. This is important to note, I chose to rely on head responses as a way to meet my design decision of not using any RJS responses from the controller.
 </p>
   
   
@@ -87,7 +87,7 @@ end
 <h2>3) Invalid Object Handling</h2>
 
 <p>
-  When Rails 2 came out, it gave us a very useful tool for our controllers, the <a href="http://api.rubyonrails.com/classes/ActionController/Rescue/ClassMethods.html" class="external-link">ActionController#rescue_from</a> method. It allows you to delegate exception handling to a method either per controller or site wide for a specific exception class. So enter the <a href="http://github.com/metaskills/homemarks/tree/master/lib/render_invalid_record.rb" class="external-link">RenderInvalidRecord</a> module, show below.
+  When Rails 2 came out, it gave us a very useful tool for our controllers, the <a href="http://api.rubyonrails.com/classes/ActionController/Rescue/ClassMethods.html">ActionController#rescue_from</a> method. It allows you to delegate exception handling to a method either per controller or site wide for a specific exception class. So enter the <a href="http://github.com/metaskills/homemarks/tree/master/lib/render_invalid_record.rb">RenderInvalidRecord</a> module, show below.
 </p>
 
 <macro:code lang="ruby">
@@ -113,7 +113,7 @@ end
 </macro:code>
 
 <p>
-  Once included in your application.rb file, every ActiveRecord::RecordInvalid exception will be handled by the render_invalid_record method. I use this pattern often and it is the primary reason I always use the <strong>bang methods</strong> that end with an exclamation point, such as <code>create!</code> or <code>save!</code>. This module above was inspired by <a href="http://github.com/josh/" class="external-link">Joshua Peek's</a> own module of the same name but has been edited here to fit my needs. Both the "xml" and "html" response formats are not used by HomeMarks but are included here to show how this module can work for any request type.
+  Once included in your application.rb file, every ActiveRecord::RecordInvalid exception will be handled by the render_invalid_record method. I use this pattern often and it is the primary reason I always use the <strong>bang methods</strong> that end with an exclamation point, such as <code>create!</code> or <code>save!</code>. This module above was inspired by <a href="http://github.com/josh/">Joshua Peek's</a> own module of the same name but has been edited here to fit my needs. Both the "xml" and "html" response formats are not used by HomeMarks but are included here to show how this module can work for any request type.
 </p>
 
 <p>
@@ -273,7 +273,7 @@ var HomeMarksSite = Class.create(HomeMarksBase,{
 </macro:code>
 
 <p>
-  <a href="http://metaskills.net/files/homemarksv2/login.html" rel="lyteframe" title="HomeMarks v2 Login" rev="width: 617px; height: 477px; scrolling: no;"><img src="http://metaskills.net/files/homemarksv2/preview_login2.png" width="246" height="251" class="floatr"></a>Lastly, and probably the coolest, is the HomeMarksModal JavaScript class I created. This is my new default way of errors to a user. It can be seen in all my video examples on this page. To the right is another example of the login form that uses the same handlers described above. The HomeMarksModal JavaScript class is a bit large to paste inline in this article, but if you want to see the latest version, you can always get it <a href="http://github.com/metaskills/homemarks/tree/master/public/javascripts/homemarks/modal.js" class="external-link">from the master branch of the homemarks_core project</a> on Github.com. When you bind an instance of this object to the window/document, it will automatically crate the modal HTML using Builder. If you want to use it, make sure to get the CSS and images the project too. Below is a function that I put in my site class that allows me to call <code>this.flashModal('good',someHTML))</code>.
+  <a href="http://metaskills.net/files/homemarksv2/login.html" rel="lyteframe" title="HomeMarks v2 Login" rev="width: 617px; height: 477px; scrolling: no;"><img src="http://metaskills.net/files/homemarksv2/preview_login2.png" width="246" height="251" class="floatr"></a>Lastly, and probably the coolest, is the HomeMarksModal JavaScript class I created. This is my new default way of errors to a user. It can be seen in all my video examples on this page. To the right is another example of the login form that uses the same handlers described above. The HomeMarksModal JavaScript class is a bit large to paste inline in this article, but if you want to see the latest version, you can always get it <a href="http://github.com/metaskills/homemarks/tree/master/public/javascripts/homemarks/modal.js">from the master branch of the homemarks_core project</a> on Github.com. When you bind an instance of this object to the window/document, it will automatically crate the modal HTML using Builder. If you want to use it, make sure to get the CSS and images the project too. Below is a function that I put in my site class that allows me to call <code>this.flashModal('good',someHTML))</code>.
 </p>
 
 <macro:code lang="javascript">
@@ -305,13 +305,13 @@ var HomeMarksSite = Class.create(HomeMarksBase,{
 <h2>Resources</h2>
 
 <ul class="mt20">
-  <li>Original <a href="http://github.com/metaskills/homemarks/tree/d33dab1405537db2d2dab86d79db415d9e7f56e5/app/helpers/application_helper.rb" class="external-link">application_helper.rb</a> from HomeMarks v1. An overboard example of shared view/controller tagsoup/rjs.</li>
-  <li>The latest <a href="http://www.pragprog.com/titles/fr_arr/advanced-rails-recipes" class="external-link"><em>Advanced Rails Recipes</em></a> book. See the chapter on "Replace In-View Raw JavaScript". I discourage this technique used in mass.</li>
-  <li>Rails API for the <a href="http://api.rubyonrails.com/classes/ActionController/Base.html#M000454" class="external-link">ActionController::Base#head</a> method.</li>
-  <li>Rails API for the <a href="http://dev.rubyonrails.org/browser/trunk/actionpack/lib/action_controller/status_codes.rb" class="external-link">HTTP status codes</a>.</li>
-  <li>Rails API for the <a href="http://api.rubyonrails.com/classes/ActionController/Rescue/ClassMethods.html" class="external-link">ActionController#rescue_from</a> method.</li>
-  <li>The latest <a href="http://github.com/metaskills/homemarks/tree/master/lib/render_invalid_record.rb" class="external-link">RenderInvalidRecord</a> module from the HomeMarks core.</li>
-  <li>The latest  <a href="http://github.com/metaskills/homemarks/tree/master/public/javascripts/homemarks/modal.js" class="external-link">HomeMarksModal</a> JavaScript class from the HomeMarks core.</li>
+  <li>Original <a href="http://github.com/metaskills/homemarks/tree/d33dab1405537db2d2dab86d79db415d9e7f56e5/app/helpers/application_helper.rb">application_helper.rb</a> from HomeMarks v1. An overboard example of shared view/controller tagsoup/rjs.</li>
+  <li>The latest <a href="http://www.pragprog.com/titles/fr_arr/advanced-rails-recipes"><em>Advanced Rails Recipes</em></a> book. See the chapter on "Replace In-View Raw JavaScript". I discourage this technique used in mass.</li>
+  <li>Rails API for the <a href="http://api.rubyonrails.com/classes/ActionController/Base.html#M000454">ActionController::Base#head</a> method.</li>
+  <li>Rails API for the <a href="http://dev.rubyonrails.org/browser/trunk/actionpack/lib/action_controller/status_codes.rb">HTTP status codes</a>.</li>
+  <li>Rails API for the <a href="http://api.rubyonrails.com/classes/ActionController/Rescue/ClassMethods.html">ActionController#rescue_from</a> method.</li>
+  <li>The latest <a href="http://github.com/metaskills/homemarks/tree/master/lib/render_invalid_record.rb">RenderInvalidRecord</a> module from the HomeMarks core.</li>
+  <li>The latest  <a href="http://github.com/metaskills/homemarks/tree/master/public/javascripts/homemarks/modal.js">HomeMarksModal</a> JavaScript class from the HomeMarks core.</li>
 </ul>
 
 

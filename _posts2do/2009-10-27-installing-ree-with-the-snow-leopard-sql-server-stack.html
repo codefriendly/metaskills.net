@@ -11,7 +11,7 @@ categories:
 
 
 <p>
-  Today I noticed that Ruby Enterprise Edition 2009.10 was released and I have really been wanting to see if I could get the <a href="http://github.com/rails-sqlserver" class="external-link">SQL Server adapter</a> tested and running under it. I am really curious how the speed improvements might look and will share my results below. This article assumes that you read my previous guide titled <a href="/2009/9/5/the-ultimate-os-x-snow-leopard-stack-for-rails-development-x86_64-macports-ruby-1-8-1-9-sql-server-more">The Ultimate OS X Snow Leopard Stack For Rails Development - x86_64, MacPorts, Ruby 1.8/1.9, SQL Server, SQLite3, MySQL & More</a> as I will be building on top of it and referencing certain steps. So let's get down to business.
+  Today I noticed that Ruby Enterprise Edition 2009.10 was released and I have really been wanting to see if I could get the <a href="http://github.com/rails-sqlserver">SQL Server adapter</a> tested and running under it. I am really curious how the speed improvements might look and will share my results below. This article assumes that you read my previous guide titled <a href="/2009/9/5/the-ultimate-os-x-snow-leopard-stack-for-rails-development-x86_64-macports-ruby-1-8-1-9-sql-server-more">The Ultimate OS X Snow Leopard Stack For Rails Development - x86_64, MacPorts, Ruby 1.8/1.9, SQL Server, SQLite3, MySQL & More</a> as I will be building on top of it and referencing certain steps. So let's get down to business.
 </p>
 
 
@@ -19,7 +19,7 @@ categories:
 <h2>Installing REE</h2>
 
 <p>
-  The guys at Phusion have done a rock solid job. My previous attempts to install REE were a bomb, but it worked perfectly this time around. Simply <a href="http://www.rubyenterpriseedition.com/download.html" class="external-link">follow their directions</a> and all will be OK. A snippet of my output is below. I liked how they picked a new default install directory of <code>/opt/ruby-enterprise-1.8.7-2009.10</code>. Wicked cool! By the way, the only issue I had during install was when they were trying to install the pg gem for me. I ignored that error for now.
+  The guys at Phusion have done a rock solid job. My previous attempts to install REE were a bomb, but it worked perfectly this time around. Simply <a href="http://www.rubyenterpriseedition.com/download.html">follow their directions</a> and all will be OK. A snippet of my output is below. I liked how they picked a new default install directory of <code>/opt/ruby-enterprise-1.8.7-2009.10</code>. Wicked cool! By the way, the only issue I had during install was when they were trying to install the pg gem for me. I ignored that error for now.
 </p>
 
 <pre class="command">
@@ -66,7 +66,7 @@ $ which gem
 <h2>Using REE With SQL Server</h2>
 
 <p>
-  Let's get the easy stuff out of the way and install the needed gems for the adapter to work. Again, always <a href="http://github.com/rails-sqlserver" class="external-link">follow the TODO on the adapter page</a> for the latest blessed versions of DBI and low level connectivity stuff. But just to recap the current needs.
+  Let's get the easy stuff out of the way and install the needed gems for the adapter to work. Again, always <a href="http://github.com/rails-sqlserver">follow the TODO on the adapter page</a> for the latest blessed versions of DBI and low level connectivity stuff. But just to recap the current needs.
 </p>
 
 <pre class="command">
@@ -76,7 +76,7 @@ $ sudo gem install activerecord-sqlserver-adapter
 </pre>
 
 <p>
-  Now the hard part, but I have an easy solution. You can do this the hard way and recompile the UTF8 version of ruby odbc by hand or you can type one command. I tried compiling it by hand and found that I had a few bugs, even after following <a href="http://digitaljacob.riff.dk/2009/10/26/using-ruby-odbc-with-unixodbc-on-snow-leopard/" class="external-link">Jacob Riff's notes</a> when he had a similar issue when trying to hook ruby ODBC to use unixODBC in his <code>/usr/local</code> . My solution was much simpler. I just coped my ruby 1.8.7 ruby odbc to the REE's vendor ruby directory. Hence:
+  Now the hard part, but I have an easy solution. You can do this the hard way and recompile the UTF8 version of ruby odbc by hand or you can type one command. I tried compiling it by hand and found that I had a few bugs, even after following <a href="http://digitaljacob.riff.dk/2009/10/26/using-ruby-odbc-with-unixodbc-on-snow-leopard/">Jacob Riff's notes</a> when he had a similar issue when trying to hook ruby ODBC to use unixODBC in his <code>/usr/local</code> . My solution was much simpler. I just coped my ruby 1.8.7 ruby odbc to the REE's vendor ruby directory. Hence:
 </p>
 
 <pre class="command">

@@ -3,6 +3,7 @@
 
 * Test &, <, > in content with Tidy.
 * Turn on "Cross-domain Receiver URL" in DISQUS settings.
+* Turn off "var disqus_developer = 1;"
 * Make sure to use "--style compressed" with sass.
 * Think about google sitemap again.
 * Consider using feedburner vs my own alternate atom?

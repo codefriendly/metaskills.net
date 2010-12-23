@@ -29,7 +29,7 @@ categories:
 </p>
 
 <p>
-  Even though this tutorial is based on MacPorts, there are alternatives if you have the guts. One is called <a href="http://github.com/mxcl/homebrew/tree/masterbrew" class="external-link">Homebrew</a> by Max Howell, which offers a very easy package management system that is closely knit to OS X's own libraries. If your smart enough to manage the sheer amount of dependencies and different ways OS X wants to pull you when using their libraries, then have at it. I failed horribly and I consider myself somewhat smart. This article also focuses on running multiple versions of ruby, specifically 1.8.7 and a flavor of 1.9.x. Again to this end there are other solutions. One recent one is called <a href="http://rvm.beginrescueend.com/" class="external-link">Ruby Version Manager (rvm)</a> by Wayne Seguin. An incredible library, but something I could not use with my level of compiling source due to the fact that all the dependencies needed for SQL Server to ODBC are hard enough to get in place for one ruby installation. RVM has it's use, but if you just need two versions of ruby with a full 64-bit stack to SQL Server, read on.
+  Even though this tutorial is based on MacPorts, there are alternatives if you have the guts. One is called <a href="http://github.com/mxcl/homebrew/tree/masterbrew">Homebrew</a> by Max Howell, which offers a very easy package management system that is closely knit to OS X's own libraries. If your smart enough to manage the sheer amount of dependencies and different ways OS X wants to pull you when using their libraries, then have at it. I failed horribly and I consider myself somewhat smart. This article also focuses on running multiple versions of ruby, specifically 1.8.7 and a flavor of 1.9.x. Again to this end there are other solutions. One recent one is called <a href="http://rvm.beginrescueend.com/">Ruby Version Manager (rvm)</a> by Wayne Seguin. An incredible library, but something I could not use with my level of compiling source due to the fact that all the dependencies needed for SQL Server to ODBC are hard enough to get in place for one ruby installation. RVM has it's use, but if you just need two versions of ruby with a full 64-bit stack to SQL Server, read on.
 </p>
 
 
@@ -39,7 +39,7 @@ categories:
 <h2>Install MacPorts</h2>
 
 <p>
-  If you have not done so already, go <a href="http://www.macports.org/install.php" class="external-link">download MacPorts</a> and run the installer and follow <a href="http://guide.macports.org/" class="external-link">their installation instructions</a>. At the time of this writing, the current version is 1.8 and has tons of new stuff for Snow Leopard. If you use bash, the default shell on OS X, then add this to your ~/.profile.
+  If you have not done so already, go <a href="http://www.macports.org/install.php">download MacPorts</a> and run the installer and follow <a href="http://guide.macports.org/">their installation instructions</a>. At the time of this writing, the current version is 1.8 and has tons of new stuff for Snow Leopard. If you use bash, the default shell on OS X, then add this to your ~/.profile.
 </p>
 
 <pre class="command">
@@ -49,7 +49,7 @@ export INFOPATH="/usr/local/share/info:$INFOPATH"
 </pre>
 
 <p>
-  However, if you have <a href="http://books.google.com/books?id=jKY-rDoJx3wC&pg=PA115&lpg=PA115&dq=system+preferences+account+right+click+os+x+switch+to+zsh+default+shell&source=bl&ots=J0eyfcuH37&sig=F4MrA0-NmqeprnqEneAhAdqJBPg&hl=en&ei=FFigSs73GMqc8QaAzoDeDw&sa=X&oi=book_result&ct=result&resnum=2#v=onepage&q=system%20preferences%20account%20right%20click%20os%20x%20switch%20to%20zsh%20default%20shell&f=false" class="external-link">changed your default shell to ZSH</a>, then put this in your ~/.zshenv file. I highly recommend switching your default shell to ZSH.
+  However, if you have <a href="http://books.google.com/books?id=jKY-rDoJx3wC&pg=PA115&lpg=PA115&dq=system+preferences+account+right+click+os+x+switch+to+zsh+default+shell&source=bl&ots=J0eyfcuH37&sig=F4MrA0-NmqeprnqEneAhAdqJBPg&hl=en&ei=FFigSs73GMqc8QaAzoDeDw&sa=X&oi=book_result&ct=result&resnum=2#v=onepage&q=system%20preferences%20account%20right%20click%20os%20x%20switch%20to%20zsh%20default%20shell&f=false">changed your default shell to ZSH</a>, then put this in your ~/.zshenv file. I highly recommend switching your default shell to ZSH.
 </p>
 
 <pre class="command">
@@ -162,7 +162,7 @@ locale charset is "utf-8"
 </p>
 
 <p>
-  Right. That completes the UNIX'y low level parts to get us talking to SQL Server, now to put the focus back on Ruby again by installing a few gems that will be needed. Here are the ones critical to this setup. Please consult the adapter's <a href="http://github.com/rails-sqlserver/2000-2005-adapter/tree/master" class="external-link">README</a> for update to date version information on the approved/latest gems for DBI.
+  Right. That completes the UNIX'y low level parts to get us talking to SQL Server, now to put the focus back on Ruby again by installing a few gems that will be needed. Here are the ones critical to this setup. Please consult the adapter's <a href="http://github.com/rails-sqlserver/2000-2005-adapter/tree/master">README</a> for update to date version information on the approved/latest gems for DBI.
 </p>
 
 <pre class="command">
@@ -172,7 +172,7 @@ $ sudo gem install activerecord-sqlserver-adapter
 </pre>
 
 <p>
-  Almost there, we need one more piece, the Ruby ODBC bindings, so we can talk to the low level unixODBC. At the time of this writing, the MacPort portfile for rb-odbc was stuck at 0.9995 while the <a href="http://www.ch-werner.de/rubyodbc/" class="external-link">ruby odbc project page</a> reports that the latest version is 0.9997. So here is a little lesson on how to edit a portfile to get our desired results. 
+  Almost there, we need one more piece, the Ruby ODBC bindings, so we can talk to the low level unixODBC. At the time of this writing, the MacPort portfile for rb-odbc was stuck at 0.9995 while the <a href="http://www.ch-werner.de/rubyodbc/">ruby odbc project page</a> reports that the latest version is 0.9997. So here is a little lesson on how to edit a portfile to get our desired results. 
 </p>
 
 <pre class="command">
@@ -200,7 +200,7 @@ $ sudo port install rb-odbc +utf8
 <h2>Configure The SQL Server Stack</h2>
 
 <p>
-  First, let's configure FreeTDS to point to our server. Assuming you have TextMate a simple <code>mate /opt/local/etc/freetds/freetds.conf</code> should get it open for us. FreeTDS even put in a few examples at the bottom of the file, I typically comment these out and add my own. In this example I am naming my server "my_dev_server". Note that tds version section, I personally use tds version 8.0 and have tested this against my stack on all SQL Server types with the ActiveRecord tests. Some have reported that they have errors unless the use 7.0. Your mileage may vary. Save and close the file. <strong>UPDATE:</strong> As noted above when running <code>tsql I</code>, if you do not see a utf-8 locale setting, you may have to add this line <code>client charset = UTF-8</code> to your configuration file. Here is a thread on <a href="http://lists.ibiblio.org/pipermail/freetds/2006q3/020396.html" class="external-link">how to set tsql's client character set</a>.
+  First, let's configure FreeTDS to point to our server. Assuming you have TextMate a simple <code>mate /opt/local/etc/freetds/freetds.conf</code> should get it open for us. FreeTDS even put in a few examples at the bottom of the file, I typically comment these out and add my own. In this example I am naming my server "my_dev_server". Note that tds version section, I personally use tds version 8.0 and have tested this against my stack on all SQL Server types with the ActiveRecord tests. Some have reported that they have errors unless the use 7.0. Your mileage may vary. Save and close the file. <strong>UPDATE:</strong> As noted above when running <code>tsql I</code>, if you do not see a utf-8 locale setting, you may have to add this line <code>client charset = UTF-8</code> to your configuration file. Here is a thread on <a href="http://lists.ibiblio.org/pipermail/freetds/2006q3/020396.html">how to set tsql's client character set</a>.
 </p>
 
 <pre class="">

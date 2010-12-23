@@ -10,11 +10,11 @@ categories:
 
 
 <p>
-  Last week I started reading <a href="http://oreilly.com/catalog/9780596517748" class="external-link"><em>JavaScript: The Good Parts</em></a> by Douglas Crockford. It was on my list of long overdue things to do. While reading it, I wanted to be able to kick some simple JavaScript examples around. As rubyist we have it good, <code>irb</code> let's us fire up an interactive console anytime we want. But with JavaScript, options are limited. Sure you could install Johnson/EnvJS, Rhino or some other JavaScript engine. Maybe even load up firebug or the web inspector. But who wants to load a browser to play with JS?
+  Last week I started reading <a href="http://oreilly.com/catalog/9780596517748"><em>JavaScript: The Good Parts</em></a> by Douglas Crockford. It was on my list of long overdue things to do. While reading it, I wanted to be able to kick some simple JavaScript examples around. As rubyist we have it good, <code>irb</code> let's us fire up an interactive console anytime we want. But with JavaScript, options are limited. Sure you could install Johnson/EnvJS, Rhino or some other JavaScript engine. Maybe even load up firebug or the web inspector. But who wants to load a browser to play with JS?
 </p>
 
 <p>
-  Luckily if your are on a Mac, you do not have to worry about any of that. You already have a JavaScript engine installed. Where? Thanks to Safari's <a href="http://webkit.org/blog/214/introducing-squirrelfish-extreme/" class="external-link">SquirrelFish Extreme (SFX)</a>, it is right in your system's library at this full path <code>/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc</code>. Instead of adding that to my path, I created a symlink to in my opt's bin directory (seeing how I have MacPorts). For instance.
+  Luckily if your are on a Mac, you do not have to worry about any of that. You already have a JavaScript engine installed. Where? Thanks to Safari's <a href="http://webkit.org/blog/214/introducing-squirrelfish-extreme/">SquirrelFish Extreme (SFX)</a>, it is right in your system's library at this full path <code>/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc</code>. Instead of adding that to my path, I created a symlink to in my opt's bin directory (seeing how I have MacPorts). For instance.
 </p>
 
 <pre class="command">
@@ -29,7 +29,7 @@ categories:
 <h2>Creating A TextMate Bundle To Run JavaScript</h2>
 
 <p>
-  So I was inspired by this article that explained how easy it is to make a <a href="http://www.phpied.com/jslint-on-mac-textmate/" class="external-link">TextMate bundle to run JavaScript thru JSLint</a> and decided to make one to run the same JavaScript in an the interactive console for SFX. I wont go thru the details of how to add a simple TextMate bundle command, but the following picture and code sample shows the <code>Run JSConsole</code> command I made. The command resides in my own bundle namespace.
+  So I was inspired by this article that explained how easy it is to make a <a href="http://www.phpied.com/jslint-on-mac-textmate/">TextMate bundle to run JavaScript thru JSLint</a> and decided to make one to run the same JavaScript in an the interactive console for SFX. I wont go thru the details of how to add a simple TextMate bundle command, but the following picture and code sample shows the <code>Run JSConsole</code> command I made. The command resides in my own bundle namespace.
 </p>
 
 <div class="photobounding" style="width:548px">

@@ -10,7 +10,7 @@ categories:
 ---
 
 
-<p>I've been a TextMate user for a long time now and I'm still finding new things to do with it. Here recently I wanted to use the <a href="http://code.leadmediapartners.com/tools/rubyamp" class="external-link">RubyAMP TextMate Bundle</a> and was a little miffed to find that it was pointing to my OS X system ruby. The error message looked something like this when it went looking for my ruby/gems.</p>
+<p>I've been a TextMate user for a long time now and I'm still finding new things to do with it. Here recently I wanted to use the <a href="http://code.leadmediapartners.com/tools/rubyamp">RubyAMP TextMate Bundle</a> and was a little miffed to find that it was pointing to my OS X system ruby. The error message looked something like this when it went looking for my ruby/gems.</p>
 
 <pre>
 No such file to load -- appscript (LoadError) from 
@@ -19,7 +19,7 @@ No such file to load -- appscript (LoadError) from
 ...
 </pre>
 
-<p>My problem is that I use ruby installed from MacPorts (yes I have Leopard). I do this because I put a lot of crap and extra dependencies into my opt direcotry and I do not trust Apple to NOT blow away the crazy dependencey hell I would have ended up creating in the standard bin directories if I chose not to use MacPorts. I would have thought that my <code>TM_RUBY</code> environment variable being set correctly to <code>/opt/local/bin/ruby</code> in my TextMate preferences would have given RubyAMP enough info to find my correct gem environment. Obviously not... and it took me quite a bit of digging around to learn what else I needed to do. For starters, here is more than you ever wanted to know about <a href="http://macromates.com/textmate/manual/shell_commands#search_path" class="external-link">how TextMate gets the $PATH information</a>. You can skip reading that and do these simple steps.</p>
+<p>My problem is that I use ruby installed from MacPorts (yes I have Leopard). I do this because I put a lot of crap and extra dependencies into my opt direcotry and I do not trust Apple to NOT blow away the crazy dependencey hell I would have ended up creating in the standard bin directories if I chose not to use MacPorts. I would have thought that my <code>TM_RUBY</code> environment variable being set correctly to <code>/opt/local/bin/ruby</code> in my TextMate preferences would have given RubyAMP enough info to find my correct gem environment. Obviously not... and it took me quite a bit of digging around to learn what else I needed to do. For starters, here is more than you ever wanted to know about <a href="http://macromates.com/textmate/manual/shell_commands#search_path">how TextMate gets the $PATH information</a>. You can skip reading that and do these simple steps.</p>
 
 <ul class="mt10">
 <li>Open /Developer/Applications/Utilities/Property List Editor.app</li>

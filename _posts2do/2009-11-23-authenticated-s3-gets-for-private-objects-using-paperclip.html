@@ -9,7 +9,7 @@ categories:
 
 
 <p>
-  Yea I know, I am probably the last person on earth that is just getting around to using <a href="http://github.com/thoughtbot/paperclip" class="external-link">Paperclip</a>. To be honest, most of my file upload code was written way before Paperclip or even AttachementFu was ever conceived. And frankly, I do not do much social app coding on the side - so the need never came up. But that changed recently and I wanted a really really good way of leveraging AWS::S3 storage with the best local app security while maintaining tight control over the files.
+  Yea I know, I am probably the last person on earth that is just getting around to using <a href="http://github.com/thoughtbot/paperclip">Paperclip</a>. To be honest, most of my file upload code was written way before Paperclip or even AttachementFu was ever conceived. And frankly, I do not do much social app coding on the side - so the need never came up. But that changed recently and I wanted a really really good way of leveraging AWS::S3 storage with the best local app security while maintaining tight control over the files.
 </p>
 
 <p>
@@ -87,7 +87,7 @@ end
 <h3>What Is That Noop Processor</h3>
 
 <p>
-  Good eye! Did you see that I have a processor called Noop in the has_attached_file declaration? The default processor in Paperclip is the Thumbnail processor, which no matter what calls the ImageMagick identify command to see if it can do something to the file. I did not want that or any processing, just simple attachments. So I created this simple processor that just straight returns the file object. I made a <a href="http://github.com/thoughtbot/paperclip/issues/#issue/118" class="external-link">ticket on the Paperclip's issue page</a> that hopefully would allow a <code>:processors => false</code> option one day that would do this as well. So maybe one day it'll be a feature.
+  Good eye! Did you see that I have a processor called Noop in the has_attached_file declaration? The default processor in Paperclip is the Thumbnail processor, which no matter what calls the ImageMagick identify command to see if it can do something to the file. I did not want that or any processing, just simple attachments. So I created this simple processor that just straight returns the file object. I made a <a href="http://github.com/thoughtbot/paperclip/issues/#issue/118">ticket on the Paperclip's issue page</a> that hopefully would allow a <code>:processors => false</code> option one day that would do this as well. So maybe one day it'll be a feature.
 </p>
 
 <div class="mt20 mb10">
@@ -108,9 +108,9 @@ end
 <h2>Resources</h2>
 
 <ul>
-  <li><a href="http://almosteffortless.com/2009/03/22/randomize-filename-in-paperclip/" class="external-link">Security Through Obscurity: Randomize Filename in Paperclip</a></li>
-  <li><a href="http://thewebfellas.com/blog/2009/8/29/protecting-your-paperclip-downloads" class="external-link">Your Access Control: Protecting Your Paperclip Downloads</a></li>
-  <li><a href="http://github.com/thoughtbot/paperclip/issues/#issue/118" class="external-link">Allow False Option For Processors</a></li>
+  <li><a href="http://almosteffortless.com/2009/03/22/randomize-filename-in-paperclip/">Security Through Obscurity: Randomize Filename in Paperclip</a></li>
+  <li><a href="http://thewebfellas.com/blog/2009/8/29/protecting-your-paperclip-downloads">Your Access Control: Protecting Your Paperclip Downloads</a></li>
+  <li><a href="http://github.com/thoughtbot/paperclip/issues/#issue/118">Allow False Option For Processors</a></li>
 </ul>
 
 

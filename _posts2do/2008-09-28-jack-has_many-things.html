@@ -49,7 +49,7 @@ categories:
 </p>
 
 <p>
-  The problem is that the ActiveRecord has_many association is scoped to an individual. No matter what conditions are tacked on, they are always <a href="http://en.wikipedia.org/wiki/Pwn" class="external-link">pwned</a> by the proxy owner. The things they own have ended up owning you! Sure we could model some groupable schema and go through it, ActiveRecord is beautiful that way. But what about our hard work in all those existing has_many associations and named_scopes? 
+  The problem is that the ActiveRecord has_many association is scoped to an individual. No matter what conditions are tacked on, they are always <a href="http://en.wikipedia.org/wiki/Pwn">pwned</a> by the proxy owner. The things they own have ended up owning you! Sure we could model some groupable schema and go through it, ActiveRecord is beautiful that way. But what about our hard work in all those existing has_many associations and named_scopes? 
 </p>
 
 
@@ -59,7 +59,7 @@ categories:
 <h2>I felt like destroying something beautiful.</h2>
 
 <p>
-  The solution is on everyone's face, it is on the tip of everyone's tongue. I just gave it a name. It is called <a href="http://github.com/metaskills/grouped_scope/tree/master" class="external-link">GroupedScope</a> and it will fundamentally change the constructed SQL for the has_many associations you want to share. The best part is that it will leave those associations untouched for continued use. GroupedScope even works with your existing association extensions and any named scopes. Let's have a session.
+  The solution is on everyone's face, it is on the tip of everyone's tongue. I just gave it a name. It is called <a href="http://github.com/metaskills/grouped_scope/tree/master">GroupedScope</a> and it will fundamentally change the constructed SQL for the has_many associations you want to share. The best part is that it will leave those associations untouched for continued use. GroupedScope even works with your existing association extensions and any named scopes. Let's have a session.
 </p> 
 
 <p>First we need to install the plugin.</p>
@@ -170,7 +170,7 @@ end
 </p>
 
 <p>
-  First, every model that declares <code>grouped_scope</code> also generates a <code>belongs_to :grouping</code> association that can be used to get to the GroupedScope::Grouping object. This object has no underlying schema and is not being used right now. Eventually this will be the place where you write your own <a href="http://errtheblog.com/posts/67-evil-twin-plugin" class="external-link">evil twin plugin</a> that defines your business logic to what a group (not the selfgrouping proxy) can do. For now, it would be a good idea to generate a "groupings" table and create rows and use those IDs when assigning group_ids.
+  First, every model that declares <code>grouped_scope</code> also generates a <code>belongs_to :grouping</code> association that can be used to get to the GroupedScope::Grouping object. This object has no underlying schema and is not being used right now. Eventually this will be the place where you write your own <a href="http://errtheblog.com/posts/67-evil-twin-plugin">evil twin plugin</a> that defines your business logic to what a group (not the selfgrouping proxy) can do. For now, it would be a good idea to generate a "groupings" table and create rows and use those IDs when assigning group_ids.
 </p>
 
 <p>
@@ -182,7 +182,7 @@ end
 <h2>I'd like to thank the Academy.</h2>
 
 <ul>
-  <li><a href="http://github.com/metaskills/grouped_scope/tree/master" class="external-link">The GroupedScope plugin on my Github account.</a></li>
-  <li><a href="http://en.wikipedia.org/wiki/Fight_Club" class="external-link">About the movie Fight Club.</a></li>
+  <li><a href="http://github.com/metaskills/grouped_scope/tree/master">The GroupedScope plugin on my Github account.</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Fight_Club">About the movie Fight Club.</a></li>
 </ul>
 
