@@ -49,6 +49,7 @@
 /* Component - Fancy Photo */
 /* Component - Disqus Formatting */
 /* Component - Footers */
+/* Layout - Excerpt */
 /* Layout - Post */
 /* Layout - Default */
 body {
@@ -137,7 +138,46 @@ body {
       float: right;
       width: 780px;
       padding-top: 90px;
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      /*
+      article.excerpt {
+        margin: 15px 0;
+        header {
+          &:after { @include clearfix; }
+          h3 { width:70%; border:none; float:left; }
+          time { float:right; @include font-metamed(16px); }
+        }
+        p { font-size:14px; margin:0; }
+      }
+      */ }
+      body section#page section#content article.excerpt {
+        margin: 15px 0; }
+        body section#page section#content article.excerpt:after {
+          content: ".";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden; }
+        body section#page section#content article.excerpt header {
+          float: left;
+          width: 180px;
+          padding-right: 20px;
+          text-align: right; }
+          body section#page section#content article.excerpt header h3 {
+            border: none; }
+            body section#page section#content article.excerpt header h3 a, body section#page section#content article.excerpt header h3 a:link, body section#page section#content article.excerpt header h3 a:visited, body section#page section#content article.excerpt header h3 a:hover, body section#page section#content article.excerpt header h3 a:active {
+              color: #ffff66;
+              background-color: none;
+              text-decoration: none;
+              border: none; }
+          body section#page section#content article.excerpt header time {
+            font-family: MetaMedRoman, sans-serif;
+            font-size: 16px; }
+        body section#page section#content article.excerpt p {
+          float: left;
+          width: 580px;
+          margin: 0;
+          font-size: 15px; }
       body section#page section#content article#post header:after {
         content: ".";
         display: block;
@@ -146,9 +186,7 @@ body {
         visibility: hidden; }
       body section#page section#content article#post header h1 {
         width: 450px;
-        float: left;
-        margin: 0 0 10px 0;
-        text-shadow: 2px 2px 1px #000; }
+        float: left; }
       body section#page section#content article#post header time {
         width: 50px;
         height: 64px;
@@ -231,7 +269,8 @@ body {
         box-shadow: inset 1px 1px 4px 2px rgba(0, 0, 0, 0.8);
         background-color: rgba(0, 0, 0, 0.6);
         overflow: auto;
-        padding: 14px; }
+        padding: 14px;
+        margin: 10px 0; }
         body section#page section#content article#post div.highlight:before, body section#page section#content article#post pre.command:before, body section#page section#content article#post pre.code:before {
           content: "";
           width: 123px;
@@ -247,6 +286,10 @@ body {
           background-image: url("/resource/sprite.png");
           background-position: -0px -280px;
           background-repeat: no-repeat; }
+      body section#page section#content article#post ul {
+        padding-left: 18px; }
+      body section#page section#content article#post ul li {
+        margin: 2px 0; }
       body section#page section#content article#post span.photofancy {
         position: relative;
         z-index: 1;
@@ -549,9 +592,14 @@ body {
     line-height: 1em; }
   body h1 {
     font-size: 34px;
-    width: 60%; }
+    width: 60%;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 1px #000; }
   body h2 {
-    font-size: 30px; }
+    font-size: 24px;
+    line-height: 1.3em;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    margin: 35px 0 10px 0; }
   body h3 {
     font-size: 18px;
     line-height: 1.3em;
@@ -844,7 +892,8 @@ a.button {
 
 /* Literal.Number.Oct */
 .highlight .sb {
-  color: #d14; }
+  color: black;
+  background-color: #ffff66; }
 
 /* Literal.String.Backtick */
 .highlight .sc {
@@ -896,7 +945,7 @@ a.button {
 
 /* Name.Variable.Class */
 .highlight .vg {
-  color: #008080; }
+  color: #f9ccb1; }
 
 /* Name.Variable.Global */
 .highlight .vi {

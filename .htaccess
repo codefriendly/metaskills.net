@@ -13,8 +13,19 @@ AddCharset utf-8 .html .css .js .xml .json .rss
 Options +FollowSymlinks
 RewriteEngine On
 
-# Mephisto To Jekyll
+# Mephisto To Jekyll (Categories)
+RewriteRule ^heuristics$ /categories/heuristics.html [L]
+RewriteRule ^workflow$ /categories/workflow.html [L]
+RewriteRule ^apple/osx$ /categories/apple-osx.html [L]
+RewriteRule ^database$ /categories/database.html [L]
+RewriteRule ^lifestyle$ /categories/lifestyle.html [L]
+RewriteRule ^miscellaneous$ /categories/miscellaneous.html [L]
+RewriteRule ^ruby/rails$ /categories/ruby-rails.html [L]
+RewriteRule ^textmate$ /categories/textmate.html [L]
+
+# Mephisto To Jekyll (Articles)
 RewriteRule ^2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library$ /2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library/ [L]
 RewriteRule ^2010/8/19/how-to-clean-a-campfire-room-of-uploads$ /2010/08/19/how-to-clean-a-campfire-room-of-uploads/ [L]
 RewriteRule ^2010/8/6/protip-exclude-your-rvm-install-from-timemachine-backups$ /2010/08/06/protip-exclude-your-rvm-install-from-timemachine-backups/ [L]
 RewriteRule ^2010/7/30/the-rvm-ruby-api$ /2010/07/30/the-rvm-ruby-api/ [L]
+
