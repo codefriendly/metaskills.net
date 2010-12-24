@@ -41,7 +41,6 @@ var MetaPygmentize = {
   
   convert: function(fromClass, toClass, texts) {
     var spans = $('div.highlight span.' + fromClass);
-    console.log(spans.get());
     spans.each(function(s){
       var span = $(s);
       var text = span.text();
