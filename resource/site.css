@@ -261,7 +261,7 @@ body {
         box-shadow: inset 1px 1px 4px 2px rgba(0, 0, 0, 0.8);
         background-color: rgba(0, 0, 0, 0.6);
         overflow: auto;
-        padding: 14px;
+        padding: 14px 14px 4px 14px;
         margin: 10px 0; }
         body section#page section#content article#post div.highlight:before, body section#page section#content article#post pre.command:before, body section#page section#content article#post pre.code:before {
           content: "";
@@ -284,6 +284,12 @@ body {
         margin: 2px 0; }
       body section#page section#content article#post p strong {
         color: #66ff66; }
+      body section#page section#content article#post img.shadow {
+        margin-bottom: 10px;
+        -webkit-box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.7);
+        -ms-box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.7);
+        box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.7); }
       body section#page section#content article#post span.photofancy {
         position: relative;
         z-index: 1;
@@ -742,8 +748,7 @@ a.button {
 
 /* Comment */
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2; }
+  color: white; }
 
 /* Error */
 .highlight .k {
@@ -845,6 +850,9 @@ a.button {
   font-weight: bold; }
 
 /* Keyword.Reserved */
+.highlight .kjs {
+  color: #8000ff; }
+
 .highlight .kt {
   color: #445588;
   font-weight: bold; }
@@ -855,14 +863,14 @@ a.button {
 
 /* Literal.Number */
 .highlight .s {
-  color: #d14; }
+  color: #00d83c; }
 
 /* Literal.String */
 .highlight .n {
   color: white; }
 
 .highlight .na {
-  color: #008080; }
+  color: white; }
 
 /* Name.Attribute */
 .highlight .nb {
@@ -893,11 +901,11 @@ a.button {
 
 /* Name.Function */
 .highlight .nn {
-  color: #555555; }
+  color: white; }
 
 /* Name.Namespace */
 .highlight .nt {
-  color: #000080; }
+  color: #3030ff; }
 
 /* Name.Tag */
 .highlight .nv {
@@ -946,7 +954,7 @@ a.button {
 
 /* Literal.String.Double */
 .highlight .se {
-  color: #d14; }
+  color: #4c4c4c; }
 
 /* Literal.String.Escape */
 .highlight .sh {

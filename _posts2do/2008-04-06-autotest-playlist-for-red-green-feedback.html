@@ -31,9 +31,9 @@ mv autotest_playlist .autotest_playlist && rm autotest_playlist.tar
 
 <p>User your favorite editor to open your <code>~/.autotest</code> file. And add this code below to it. Now you should be setup to have your own playlist of sounds that play using the <code>qtplay</code> binary installed above. If you want to play around with the sounds, then <code>open ~/.autotest_playlist/sounds</code> and start swapping out sounds. By the way, I made the :initialize and :quit sounds using the new Alex voice in Leopard. I hijacked some text to speech and then ran an audio tool called WavePad to speed change, flange, and chorus the voice a little bit.</p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 require '~/.autotest_playlist/playlist'
-</macro:code>
+{% endhighlight %}
 
 <h2>Credits:</h2>
 

@@ -30,4 +30,10 @@ RewriteRule ^2010/8/6/protip-exclude-your-rvm-install-from-timemachine-backups$ 
 RewriteRule ^2010/7/30/the-rvm-ruby-api$ /2010/07/30/the-rvm-ruby-api/ [L]
 RewriteRule ^2010/7/19/a-macport-rubyodbc-update$ /2010/07/19/a-macport-rubyodbc-update/ [L]
 RewriteRule ^2010/7/9/interactive-javascript-console-with-textmate$ /2010/07/09/interactive-javascript-console-with-textmate/ [L]
+RewriteRule ^2010/7/7/bit-fat-legacy-schema-inspection$ /2010/07/07/bit-fat-legacy-schema-inspection/ [L]
+RewriteRule ^2010/7/6/custom-webrat-session-formatted_error-for-rails-with-nokogiri$ /2010/07/06/custom-webrat-session-formatted_error-for-rails-with-nokogiri/ [L]
+RewriteRule ^2010/5/26/the-alias_method_chain-of-rake-override-rake-task$ /2010/05/26/the-alias_method_chain-of-rake-override-rake-task/ [L]
+RewriteRule ^2010/4/13/restful-ajax-with-forgery-protection-with-rails-3$ /2010/04/13/restful-ajax-with-forgery-protection-with-rails-3/ [L]
+
+
 

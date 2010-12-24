@@ -24,25 +24,25 @@ categories:
   Since the HomeMarks v2 app has one AJAX dispatcher/handler for the entire app, all I had to do was to get the authenticity token into each and every request. It took a bit of digging in the rails source to find the methods I wanted but here both the ERB snippet I am using in my layout and the helper method found in my <code>application_helper.rb</code> file.
 </p>
 
-<macro:code lang="html">
+{% highlight html %}
 <script type="text/javascript">
   <%= auth_params_js_var %>
 </script>
-</macro:code>
+{% endhighlight %}
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 def auth_params_js_var
   unless RAILS_ENV == 'test'
     %|var authParams = $H({#{request_forgery_protection_token}:#{form_authenticity_token.inspect}});|
   end
 end
-</macro:code>
+{% endhighlight %}
 
 <p>
   What does this do? It creates a JS variable called <code>authParams</code> at the window level (right term?) that all other functions can use. That variable returns a JavaScript hash that will have a single key/value pair for the rails authenticity token, see below. Basically at this point all you have to do is merge this hash with your <code>parameters</code> option for your AJAX object. You can reference the HomeMarks app.js file in the resources section if you want to see how I did this on my app, code snippet below too.
 </p>
 
-<macro:code lang="javascript">
+{% highlight javascript %}
   doAjaxRequest: function(elmnt,finishMethod) {
     // ...
     var method = elmnt.method || 'post';
@@ -55,7 +55,7 @@ end
       method: method
     });
   }
-</macro:code>
+{% endhighlight %}
 
 
 

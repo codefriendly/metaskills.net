@@ -12,14 +12,14 @@ categories:
 </p>
 
 <div class="mt20 mb10">
-<macro:code lang="ruby">
+{% highlight ruby %}
 class User < ActiveRecord::Base
   has_many                :articles
   named_scope             :active, :conditions => {:active => true}
   validates_uniqueness_of :email
   validates_presence_of   :email, :username, :twitter_handle
 end
-</macro:code>
+{% endhighlight %}
 </div>
 
 <p>
@@ -31,7 +31,7 @@ end
 </p>
 
 <div class="mt20 mb10">
-<macro:code lang="ruby">
+{% highlight ruby %}
 class MyClass
   attr_accessor :foo
 end
@@ -53,7 +53,7 @@ o = MyClass.new
 o.foo           # => nil
 o.foo = 'bar'   # => "bar"
 o               # => #<MyClass:0x100172b80 @foo="bar">
-</macro:code>
+{% endhighlight %}
 </dib>
 
 <p>
@@ -61,7 +61,7 @@ o               # => #<MyClass:0x100172b80 @foo="bar">
 </p>
 
 <div class="mt20 mb10">
-<macro:code lang="ruby">
+{% highlight ruby %}
 module MetaSkills
   
   def self.included(klass)
@@ -103,7 +103,7 @@ o = MyClass.new
 o.foo           # => nil
 o.foo = 'bar'   # => "bar"
 o               # => #<MyClass:0x100171c80 @foo="bar">
-</macro:code>
+{% endhighlight %}
 </div>
 
 <p>

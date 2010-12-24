@@ -12,7 +12,7 @@ categories:
 
 <p>The answer is to push the logic back to the model again. Your controllers should not be concerned with the logic that deals with your own business rules for sending email. The problem with ActionMailer is that most people just use the dynamic <code>MyMailerClass.deliver_</code> methods that utilize <code>method_missing</code> to instantiate a mailer classs, and send an email in one fell swoop. I like this usage too, but the challenge is how to tell an instance of a the ActionMailer::Base class that it needs to stop delivery within a method definition that is all set to deliver? The answer is Ruby singleton method magic.</p> 
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 module ActionMailer
   class Base
     
@@ -24,11 +24,11 @@ module ActionMailer
     
   end
 end
-</macro:code>
+{% endhighlight %}
 
 <p>I suggest placing this code into your <code>lib/core_ext/action_mailer.rb</code> file. It will allow you to write mailer methods that can short circuit themselves to stop delivery. For instance:
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 class MyMailerClass < ActionMailer::Base
   def user_notification(user)
     # ... 
@@ -37,7 +37,7 @@ class MyMailerClass < ActionMailer::Base
 end
 # In your controller code.
 MyMailerClass.deliver_user_notification(@user)
-</macro:code>
+{% endhighlight %}
 
 <p>Now you do not have to worry about placing delivery concerns in the controller and even worse duplicate that code when you have to use the same mailer method in multiple places. This works by letting the instance of the ActionMailer::Base class define it's own deliver! method which trumps the delier! method called by that object normally defined in ActionMailer::Base.</p>
 

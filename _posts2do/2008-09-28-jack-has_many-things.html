@@ -70,7 +70,7 @@ categories:
 
 <p>Now let's open up our Person model and schema, so Jack can share.</p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 class PeopleCanChooseAGroup < ActiveRecord::Migration
   def self.up
     add_column :people, :group_id, :integer
@@ -79,9 +79,9 @@ class PeopleCanChooseAGroup < ActiveRecord::Migration
     remove_column :people, :group_id
   end
 end
-</macro:code>
+{% endhighlight %}
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 class Person < ActiveRecord::Base
   has_many :things
   has_many :acquaintances
@@ -94,15 +94,15 @@ end
 
 @jack.update_attribute :group_id, 1
 @bob.update_attribute :group_id, 1
-</macro:code>
+{% endhighlight %}
 
 <p>
   Every Person object in our app is now ready to share their :things and their :problems. I have also just arbitrarily put Jack and Bob into the same group. Declaring <code>grouped_scope</code> in the model generates a new <code>group</code> instance method that will allow us to iterate over its members.
 </p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 @jack.group   # => [#<Person id: 1, name: "Jack", group_id: 1>, #<Person id: 2, name: "Bob", group_id: 1>]
-</macro:code>
+{% endhighlight %}
 
 
 
@@ -114,14 +114,14 @@ end
   The object returned by the group method, an instance of GroupedScope::SelfGrouping, is far cooler than you think. It looks and acts as an enumerable array, but in reality it is a proxy object that can delegate to generated grouped association reflections which mimic their originals. Essentially giving the group access to all associated objects of its members, in this case their :things and :problems. Did I loose you? 
 </p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 @jack.problems.size   # => 6
 @bob.problems.size    # => 2
 
 @bob.group.problems        # => [#<Problem...>,#<Problem...>,#<Problem...>,#<Problem...>,....]
 @bob.group.problems.size   # => 8
 @jack.group.problems.size  # => 8
-</macro:code>
+{% endhighlight %}
 
 <p>
   Without going into the detail of Jack's and Bob's problems, we can see that within the group, they are all shared. This is what the GroupedScope plugin is really all about. It allows existing has_many associations to be called on the group which changes the SQL generated to be owned by the group, essentially from <code>id = 1</code> to <code>id IN (1,2)</code>.
@@ -131,7 +131,7 @@ end
   The way it accomplishes this is pretty sweet. GroupedScope creates an association reflection and accessor that will proxy all critical reflection calls back to the original association reflection. This means that it can be really smart and maintain all the logic in the existing association which could include custom options like :class_name, :foreign_key, :though, and :extend, very handy for legacy/custom associations. It also lets you chain named scopes on the grouped scope. Here is very contrived example:
 </p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 class Person < ActiveRecord::Base
   has_many :mental_issues, :class_name => "MentalState", :foreign_key => :name do
     def dangerous
@@ -148,7 +148,7 @@ class MentalState < ActiveRecord::Base
 end
 
 @jack.group.mental_issues.dangerous.treatable_by(@doctor) # => [#<MentalState...>,#<MentalState...>]
-</macro:code>
+{% endhighlight %}
 
 
 

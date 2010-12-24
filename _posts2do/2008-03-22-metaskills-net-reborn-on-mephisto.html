@@ -18,7 +18,7 @@ categories:
 
 <p>This script is what I used in the rails console to populate data from my old Drupal 4.7 blog to Mephisto. This code is untested on the schema of higher versions of Drupal.</p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 # My Drupal 4.7 to Mephisto Script
 # ----------------------------------------------------------------
 # Things I did before
@@ -94,5 +94,5 @@ DrupalArticle.find(:all).each do |da|
     nac.save!
   end
 end
-</macro:code>
+{% endhighlight %}
 

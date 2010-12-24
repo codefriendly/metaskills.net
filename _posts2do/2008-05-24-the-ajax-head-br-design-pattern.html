@@ -68,7 +68,7 @@ categories:
   The basic usage of the head method is simple, you just pass a symbol to the head method that is the lowercase underscore equivalent to an HTTP status code. For instance, if you wanted to respond with success, choose a status code from the 200 range, the easiest being 'OK', which would look like <code>head(:ok)</code>. If you wanted to respond to bad authentication, you might use the 401 code like so, <code>head(:unauthorized)</code>. Here is an example from HomeMarks restful user signup action.
 </p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 class UsersController < ApplicationController
   # ...
   def create
@@ -77,7 +77,7 @@ class UsersController < ApplicationController
   end
   # ...
 end
-</macro:code>
+{% endhighlight %}
 
 <p>
   There is actually a number of things going on in those 2 lines of code above. If the user is created, the AJAX request will get a simple 'OK' message via the head method. Obviously the client will need to know what to do on its own. But if errors happen what to do? This brings us to...
@@ -90,7 +90,7 @@ end
   When Rails 2 came out, it gave us a very useful tool for our controllers, the <a href="http://api.rubyonrails.com/classes/ActionController/Rescue/ClassMethods.html">ActionController#rescue_from</a> method. It allows you to delegate exception handling to a method either per controller or site wide for a specific exception class. So enter the <a href="http://github.com/metaskills/homemarks/tree/master/lib/render_invalid_record.rb">RenderInvalidRecord</a> module, show below.
 </p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 module RenderInvalidRecord
   
   def self.included(base)
@@ -110,7 +110,7 @@ module RenderInvalidRecord
   end
   
 end
-</macro:code>
+{% endhighlight %}
 
 <p>
   Once included in your application.rb file, every ActiveRecord::RecordInvalid exception will be handled by the render_invalid_record method. I use this pattern often and it is the primary reason I always use the <strong>bang methods</strong> that end with an exclamation point, such as <code>create!</code> or <code>save!</code>. This module above was inspired by <a href="http://github.com/josh/">Joshua Peek's</a> own module of the same name but has been edited here to fit my needs. Both the "xml" and "html" response formats are not used by HomeMarks but are included here to show how this module can work for any request type.
@@ -148,7 +148,7 @@ end
   </ul>
 </ul>
 
-<macro:code lang="javascript">
+{% highlight javascript %}
 var HomeMarksBase = {
   getRequestMood: function(request) {
     return (request.status >= 200 && request.status < 300) ? 'good' : 'bad';
@@ -216,7 +216,7 @@ var HomeMarksSite = Class.create(HomeMarksBase,{
     if (this.signupForm) { this.signupForm.observe('submit', this.startAjaxForm.bindAsEventListener(this)); };
   }
 });
-</macro:code>
+{% endhighlight %}
 
 
 <h2>5) Client-Side Error Handling</h2>
@@ -229,16 +229,16 @@ var HomeMarksSite = Class.create(HomeMarksBase,{
   The second slightly more interesting way was to create a flash message that used the same XHTML/CSS already present in my layout file. This was real easy to implement. Basically using the ERB fragment below in my layout, I guaranteed that I had 3 unique DOM elements for each of my flash message styles, good/bad/indif. Now all I had to do was to create an accessor in my HomeMarksSite class. I choose <code>this.flashes</code>. I then created a <code>clearFlashes()</code> function and then a <code>flash()</code> function that would take the mood and the HTML to embed, viola â€“ I can now call <code>this.flash.('good',someHTML)</code> and I get the same type of flash one would have seen if I set it in the controller and rendered. Note, this is what I used on the the signup form success above.
 </p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 <% [:good,:bad,:indif].each do |key| %>
   <div id="flash_<%= key %>" class="flash_message" style="display:<%= flash[key].blank? ? 'none' : 'block' %>;">
 	  <span><%= flash[key] %></span>
 	</div>
 <% end %>
-</macro:code>
+{% endhighlight %}
 <br />
 
-<macro:code lang="javascript">
+{% highlight javascript %}
 var HomeMarksBase = {
   messagesToAlert: function(request) {
     var messages = request.responseJSON;
@@ -270,20 +270,20 @@ var HomeMarksSite = Class.create(HomeMarksBase,{
     $('site_wrapper').scrollTo();
   }
 });
-</macro:code>
+{% endhighlight %}
 
 <p>
   <a href="http://metaskills.net/files/homemarksv2/login.html" rel="lyteframe" title="HomeMarks v2 Login" rev="width: 617px; height: 477px; scrolling: no;"><img src="http://metaskills.net/files/homemarksv2/preview_login2.png" width="246" height="251" class="floatr"></a>Lastly, and probably the coolest, is the HomeMarksModal JavaScript class I created. This is my new default way of errors to a user. It can be seen in all my video examples on this page. To the right is another example of the login form that uses the same handlers described above. The HomeMarksModal JavaScript class is a bit large to paste inline in this article, but if you want to see the latest version, you can always get it <a href="http://github.com/metaskills/homemarks/tree/master/public/javascripts/homemarks/modal.js">from the master branch of the homemarks_core project</a> on Github.com. When you bind an instance of this object to the window/document, it will automatically crate the modal HTML using Builder. If you want to use it, make sure to get the CSS and images the project too. Below is a function that I put in my site class that allows me to call <code>this.flashModal('good',someHTML))</code>.
 </p>
 
-<macro:code lang="javascript">
+{% highlight javascript %}
 var HomeMarksSite = Class.create(HomeMarksBase,{ 
   flashModal: function(mood,html) {
     var moodColor = this.flashMoodColors.get(mood);
     HmModal.show(html,{color:moodColor});
   }
 });
-</macro:code>
+{% endhighlight %}
 
 
 <h2>Wrapping It Up</h2>

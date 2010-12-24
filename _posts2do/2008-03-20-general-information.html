@@ -34,7 +34,7 @@ categories:
 
 <p>Art Web has a great article titled <a href="http://www.artweb-design.de/projects/mephisto-plugin-paged-article-lists">Mephisto Plugin: Paged Article Lists</a> that walks you through installing the needed plugins. Use the liquid snippet below in the <code>_list.liquid</code> template to get pagination links as seen on my home page.</p><br/>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
   {{ articles | will_paginate: path_info }}
-</macro:code>
+{% endhighlight %}
 

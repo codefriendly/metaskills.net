@@ -3,14 +3,15 @@ layout: post
 title: Custom Webrat::Session formatted_error For Rails With Nokogiri
 disqus_id: /2010/7/6/custom-webrat-session-formatted_error-for-rails-with-nokogiri
 categories: 
-  []
+  - ruby-rails
 ---
 
+<p>
+  I never liked how Webrat shows the complete response body for exceptions when integration testing rails applications. For the longest time I redefined the formatted_error method to simple do nothing. Today I used Nokogiri to parse out the good bits from that page. Here is the result. Not pretty, but it's working fine so far. Got a better example? Please share!
+</p>
 
-<p>I never liked how Webrat shows the complete response body for exceptions when integration testing rails applications. For the longest time I redefined the formatted_error method to simple do nothing. Today I used Nokogiri to parse out the good bits from that page. Here is the result. Not pretty, but it's working fine so far. Got a better example? Please share!</p>
 
-
-<macro:code lang="ruby">
+{% highlight ruby %}
 module Webrat
   class Session
     def formatted_error
@@ -34,5 +35,5 @@ module Webrat
     end
   end
 end
-</macro:code>
+{% endhighlight %}
 

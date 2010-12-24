@@ -32,11 +32,11 @@ Dunno! config/uuid.state
 
 <p>We have two options here. You can either add an autotest exception in you <code>~/.autotest</code> file or you can bail out. My option is to bail out because I should not be adding a file at run time to the config directory. It would seem a better place would be the <code>tmp</code> directory. However if you think that adding an exception to your <code>~/.autotest</code> file would be more appropriate, here is the syntax</p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 Autotest.add_hook :initialize do |autotest|
   ['.svn','.hg','.git'].each { |exception| autotest.add_exception(exception) }
 end
-</macro:code>
+{% endhighlight %}
 
 <h2>Step 3
 

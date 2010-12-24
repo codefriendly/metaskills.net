@@ -34,7 +34,7 @@ categories:
 <p>Like most other programming books, this one is rich in examples and test scripts. The thing that I thought most unique about it was that it forced you to utilize the concepts you learned by asking you to write a program that did X, Y, and Z. It did this without giving you the answers which really forces you out of the academia of learning into real practice. So if you <a href="http://www.pragmaticprogrammer.com/titles/fr_ltp/" rel="external">pick up this book</a>, or if decide to use <a href="http://pine.fm/LearnToProgram/?Chapter=00" rel="external">the free tutorials</a> on Chris' website, check back here often and I'll keep posting updates on what code I came up with. Perhaps others can share how the faced the challenges since I could not find once single resource on the web that did this. Here are a few to start this off.</p>
 
 <h3>A Few Things To Try (bottles of beer program)</h3>
-<macro:code lang="ruby">
+{% highlight ruby %}
 bottles = 99
 
 while bottles.to_i != 0
@@ -45,10 +45,10 @@ while bottles.to_i != 0
     bottles.to_s + ' bottles of beer on the wall.'
   puts ''
 end
-</macro:code>
+{% endhighlight %}
 
 <h3>A Few Things To Try (roman numeral method)</h3>
-<macro:code lang="ruby">
+{% highlight ruby %}
 def romanize integer
   mdiv = integer/1000
   m = 'M'*mdiv
@@ -66,10 +66,10 @@ puts romanize(9)
 puts romanize(1)
 puts romanize(278)
 puts romanize(2156)
-</macro:code>
+{% endhighlight %}
 
 <h3>A Few Things To Try (how old are you, spank)</h3>
-<macro:code lang="ruby">
+{% highlight ruby %}
 puts 'What year were you born in? (number please)'
 year = gets.chomp.to_i
 puts 'What month were you born on? (number please)'
@@ -86,7 +86,7 @@ puts
 diftoyears.times do
   puts 'SPANK!'
 end
-</macro:code>
+{% endhighlight %}
 	
 
 <p>&nbsp;</p>

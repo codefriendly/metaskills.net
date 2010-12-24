@@ -71,7 +71,7 @@ Cache-Control: max-age=7200
 Expires: Sun, 19 Feb 2006 18:42:05 GMT
 Connection: close
 Content-Type: image/png
-</macro:code>
+{% endhighlight %}
 
 
     <p>What we are looking for in the header are the &quot;Cache-Control&quot; and &quot;Expires&quot; fields. These fields control how long the browser will cache this media or page asset from your server. Having a low value like &quot;1&quot; in &quot;Cache-Control&quot; can be just as bad as no value at all.</p>
@@ -80,7 +80,7 @@ Content-Type: image/png
 <macro:code lang="plaintext">
 LoadModule expires_module modules/mod_expires.so
 LoadModule headers_module modules/mod_headers.so
-</macro:code>
+{% endhighlight %}
 		
 		
     <p>When these modules are loaded and working, we can then start to use the correct Apache 2 directives to control how browsers cache everything from pages to images across the whole site or in a specific directory. </p>
@@ -105,7 +105,7 @@ LoadModule headers_module modules/mod_headers.so
   ExpiresByType application/x-javascript "access plus 60 minutes"
   ExpiresByType text/xml "access plus 60 minutes"
 </IfModule>
-</macro:code>
+{% endhighlight %}
 
       
     <p>Let's examine what is happening here in brief. If you are interested <a href="http://httpd.apache.org/docs/2.0/mod/mod_expires.html" rel="external">full documentation of the expires directive</a> can be found on Apache's website along with different syntax formats than the ones used here. I like this format since it is inheritably legible. This directive will do the following:</p>

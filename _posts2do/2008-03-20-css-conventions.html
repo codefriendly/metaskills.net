@@ -25,14 +25,14 @@ categories:
 
 <p>The Meta theme incorporates CSS for Mephisto's implementation of the <a href="http://rubyforge.org/projects/coderay/">CodeRay</a> library. To have mephisto use CodeRay to syntax highlight your code, wrap the code with &lt;macro:code lang=&quot;ruby&quot;&gt;code&lt;/macro:code&gt;. The code will look like the example below.</p>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
   # Ruby 1.9 introduces BasicObject.
   # Use Builder's BlankSlate until then.
   unless defined? BasicObject
     require 'blankslate'
     BasicObject = BlankSlate
   end
-</macro:code>
+{% endhighlight %}
 
 <p>If you want to use a &lt;blockquote&gt; tag, please put a &lt;div&gt; immediately inside of it to get the best formatting.</p>
 
