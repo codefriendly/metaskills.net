@@ -169,7 +169,8 @@ body {
           margin: 0;
           font-size: 15px; }
       body section#page section#content article#post {
-        /* pre/code */ }
+        /* pre/code */
+        /* other */ }
         body section#page section#content article#post header {
           margin-bottom: 15px; }
           body section#page section#content article#post header:after {
@@ -328,8 +329,8 @@ body {
             box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.7); }
           body section#page section#content article#post span.photofancy img, body section#page section#content article#post span.photofancy object {
             padding: 13px;
-            border: 1px solid #666;
-            background-color: #cccccc; }
+            border: 1px solid #000;
+            background-color: #1c1e26; }
         body section#page section#content article#post footer#disqus_thread {
           padding-top: 30px; }
           body section#page section#content article#post footer#disqus_thread a, body section#page section#content article#post footer#disqus_thread a:link, body section#page section#content article#post footer#disqus_thread a:visited, body section#page section#content article#post footer#disqus_thread a:hover, body section#page section#content article#post footer#disqus_thread a:active {
@@ -945,7 +946,7 @@ a.button {
 
 /* Name.Tag */
 .highlight .nv {
-  color: #008080; }
+  color: #f9ccb1; }
 
 /* Name.Variable */
 .highlight .ow {

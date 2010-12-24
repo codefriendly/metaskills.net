@@ -112,6 +112,13 @@ $sprite_grid: 20;
   background-origin: $behavior;
 }
 
+@mixin vndr-rotate($deg) {
+  -webkit-transform: rotate(#{$deg}deg);
+  -moz-transform: rotate(#{$deg}deg);
+  -ms-transform: rotate(#{$deg}deg);
+  transform: rotate(#{$deg}deg);
+}
+
 
 /* My Variables & Helpers */
 
@@ -292,18 +299,18 @@ $color-strong: #66ff66;
       position: absolute;
       z-index: -1;
       content: "";
-      width: 40px;
-      height: 80px;
+      width: 150px;
+      height: 40px;
       display: block;
       background-color: rgba(0,0,0,0.8);
       @include vndr-border-radius-all(4px)
     }
-    &:before { top: -1px; left: -1px; @include vndr-box-shadow(-7px, -7px, 10px, rgba(0,0,0,0.7)); }
-    &:after { bottom: 3px; right: -1px; @include vndr-box-shadow(7px, 7px, 10px, rgba(0,0,0,0.7)); } 
+    &:before { bottom: 8px; left: 2px; @include vndr-box-shadow(7px, 7px, 10px, rgba(0,0,0,0.7)); @include vndr-rotate(-3); }
+    &:after { bottom: 8px; right: 10px; @include vndr-box-shadow(7px, 7px, 10px, rgba(0,0,0,0.7)); @include vndr-rotate(3); } 
     img, object {
       padding: 13px;
-      border: 1px solid #666;
-      background-color: #cccccc;
+      border: 1px solid #000;
+      background-color: #ddd;
     }
   }
 }
@@ -479,6 +486,7 @@ $dsq-bubleft: 50px;
     }
     pre.command, pre.code, pre.text { padding-bottom:16px; }
     pre.text { &:before { display:none; } }
+    /* other */
     ul { padding-left: 18px; }
     ul li { margin: 2px 0; }
     p strong { color:$color-strong; }
@@ -782,7 +790,7 @@ $tmc_nt: rgb(48,48,255);
 .highlight .nf    { color: $tmc; font-weight: bold; } /* Name.Function */
 .highlight .nn    { color: $tmc } /* Name.Namespace */
 .highlight .nt    { color: $tmc_nt } /* Name.Tag */
-.highlight .nv    { color: #008080 } /* Name.Variable */
+.highlight .nv    { color: $tmc_c } /* Name.Variable */
 .highlight .ow    { font-weight: bold; } /* Operator.Word */
 .highlight .w     { color: #bbbbbb } /* Text.Whitespace */
 .highlight .mf    { color: #009999 } /* Literal.Number.Float */

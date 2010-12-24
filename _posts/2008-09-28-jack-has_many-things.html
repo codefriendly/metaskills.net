@@ -1,0 +1,147 @@
+--- 
+layout: post
+title: Jack has_many :things
+disqus_id: /2008/9/28/jack-has_many-things
+categories: 
+  - database
+  - heuristics
+  - ruby-rails
+---
+
+<p>
+  <span class="photofancy floatl mr20"><img src="/assets/jack.png" alt="Jack Has Many Things" width="320" height="214" /></span> I am Jack's sofa, stereo and wardrobe... I make Jack's life complete. I reside in a ActiveRecord table called "things" and Jack is the only one that has the key. This is Jack's life, and it's ending one minute at a time.
+</p>
+  
+<p>
+  As rails developers, we have done this simple relationship over and over again. I'm sure the has_many association is by far the most common in app/db design. It gives a single resource quick and easy access to others, but as your application grows, and depression sets in, we have to open up.
+</p>
+
+
+<h2>It's cheaper than a movie, and there's free coffee.</h2>
+
+<p>
+  <span class="photofancy floatr ml20"><img src="/assets/bob.png" alt="Jack With Bob" width="148" height="174" /></span> I am talking about groups. Not the underground ones that carve us out of wood, but ones where we share with those around us. This is healing. The time has come to for our objects to do the same, but how?
+</p>
+
+<p>
+  The problem is that the ActiveRecord has_many association is scoped to an individual. No matter what conditions are tacked on, they are always <a href="http://en.wikipedia.org/wiki/Pwn">pwned</a> by the proxy owner. The things they own have ended up owning you! Sure we could model some groupable schema and go through it, ActiveRecord is beautiful that way. But what about our hard work in all those existing has_many associations and named_scopes? 
+</p>
+
+
+
+
+
+<h2>I felt like destroying something beautiful.</h2>
+
+<p>
+  The solution is on everyone's face, it is on the tip of everyone's tongue. I just gave it a name. It is called <a href="http://github.com/metaskills/grouped_scope/tree/master">GroupedScope</a> and it will fundamentally change the constructed SQL for the has_many associations you want to share. The best part is that it will leave those associations untouched for continued use. GroupedScope even works with your existing association extensions and any named scopes. Let's have a session.
+</p> 
+
+<p>First we need to install the plugin.</p>
+
+<pre class="command">
+$ ./script/plugin install git://github.com/metaskills/grouped_scope.git
+</pre>
+
+<p>Now let's open up our Person model and schema, so Jack can share.</p>
+
+{% highlight ruby %}
+class PeopleCanChooseAGroup < ActiveRecord::Migration
+  def self.up
+    add_column :people, :group_id, :integer
+  end
+  def self.down
+    remove_column :people, :group_id
+  end
+end
+{% endhighlight %}
+
+{% highlight ruby %}
+class Person < ActiveRecord::Base
+  has_many :things
+  has_many :acquaintances
+  has_many :problems
+  grouped_scope :things, :problems
+end
+
+@jack = Person.find_by_name('Jack')
+@bob  = Person.find_by_name('Bob')
+
+@jack.update_attribute :group_id, 1
+@bob.update_attribute :group_id, 1
+{% endhighlight %}
+
+<p>
+  Every Person object in our app is now ready to share their :things and their :problems. I have also just arbitrarily put Jack and Bob into the same group. Declaring <code>grouped_scope</code> in the model generates a new <code>group</code> instance method that will allow us to iterate over its members.
+</p>
+
+{% highlight ruby %}
+@jack.group   # => [#<Person id: 1, name: "Jack", group_id: 1>, #<Person id: 2, name: "Bob", group_id: 1>]
+{% endhighlight %}
+
+
+<h2>We all started seeing things differently.</h2>
+
+<p>
+  The object returned by the group method, an instance of GroupedScope::SelfGrouping, is far cooler than you think. It looks and acts as an enumerable array, but in reality it is a proxy object that can delegate to generated grouped association reflections which mimic their originals. Essentially giving the group access to all associated objects of its members, in this case their :things and :problems. Did I loose you? 
+</p>
+
+{% highlight ruby %}
+@jack.problems.size   # => 6
+@bob.problems.size    # => 2
+
+@bob.group.problems        # => [#<Problem...>,#<Problem...>,#<Problem...>,#<Problem...>,....]
+@bob.group.problems.size   # => 8
+@jack.group.problems.size  # => 8
+{% endhighlight %}
+
+<p>
+  Without going into the detail of Jack's and Bob's problems, we can see that within the group, they are all shared. This is what the GroupedScope plugin is really all about. It allows existing has_many associations to be called on the group which changes the SQL generated to be owned by the group, essentially from <code>id = 1</code> to <code>id IN (1,2)</code>.
+</p>
+
+<p>
+  The way it accomplishes this is pretty sweet. GroupedScope creates an association reflection and accessor that will proxy all critical reflection calls back to the original association reflection. This means that it can be really smart and maintain all the logic in the existing association which could include custom options like :class_name, :foreign_key, :though, and :extend, very handy for legacy/custom associations. It also lets you chain named scopes on the grouped scope. Here is very contrived example:
+</p>
+
+{% highlight ruby %}
+class Person < ActiveRecord::Base
+  has_many :mental_issues, :class_name => "MentalState", :foreign_key => :name do
+    def dangerous
+      find :all, :conditions => {:snap_tolerance => 10}
+    end
+  end
+  grouped_scope :mental_issues
+end
+
+class MentalState < ActiveRecord::Base
+  named_scope :treatable_by, lambda { |doctor| 
+    {:conditions => {:doctor_id => doctor.id}}
+  }
+end
+
+@jack.group.mental_issues.dangerous.treatable_by(@doctor) # => [#<MentalState...>,#<MentalState...>]
+{% endhighlight %}
+
+
+<h2>This is probably one of those "cry for help" things.</h2>
+
+<p>
+  <span class="photofancy floatr ml20"><img src="/assets/marla.png" alt="Marla" width="320" height="214" /></span> The GroupedScope plugin is not done. It is however well tested and can do what I have outlined in both rails 1.2.6 and 2.1.1. I have marked some TODO's in the project README but I thought I would cover a few here in detail.
+</p>
+
+<p>
+  First, every model that declares <code>grouped_scope</code> also generates a <code>belongs_to :grouping</code> association that can be used to get to the GroupedScope::Grouping object. This object has no underlying schema and is not being used right now. Eventually this will be the place where you write your own <a href="http://errtheblog.com/posts/67-evil-twin-plugin">evil twin plugin</a> that defines your business logic to what a group (not the selfgrouping proxy) can do. For now, it would be a good idea to generate a "groupings" table and create rows and use those IDs when assigning group_ids.
+</p>
+
+<p>
+  Also, you may have noticed that GroupedScope focuses on a single group and that no single owner can essentially have many groups. I think at some point I might like to see this and work like all the examples above. Have other ideas? Send me an email. I'm ken at this domain dot com.
+</p>
+
+
+<h2>I'd like to thank the Academy.</h2>
+
+<ul>
+  <li><a href="http://github.com/metaskills/grouped_scope/tree/master">The GroupedScope plugin on my Github account.</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Fight_Club">About the movie Fight Club.</a></li>
+</ul>
+

@@ -15,6 +15,8 @@
 
 = Todo
 
+* QA search for /assets/\d\d\d just in case
+* Make sure cdn.metaskills.net is setup.
 * Test &, <, > in content with Tidy.
 * Turn on "Cross-domain Receiver URL" in DISQUS settings.
 * Turn off "var disqus_developer = 1;"
@@ -32,6 +34,7 @@
 * Blog Post On Move!
   Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
   Talk about zepto with "this" and "that" (backbone) examples.
+  * http://dev.metaskills.net/2008/9/28/jack-has_many-things
 
 
 = Development Setup
