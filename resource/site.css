@@ -44,6 +44,7 @@
 /* My Variables & Helpers */
 /* Component - Global Links */
 /* Component - AppleTV Left Navigation */
+/* Component - Flash Warnings/Messages */
 /* Component - Data badge for pubdate */
 /* Component - Pre/Code */
 /* Component - Fancy Photo */
@@ -138,20 +139,9 @@ body {
       float: right;
       width: 780px;
       padding-top: 90px;
-      padding-bottom: 20px;
-      /*
-      article.excerpt {
-        margin: 15px 0;
-        header {
-          &:after { @include clearfix; }
-          h3 { width:70%; border:none; float:left; }
-          time { float:right; @include font-metamed(16px); }
-        }
-        p { font-size:14px; margin:0; }
-      }
-      */ }
+      padding-bottom: 20px; }
       body section#page section#content article.excerpt {
-        margin: 15px 0; }
+        margin: 30px 0; }
         body section#page section#content article.excerpt:after {
           content: ".";
           display: block;
@@ -178,56 +168,58 @@ body {
           width: 580px;
           margin: 0;
           font-size: 15px; }
-      body section#page section#content article#post header:after {
-        content: ".";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden; }
-      body section#page section#content article#post header h1 {
-        width: 450px;
-        float: left; }
-      body section#page section#content article#post header time {
-        width: 50px;
-        height: 64px;
-        display: block;
-        float: left;
-        padding-bottom: 2px;
-        margin-right: 15px;
-        background-color: #666;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        -ms-border-radius: 6px;
-        border-radius: 6px;
-        -webkit-box-shadow: 2px 2px 1px black;
-        -moz-box-shadow: 2px 2px 1px black;
-        -ms-box-shadow: 2px 2px 1px black;
-        box-shadow: 2px 2px 1px black; }
-        body section#page section#content article#post header time span {
+      body section#page section#content article#post header {
+        margin-bottom: 15px; }
+        body section#page section#content article#post header:after {
+          content: ".";
           display: block;
-          text-align: center;
-          font-family: MetaMedRoman, sans-serif;
-          font-size: 14px;
-          text-transform: lowercase; }
-        body section#page section#content article#post header time span.day {
-          font-size: 26px;
-          line-height: 26px; }
-        body section#page section#content article#post header time span.month {
-          font-size: 15px;
-          line-height: 21px; }
-        body section#page section#content article#post header time span.year {
-          font-size: 16px;
-          line-height: 19px;
-          background-color: #900;
-          -webkit-border-bottom-left-radius: 6px;
-          -moz-border-radius-bottomleft: 6px;
-          -ms-border-radius-bottomleft: 6px;
-          border-bottom-left-radius: 6px;
-          -webkit-border-bottom-right-radius: 6px;
-          -moz-border-radius-bottomright: 6px;
-          -ms-border-radius-bottomright: 6px;
-          border-bottom-right-radius: 6px;
-          /*@include global_shadow;*/ }
+          height: 0;
+          clear: both;
+          visibility: hidden; }
+        body section#page section#content article#post header h1 {
+          width: 450px;
+          float: left; }
+        body section#page section#content article#post header time {
+          width: 50px;
+          height: 64px;
+          display: block;
+          float: left;
+          padding-bottom: 2px;
+          margin-right: 15px;
+          background-color: #666;
+          -webkit-border-radius: 6px;
+          -moz-border-radius: 6px;
+          -ms-border-radius: 6px;
+          border-radius: 6px;
+          -webkit-box-shadow: 2px 2px 1px black;
+          -moz-box-shadow: 2px 2px 1px black;
+          -ms-box-shadow: 2px 2px 1px black;
+          box-shadow: 2px 2px 1px black; }
+          body section#page section#content article#post header time span {
+            display: block;
+            text-align: center;
+            font-family: MetaMedRoman, sans-serif;
+            font-size: 14px;
+            text-transform: lowercase; }
+          body section#page section#content article#post header time span.day {
+            font-size: 26px;
+            line-height: 26px; }
+          body section#page section#content article#post header time span.month {
+            font-size: 15px;
+            line-height: 21px; }
+          body section#page section#content article#post header time span.year {
+            font-size: 16px;
+            line-height: 19px;
+            background-color: #900;
+            -webkit-border-bottom-left-radius: 6px;
+            -moz-border-radius-bottomleft: 6px;
+            -ms-border-radius-bottomleft: 6px;
+            border-bottom-left-radius: 6px;
+            -webkit-border-bottom-right-radius: 6px;
+            -moz-border-radius-bottomright: 6px;
+            -ms-border-radius-bottomright: 6px;
+            border-bottom-right-radius: 6px;
+            /*@include global_shadow;*/ }
       body section#page section#content article#post p code {
         width: 100%;
         -moz-box-sizing: border-box;
@@ -290,6 +282,8 @@ body {
         padding-left: 18px; }
       body section#page section#content article#post ul li {
         margin: 2px 0; }
+      body section#page section#content article#post p strong {
+        color: #66ff66; }
       body section#page section#content article#post span.photofancy {
         position: relative;
         z-index: 1;
@@ -398,6 +392,48 @@ body {
             border-bottom-color: #1c1e26; }
           body section#page section#content article#post footer#disqus_thread .dsq-full-comment .dsq-comment-body .dsq-editedtxt {
             display: none; }
+      body section#page section#content .flash_warn, body section#page section#content .flash_info {
+        position: relative;
+        margin: 10px 0 15px 0;
+        padding: 13px 13px 13px 45px;
+        color: #000;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        border-radius: 6px; }
+        body section#page section#content .flash_warn a, body section#page section#content .flash_warn a:link, body section#page section#content .flash_warn a:visited, body section#page section#content .flash_warn a:hover, body section#page section#content .flash_warn a:active, body section#page section#content .flash_info a, body section#page section#content .flash_info a:link, body section#page section#content .flash_info a:visited, body section#page section#content .flash_info a:hover, body section#page section#content .flash_info a:active {
+          color: #ffbd00;
+          border-bottom: 1px dashed #999; }
+        body section#page section#content .flash_warn:before, body section#page section#content .flash_info:before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 14px;
+          left: 19px; }
+      body section#page section#content .flash_warn {
+        color: #fff;
+        border: 2px solid #ffbd00;
+        background-color: rgba(255, 189, 0, 0.3); }
+        body section#page section#content .flash_warn a, body section#page section#content .flash_warn a:link, body section#page section#content .flash_warn a:visited, body section#page section#content .flash_warn a:hover, body section#page section#content .flash_warn a:active {
+          color: #fc9;
+          border-bottom: 1px dashed #999; }
+        body section#page section#content .flash_warn:before {
+          background-image: url("/resource/sprite.png");
+          background-position: -60px -0px;
+          background-repeat: no-repeat; }
+      body section#page section#content .flash_info {
+        color: #fff;
+        border: 2px solid #0066ff;
+        background-color: rgba(0, 102, 255, 0.3); }
+        body section#page section#content .flash_info a, body section#page section#content .flash_info a:link, body section#page section#content .flash_info a:visited, body section#page section#content .flash_info a:hover, body section#page section#content .flash_info a:active {
+          color: #69f;
+          border-bottom: 1px dashed #999; }
+        body section#page section#content .flash_info:before {
+          background-image: url("/resource/sprite.png");
+          background-position: -40px -0px;
+          background-repeat: no-repeat; }
     body section#page nav {
       z-index: 90;
       float: left;
@@ -741,8 +777,8 @@ a.button {
 
 /* Comment.Special */
 .highlight .gd {
-  color: #000000;
-  background-color: #ffdddd; }
+  color: white;
+  background-color: #ff342f; }
 
 /* Generic.Deleted */
 .highlight .gd .x {
@@ -763,8 +799,8 @@ a.button {
 
 /* Generic.Heading */
 .highlight .gi {
-  color: #000000;
-  background-color: #ddffdd; }
+  color: white;
+  background-color: #24ff6a; }
 
 /* Generic.Inserted */
 .highlight .gi .x {
@@ -785,7 +821,8 @@ a.button {
 
 /* Generic.Strong */
 .highlight .gu {
-  color: #aaaaaa; }
+  color: white;
+  background-color: #3277e2; }
 
 /* Generic.Subheading */
 .highlight .gt {

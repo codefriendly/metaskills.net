@@ -1,4 +1,18 @@
 
+= Snippets
+
+<span class="photofancy">
+  <img src="/assets/exclude_from_timemachine.gif" alt="Time Machine Exclude Window" width="463" height="320" />
+</span>
+
+{% highlight ruby %}
+  ...
+{% endhighlight %}
+
+<aside class="flash_message">...</aside>
+<aside class="flash_warn">...</aside>
+
+
 = Todo
 
 * Test &, <, > in content with Tidy.
