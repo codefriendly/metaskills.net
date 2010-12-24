@@ -317,7 +317,7 @@ body {
         body section#page section#content article#post span.photofancy img {
           padding: 13px;
           border: 1px solid #666;
-          background-color: #fff; }
+          background-color: #cccccc; }
       body section#page section#content article#post footer#disqus_thread {
         padding-top: 30px; }
         body section#page section#content article#post footer#disqus_thread a, body section#page section#content article#post footer#disqus_thread a:link, body section#page section#content article#post footer#disqus_thread a:visited, body section#page section#content article#post footer#disqus_thread a:hover, body section#page section#content article#post footer#disqus_thread a:active {

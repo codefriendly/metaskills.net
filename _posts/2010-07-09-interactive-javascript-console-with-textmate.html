@@ -18,7 +18,7 @@ categories:
 </p>
 
 <pre class="command">
-  sudo ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc /opt/local/bin
+sudo ln -s /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc /opt/local/bin
 </pre>
 
 <p>
@@ -32,18 +32,11 @@ categories:
   So I was inspired by this article that explained how easy it is to make a <a href="http://www.phpied.com/jslint-on-mac-textmate/">TextMate bundle to run JavaScript thru JSLint</a> and decided to make one to run the same JavaScript in an the interactive console for SFX. I wont go thru the details of how to add a simple TextMate bundle command, but the following picture and code sample shows the <code>Run JSConsole</code> command I made. The command resides in my own bundle namespace.
 </p>
 
-<div class="photobounding" style="width:548px">
-  <div class="tl"></div>
-  <div class="tr"></div>
-  <div class="bl"></div>
-  <div class="br"></div>
-  <div class="photoborder"></div>
-  <div class="phototime">
-    <img src="http://metaskills.net/assets/2010/7/8/jsc_tmbundle.gif" alt="TextMate Bundle Window" width="520" />
-  </div>
+<div class="center">
+  <img src="/assets/jsc_tmbundle.gif" alt="TextMate Bundle Window" width="520" class="shadow" />
 </div>
 
-<macro:code lang="ruby">
+{% highlight ruby %}
 #!/usr/bin/env ruby
 
 require ENV['TM_SUPPORT_PATH'] + '/lib/escape.rb'
@@ -56,32 +49,18 @@ def terminal_script_filepath
 end
 
 open("|osascript", "w") { |io| io << terminal_script_filepath }
-</macro:code>
+{% endhighlight %}
 
 <p>
   With that simple bundle command done, you can now use the <code>Command-R</code> keyboard shortcut to load the windows JavaScript file into a newly opened terminal window running in the SFX console. Pictures below.
 </p>
 
-<div class="photobounding" style="width:536px">
-  <div class="tl"></div>
-  <div class="tr"></div>
-  <div class="bl"></div>
-  <div class="br"></div>
-  <div class="photoborder"></div>
-  <div class="phototime">
-    <img src="http://metaskills.net/assets/2010/7/8/jsc_textmate.gif" alt="TextMate Windows With JavaScript" width="508" />
-  </div>
+<div class="center">
+  <img src="/assets/jsc_textmate.gif" alt="TextMate Windows With JavaScript" width="508" class="shadow" />
 </div>
 
-<div class="photobounding" style="width:548px">
-  <div class="tl"></div>
-  <div class="tr"></div>
-  <div class="bl"></div>
-  <div class="br"></div>
-  <div class="photoborder"></div>
-  <div class="phototime">
-    <img src="http://metaskills.net/assets/2010/7/8/jsc_terminal.gif" alt="Mac OS Terminal App Lauanched From TextMate JavaScript" width="520" />
-  </div>
+<div class="center">
+  <img src="/assets/jsc_terminal.gif" alt="Mac OS Terminal App Lauanched From TextMate JavaScript" width="520" class="shadow" />
 </div>
 
 

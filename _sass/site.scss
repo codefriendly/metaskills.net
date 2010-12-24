@@ -303,7 +303,7 @@ $color-strong: #66ff66;
     img {
       padding: 13px;
       border: 1px solid #666;
-      background-color: #fff;
+      background-color: #cccccc;
     }
   }
 }
@@ -479,6 +479,7 @@ $dsq-bubleft: 50px;
     ul { padding-left: 18px; }
     ul li { margin: 2px 0; }
     p strong { color:$color-strong; }
+    img.shadow { margin-bottom:10px; @include vndr-box-shadow(7px, 7px, 8px, rgba(0,0,0,0.7)); }
     @include cmpnt-photofancy;
     @include cmpnt-disqus;
   }
