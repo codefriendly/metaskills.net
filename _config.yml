@@ -5,6 +5,4 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - README.textile
-- z_metadata
-- z_metatheme
 - tidy.conf
