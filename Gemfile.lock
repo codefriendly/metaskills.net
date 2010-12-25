@@ -16,6 +16,11 @@ GEM
     maruku (0.6.0)
       syntax (>= 1.0.0)
     nokogiri (1.4.4)
+    rake (0.8.7)
+    rake-compiler (0.7.5)
+      rake
+    summarize (1.0.3)
+      rake-compiler
     syntax (1.0.0)
 
 PLATFORMS
@@ -26,3 +31,4 @@ DEPENDENCIES
   haml (= 3.0.25)
   jekyll (= 0.7.0)
   nokogiri (= 1.4.4)
+  summarize (= 1.0.3)
