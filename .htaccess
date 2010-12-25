@@ -13,6 +13,10 @@ AddCharset utf-8 .html .css .js .xml .json .rss
 Options +FollowSymlinks
 RewriteEngine On
 
+# Mephisto To Jekyll (Pages)
+RewriteRule ^colophon$ /pages/colophon.html [L]
+RewriteRule ^colophon/ken-collins-resume$ /pages/resume.html [L]
+RewriteRule ^projects$ /pages/projects.html [L]
 # Mephisto To Jekyll (Categories)
 RewriteRule ^heuristics$ /categories/heuristics.html [L]
 RewriteRule ^workflow$ /categories/workflow.html [L]
@@ -21,9 +25,8 @@ RewriteRule ^database$ /categories/database.html [L]
 RewriteRule ^lifestyle$ /categories/lifestyle.html [L]
 RewriteRule ^miscellaneous$ /categories/miscellaneous.html [L]
 RewriteRule ^ruby/rails$ /categories/ruby-rails.html [L]
-RewriteRule ^textmate$ /categories/textmate.html [L]
-
-# Mephisto To Jekyll (Articles)
+RewriteRule ^textmate$ /categories/tools.html [L]
+# Mephisto To Jekyll (Posts)
 RewriteRule ^2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library$ /2010/10/18/tinytds-a-modern-simple-and-fast-freetds-library-for-ruby-using-db-library/ [L]
 RewriteRule ^2010/8/19/how-to-clean-a-campfire-room-of-uploads$ /2010/08/19/how-to-clean-a-campfire-room-of-uploads/ [L]
 RewriteRule ^2010/8/6/protip-exclude-your-rvm-install-from-timemachine-backups$ /2010/08/06/protip-exclude-your-rvm-install-from-timemachine-backups/ [L]
@@ -66,7 +69,7 @@ RewriteRule ^2008/8/18/in-hell-oo-for-homemarks$ /2008/08/18/in-hell-oo-for-home
 RewriteRule ^2008/7/6/stop-exception-notifications-with-the-zombieshotgun$ /2008/07/06/stop-exception-notifications-with-the-zombieshotgun/ [L]
 RewriteRule ^2008/6/18/restful-ajax-with-forgery-protection$ /2008/06/18/restful-ajax-with-forgery-protection/ [L]
 RewriteRule ^2008/5/30/coulda-shoulda-woulda$ /2008/05/30/coulda-shoulda-woulda/ [L]
-RewriteRule ^2008/5/24/the-ajax-head-br-design-pattern$ /2008/05/24/the-ajax-head-br-design-pattern/ [L]
+RewriteRule ^2008/5/24/the-ajax-head-br-design-pattern$ /2008/05/24/the-ajax-head-design-pattern/ [L]
 RewriteRule ^2008/4/25/using-rubyamp-textmate-bundle-with-opt-ruby$ /2008/04/25/using-rubyamp-textmate-bundle-with-opt-ruby/ [L]
 RewriteRule ^2008/4/22/how-to-use-passenger-mod_rails-with-rails-edge-2-1$ /2008/04/22/how-to-use-passenger-mod_rails-with-rails-edge-2-1/ [L]
 RewriteRule ^2008/4/13/now-on-passenger-mod_rails$ /2008/04/13/now-on-passenger-mod_rails/ [L]

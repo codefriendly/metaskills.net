@@ -15,6 +15,7 @@
 
 = Todo
 
+* Need JavaScript Category
 * QA search for /assets/\d\d\d just in case
 * Make sure cdn.metaskills.net is setup.
 * Test &, <, > in content with Tidy.

@@ -1,0 +1,83 @@
+--- 
+layout: page
+title: My Projects
+categories: 
+  - projects
+---
+
+
+<h2>Rails SQL Server</h2>
+
+<p>
+  The SQL Server adapter for rails is back for ActiveRecord 2.2 and up! We are currently passing all tests and hope to continue to do so moving forward. Includes tons of new features including unicode column support, pessimistic locking, date/time column casting, DDL transactions and way more.
+</p>
+
+<p>
+  The TinyTds gem is my first ruby C extension. It provides a fast, efficient and native interface to FreeTDS. This provides SQL Server users with the first low level connection mode that properly handles client db encoding, ruby primitives, and string encodings under 1.9 and up.
+</p>
+
+<ul>
+  <li><a href="http://github.com/rails-sqlserver/activerecord-sqlserver-adapter/">Rails SQL Server Adapter</a></li>
+  <li><a href="http://github.com/rails-sqlserver/tiny_tds/">TinyTds - A modern, simple and fast FreeTDS library for Ruby using DB-Library </a></li>
+</ul>
+
+
+<h2>NamedScope Plugin</h2>
+
+<p>
+  This one is for all those left behind on rails 2.0.4 or even gasp... rails 1.2.6. This is an incredibly well tested backport of NamedScope. It even comes with those fancy .first, .last, and .all methods that can be used on classes and associations. This can be incredible useful if you are looking to upgrade your app in a way that is forward compatible.
+</p>
+
+<ul>
+  <li><a href="http://github.com/metaskills/named_scope/tree/master">NamedScope Plugin on Github</a></li>
+</ul>
+
+
+<h2>GroupedScope Plugin</h2>
+
+<p>
+  GroupedScope aims to make two things easier in your ActiveRecord models. First, provide a easy way to group objects, second, to allow the group to share associated object via existing has_many relationships. See installation and usage for more details.
+</p>
+
+<ul>
+  <li><a href="http://github.com/metaskills/grouped_scope/tree/master">GroupedScope Plugin on Github</a></li>
+  <li><a href="/2008/09/28/jack-has_many-things/">Jack has_many :things</a>, an article introducing GroupedScope.</li>
+</ul>
+
+
+
+<h2>Capistrano: Remote Shared Cache Strategy</h2>
+
+<p>
+  This class greatly speeds up deploy times to multiple hosts by only updating your latest source code to a shared location accessible to all other servers. For instance, if you have 5 app servers in your cluster then the code update only happens with the primary or first server while all others use the shared cache to copy from. The remote shared cache can be updated by either a direct SCM export or a local export copy to target host. Notables on this project include:
+</p>
+
+<ul>
+  <li>An add_rollback method that takes a block of code that can be added to the task_call_frames stack of existing transactions. Allows transactions to be added within transactions.</li>
+  <li>A primary_app_server method that finds the primary or first app server.</li>
+  <li><a href="http://github.com/metaskills/remote_shared_cache/tree/master">http://github.com/metaskills/remote_shared_cache/tree/master</a></li>
+</ul>
+
+
+
+<h2>HomeMarks: Simple Bookmark Start Page</h2>
+
+<p>
+  <a href="http://homemarks.com/">HomeMarks</a> was my first rails project when I was both learning to program in both Ruby and JavaScript. It allows you to create a simple bookmark start page that organizes links into colored boxes sorted in columns. A common practice by all early web developers I knew, this time you do not have to code your own HTML.
+</p>
+
+<p>
+  HomeMarks went thru its third rewrite a few months ago for Rails 3 and is currently deployed on Heroku. I also recently just finised my first native Objective-C iPhone app too. I am currently working on the native iPad version and will post updates here too. When that happens I will rewrite the rails application a 4th time using CoffeeScript & Backbone.js for the front end vs Prototype.
+</p>
+
+<ul>
+  <li><a href="/2010/02/12/synchronizing-core-data-with-rails-3-0-0-pre/">Synchronizing Core Data With Rails (3.0.0.pre)</a></li>
+  <li><a href="/2008/08/18/in-hell-oo-for-homemarks/">Hell'OO HomeMarks</a></li>
+  <li><a href="/2008/05/24/the-ajax-head-design-pattern/">The "AJAX Head" Design Pattern</a></li>
+</ul>
+
+
+
+
+
+

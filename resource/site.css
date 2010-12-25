@@ -54,6 +54,7 @@
 /* Component - AppleTV Left Navigation */
 /* Component - Flash Warnings/Messages */
 /* Component - Flash Warnings/Messages */
+/* Component - Resume */
 /* Component - Data badge for pubdate */
 /* Component - Pre/Code */
 /* Component - Fancy Photo */
@@ -490,6 +491,17 @@ body {
           content: "\201D";
           top: 20px;
           right: -42px; }
+      body section#page section#content article.resume {
+        width: 80%;
+        border: 1px dashed rgba(255, 255, 255, 0.2);
+        margin: 10px auto 35px auto;
+        padding: 10px 30px 0px 30px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        border-radius: 8px; }
+        body section#page section#content article.resume img {
+          vertical-align: bottom; }
     body section#page nav {
       z-index: 90;
       float: left;
@@ -707,6 +719,10 @@ body {
     font-family: MetaDroidSans, Helvetica sans-serif;
     font-size: 16px;
     line-height: 1.4em; }
+  body table th {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 8px; }
   body .center {
     margin: 0 auto;
     text-align: center; }
