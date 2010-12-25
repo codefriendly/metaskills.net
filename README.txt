@@ -22,7 +22,7 @@
 Misc notes on setting up a development environment. Rarely needs to be done, but wanted to document my personal setup.
   
   1) Install some deps.
-     $ sudo port install pngcrush
+     $ sudo port install optipng
      $ sudo port install tidy
      $ sudo port install py26-pygments
        Add /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin 
@@ -50,8 +50,8 @@ After all things are installed, here are some development helpers.
   2) Handy to watch for scss file changes while writing.
      $ sass --scss --watch _sass:_site/resource --style compact --no-cache
   
-  3) Crush PNG files.
-     $ find assets resource -name "*.png" -exec pngcrush -reduce -brute -oldtimestamp {} {}.crushed \; -exec rm {} \; -exec mv {}.crushed {} \;
+  3) Optimize PNG files.
+     $ find assets resource -name "*.png" -exec optipng -o7 {} \;
   
   4) Create the site and tidy it.
      $ setopt rmstarsilent
