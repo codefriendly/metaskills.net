@@ -30,11 +30,13 @@
   http://intridea.com/2010/12/3/summarize-a-ruby-c-binding-for-open-text-summarizer
 * Make sure I have good content types from apache for .ttf true type fonts.
   "Resource interpreted as font but transferred with MIME type text/html."
-
+* Make sure video types is correct:
+  AddType video/mp4 .mp4
 * Blog Post On Move!
   Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
   Talk about zepto with "this" and "that" (backbone) examples.
   * http://dev.metaskills.net/2008/9/28/jack-has_many-things
+  * http://dev.metaskills.net/2008/8/18/in-hell-oo-for-homemarks
 
 
 = Development Setup

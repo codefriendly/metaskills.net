@@ -616,7 +616,7 @@ I'll be following your efforts on this... maybe I can learn something... who kno
       <pubDate>Sun, 05 Feb 2006 03:52:00 +0000</pubDate>
       <jskit:attribute value="10.0.1.4" key="IP"></jskit:attribute>
       <author>Ken Collins</author>
-      <description>And good luck with your SA configuration. One thing I've found very useful is configuring postfix is the live blacklist feature. In the OS X Server Admin, there is a feature for this and I have my mail server set to use &lt;a href="http://www.spamhaus.org/sbl/howtouse.html" rel="external" class="external-link"&gt;Spamhaus&lt;/a&gt; as a real time blacklist. I use sbl-xbl.spamhaus.org in mine. If you are configuring postfix by the CLI, I you can just add &lt;code&gt;smtpd_client_restrictions = permit_mynetworks  refect_rbl_client xbl-xbl.spamhaus.org permit&lt;/code&gt;</description>
+      <description>And good luck with your SA configuration. One thing I've found very useful is configuring postfix is the live blacklist feature. In the OS X Server Admin, there is a feature for this and I have my mail server set to use &lt;a href="http://www.spamhaus.org/sbl/howtouse.html" class="external-link"&gt;Spamhaus&lt;/a&gt; as a real time blacklist. I use sbl-xbl.spamhaus.org in mine. If you are configuring postfix by the CLI, I you can just add &lt;code&gt;smtpd_client_restrictions = permit_mynetworks  refect_rbl_client xbl-xbl.spamhaus.org permit&lt;/code&gt;</description>
       <jskit:attribute value="44-17" key="sync_peer_3"></jskit:attribute>
       <jskit:attribute value="3" key="foreign"></jskit:attribute>
     </item>

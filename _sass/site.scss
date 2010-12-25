@@ -15,7 +15,8 @@
 /* Fonts */
 /* Pictos Font - Copyright © 2010 Drew Wilson http://www.drewwilson.com - This font is NOT free! */
 
-@font-face  { font-family: MetaMedRoman; src: url('/resource/font-meta-med.ttf') format('truetype'); }
+@font-face  { font-family: MetaMedRoman; src: url('/resource/font-meta-med.ttf') format('truetype'); font-style: normal; font-weight: normal; }
+@font-face  { font-family: MetaMedRoman; src: url('/resource/font-meta-ita.ttf') format('truetype'); font-style: italic; font-weight: normal; }
 @font-face  { font-family: MetaMono; src: url('/resource/font-meta-mono.ttf') format('truetype'); }
 @font-face  { font-family: MetaDroidSans; src: url('/resource/font-goog-dsr.ttf') format('truetype'); font-style: normal; font-weight: normal; }
 @font-face  { font-family: MetaDroidSans; src: url('/resource/font-goog-dsb.ttf') format('truetype'); font-style: normal; font-weight: bold; }
@@ -243,6 +244,27 @@ $color-strong: #66ff66;
     background-color: rgba(0,102,255,0.3);
     a, a:link, a:visited, a:hover, a:active { color:#69f; border-bottom: 1px dashed #999; }
     &:before { @include sprite(0,2); }
+  }
+}
+
+
+/* Component - Flash Warnings/Messages */
+
+@mixin cmpnt-blockquote {
+  blockquote {
+    @include font-metamed(18px);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.4em;
+    margin: 20px 75px;
+    position: relative;
+    &:before, &:after {
+      display: block;
+      @include font-metamed(92px);
+      position: absolute;
+    }
+    &:before { content:"\201C"; top:20px; left:-54px; }
+    &:after { content:"\201D"; top:20px; right:-42px; }
   }
 }
 
@@ -476,7 +498,7 @@ $dsq-bubleft: 50px;
       @include cmpnt-datebadge;
     }
     /* pre/code */
-    p code { @include cmpnt-code; padding: 2px 5px; }
+    p code, ul code { @include cmpnt-code; padding: 2px 5px; }
     div.highlight, pre.command, pre.code, pre.text { 
       @include cmpnt-code; 
       padding: 14px 14px 4px 14px;
@@ -487,10 +509,11 @@ $dsq-bubleft: 50px;
     pre.command, pre.code, pre.text { padding-bottom:16px; }
     pre.text { &:before { display:none; } }
     /* other */
-    ul { padding-left: 18px; }
-    ul li { margin: 2px 0; }
+    ul { @include font-droidsans(16px); margin: 4px 0; padding-left: 18px; }
+    ul li { margin: 4px 0; }
     p strong { color:$color-strong; }
     img.shadow { margin-bottom:10px; @include vndr-box-shadow(7px, 7px, 8px, rgba(0,0,0,0.7)); }
+    a.nobor, a.nobor:link, a.nobor:visited, a.nobor:hover, a.nobor:active { border:none; }
     @include cmpnt-photofancy;
     @include cmpnt-disqus;
   }
@@ -568,6 +591,7 @@ body {
       @include layout-excerpt;
       @include layout-post;
       @include cmpnt-flash;
+      @include cmpnt-blockquote;
     }
     nav {
       z-index: 90;
