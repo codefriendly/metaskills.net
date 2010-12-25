@@ -1,44 +1,24 @@
 
-= Snippets
-
-<span class="photofancy">
-  <img src="/assets/exclude_from_timemachine.gif" alt="Time Machine Exclude Window" width="463" height="320" />
-</span>
-
-{% highlight ruby %}
-  ...
-{% endhighlight %}
-
-<aside class="flash_message">...</aside>
-<aside class="flash_warn">...</aside>
-
-
 = Todo
 
-* Need JavaScript Category
-* QA search for /assets/\d\d\d just in case
-* Make sure cdn.metaskills.net is setup.
-* Test &, <, > in content with Tidy.
-* Turn on "Cross-domain Receiver URL" in DISQUS settings.
-* Turn off "var disqus_developer = 1;"
-* Make sure to use "--style compressed" with sass.
-* Think about google sitemap again.
-* Consider using feedburner vs my own alternate atom?
-  - Consider this XML too. https://github.com/metajack/metajack.im/blob/master/atom.xml
-* Add png crush to pre deploy or asset stuff.
-  pngcrush -reduce -brute sprite.png sprite2.png
 * Consider doing HP with summarize
   http://intridea.com/2010/12/3/summarize-a-ruby-c-binding-for-open-text-summarizer
-* Make sure I have good content types from apache for .ttf true type fonts.
-  "Resource interpreted as font but transferred with MIME type text/html."
-* Make sure video types is correct:
-  AddType video/mp4 .mp4
-* Blog Post On Move!
-  Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
-  Talk about zepto with "this" and "that" (backbone) examples.
-  * http://dev.metaskills.net/2008/9/28/jack-has_many-things
-  * http://dev.metaskills.net/2008/8/18/in-hell-oo-for-homemarks
 
+* POST LAUNCH
+  - Apache Setting.
+    * Video types - AddType video/mp4 .mp4
+    * Fonts - .ttf 
+  - Test atom.xml feed.
+    * Consider using feedburner vs my own alternate
+    * Consider this XML too. https://github.com/metajack/metajack.im/blob/master/atom.xml
+  - Hook up a google sitemap.
+  - Turn on "Cross-domain Receiver URL" in DISQUS settings.
+  - Blog Post On Move!
+    Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
+    Talk about zepto with "this" and "that" (backbone) examples.
+    * http://dev.metaskills.net/2008/9/28/jack-has_many-things
+    * http://dev.metaskills.net/2008/8/18/in-hell-oo-for-homemarks
+  
 
 = Development Setup
 
@@ -61,6 +41,7 @@ Misc notes on setting up a development environment. Rarely needs to be done, but
      $ git checkout v0.3
 
 
+
 = Developing
 
 After all things are installed, here are some development helpers.
@@ -72,10 +53,29 @@ After all things are installed, here are some development helpers.
   2) Handy to watch for scss file changes while writing.
      $ sass --scss --watch _sass:_site/resource --style compact --no-cache
   
-  3) Create the site and tidy it.
+  3) Crush PNG files.
+     $ find assets resource -name "*.png" -exec pngcrush -reduce -brute -oldtimestamp {} {}.crushed \; -exec rm {} \; -exec mv {}.crushed {} \;
+  
+  4) Create the site and tidy it.
      $ setopt rmstarsilent
-     $ rm -rf _site/* && sass _sass/site.scss:resource/site.css && jekyll && 
-       find _site -name "*.html" -exec tidy -config $(pwd)/tidy.conf {} \;
+     $ rm -rf _site/* && sass --style compressed _sass/site.scss:resource/site.css && 
+       jekyll && find _site -name "*.html" -exec tidy -config $(pwd)/tidy.conf {} \;
+
+
+
+= CSS Conventions
+
+  <span class="photofancy">
+    <img src="/assets/exclude_from_timemachine.gif" alt="Time Machine Exclude Window" width="463" height="320" />
+  </span>
+
+  {% highlight ruby %}
+    ...
+  {% endhighlight %}
+
+  <aside class="flash_message">...</aside>
+  <aside class="flash_warn">...</aside>
+
 
 
 = License
