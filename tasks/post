@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+# Based on https://github.com/henrik/henrik.nyh.se/blob/master/tasks/post
+
+require 'rubygems'
+
+
+ROOT_DIR = File.join(File.dirname(__FILE__), '/..')
+
+title = ARGV[0]
+
+unless title
+  puts %{Usage: #{$0} "The Post Title"}
+  exit(-1)
+end
+
+datetime = (Time.now + 30*60).strftime('%Y-%m-%d')
+slug = title.downcase.gsub(/[&$:-]/,'').gsub(' ','-')
+path = "#{ROOT_DIR}/_posts/#{datetime}-#{slug}.html"
+header = %|---
+layout: post
+title: #{title}
+categories: 
+  - 
+---
+
+
+
+|
+
+File.open(path, 'w') {|f| f << header }
+system("mate", "-a", path)
