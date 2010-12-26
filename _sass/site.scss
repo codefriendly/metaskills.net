@@ -712,7 +712,6 @@ body {
   header#mast div.content section#identity * { margin-left:15px !important; }
   section#page section#content { width: $c8width - 15px !important; padding-right:15px; }
   section#page nav { width: #{$c2width - 15px} !important; padding-left:15px !important; }
-  section#page nav ul { width: #{$c2width - 64px - 15px} !important; }
   article.excerpt p { width: #{$c6width - 15px} !important; }
   section#footer section#recentposts { width: #{$c6width - 15px} !important; padding-left: 15px !important; }
   section#footer section#blogroll { width: #{$c2width - 15px} !important; }
