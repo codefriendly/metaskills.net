@@ -5,14 +5,17 @@
     Header set Access-Control-Allow-Origin "*"
   </IfModule>
 </FilesMatch>
+
 # Only works in main http.conf
 AddDefaultCharset utf-8
 AddCharset utf-8 .html .css .js .xml .json .rss
+AddType font/truetype .ttf
+AddType video/mp4 .mp4
+AddType text/cache-manifest .manifest
 
 # Rewriting!
 Options +FollowSymlinks
 RewriteEngine on
-
 # Mephisto To Jekyll (Feed)
 RewriteRule ^feed/atom\.xml$ /atom.xml [L]
 # Mephisto To Jekyll (Pages)

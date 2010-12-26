@@ -5,7 +5,7 @@
 * POST LAUNCH
   - Apache Setting.
     * Video types - AddType video/mp4 .mp4
-    * Fonts - .ttf 
+    * Fonts - .ttf - AddType font/truetype ttf
   - Hook up a google sitemap.
   - Blog Post On Move!
     Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
