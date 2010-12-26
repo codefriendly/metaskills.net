@@ -1,15 +1,12 @@
 
 = Todo
 
+* Custom 404 Page.
 * POST LAUNCH
   - Apache Setting.
     * Video types - AddType video/mp4 .mp4
     * Fonts - .ttf 
-  - Test atom.xml feed.
-    * Consider using feedburner vs my own alternate
-    * Consider this XML too. https://github.com/metajack/metajack.im/blob/master/atom.xml
   - Hook up a google sitemap.
-  - Turn on "Cross-domain Receiver URL" in DISQUS settings.
   - Blog Post On Move!
     Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
     Talk about zepto with "this" and "that" (backbone) examples.

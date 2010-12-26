@@ -705,7 +705,18 @@ body {
   .pl20 { padding-left:20px; }
 }
 
-
+/* Layout - Default (iPad [portrait + landscape]) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  header#mast div.content nav ul { margin-right:15px; }
+  header#mast div.content section#identity div#avatar { margin-left:15px !important; }
+  header#mast div.content section#identity * { margin-left:15px !important; }
+  section#page section#content { width: $c8width - 15px !important; padding-right:15px; }
+  section#page nav { width: #{$c2width - 15px} !important; padding-left:15px !important; }
+  section#page nav ul { width: #{$c2width - 64px - 15px} !important; }
+  article.excerpt p { width: #{$c6width - 15px} !important; }
+  section#footer section#recentposts { width: #{$c6width - 15px} !important; padding-left: 15px !important; }
+  section#footer section#blogroll { width: #{$c2width - 15px} !important; }
+}
 
 
 
