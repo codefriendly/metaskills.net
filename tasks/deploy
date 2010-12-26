@@ -2,6 +2,8 @@
 
 # Build and deploy to mini.
 
-./tasks/jekyll && rsync -avz --delete _site/ mini:/Library/WebServer/hosts/metaskills.net
+./tasks/jekyll && \
+  rsync -avz --delete _site/ mini:/Library/WebServer/hosts/metaskills.net && \
+  mini sudo apachectl restart
 
 
