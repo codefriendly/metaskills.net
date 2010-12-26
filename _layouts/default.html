@@ -60,9 +60,11 @@
               <p><a href="{{ post.url }}">{{ post.content | strip_html | truncatewords:30 }}</a></p>
             </article>
           {% endfor %}
+          <aside id="powered">
+      	    <span>Powered by <a href="http://github.com/henrik/jekyll">Jekyll</a> and <a href="http://disqus.com">Disqus</a>. Check out <a href="https://github.com/metaskills/metaskills.net">the code</a>.</span>
+      	  </aside>
         </section>
         <section id="badges">
-          <!-- <h3>Meta Info</h3> -->
           <ul>
             <li><a id="badge_ios" href="http://developer.apple.com/"></a></li>
             <li><a id="badge_railscore" href="http://contributors.rubyonrails.org/contributors/ken-collins/commits"></a></li>

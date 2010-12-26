@@ -658,6 +658,15 @@ body {
       @include cmpnt-recentposts;
       @include cmpnt-badges;
       @include cmpnt-blogroll;
+      aside#powered {
+        @include cmpnt-links;
+        a, a:link, a:visited, a:hover, a:active { border:none; }
+        @include font-inconsolata(12px);
+        font-style: italic;
+        text-align: left;
+        padding: 15px 0 40px 0;
+        span { padding: 2px 0; border-top: 1px dashed rgba(255,255,255,0.2); border-bottom: 1px dashed rgba(255,255,255,0.2); }
+      }
     }
   }
   h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; }
@@ -667,9 +676,12 @@ body {
   h4 { font-size: 16px; line-height:1.3em; margin-bottom:5px; }
   p { margin: 15px 0; @include font-droidsans(16px); line-height: 1.4em; }
   table th { text-align:right; font-weight:bold; padding-right:8px; }
+  .left { text-align:left; }
+  .right { text-align:right; }
   .center { margin: 0 auto; text-align:center; }
   .floatl { float:left; }
   .floatr { float:right; }
+  .nowrap { white-space:nowrap; }
   .clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
   .m10  { margin:10px; }
   .m20  { margin:20px; }
@@ -681,6 +693,16 @@ body {
   .mb20 { margin-bottom:20px; }
   .ml10 { margin-left:10px; }
   .ml20 { margin-left:20px; }
+  .p10  { padding:10px; }
+  .p20  { padding:20px; }
+  .pt10 { padding-top:10px; }
+  .pt20 { padding-top:20px; }
+  .pr10 { padding-right:10px; }
+  .pr20 { padding-right:20px; }
+  .pb10 { padding-bottom:10px; }
+  .pb20 { padding-bottom:20px; }
+  .pl10 { padding-left:10px; }
+  .pl20 { padding-left:20px; }
 }
 
 

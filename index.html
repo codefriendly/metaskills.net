@@ -1,0 +1,13 @@
+---
+layout: category
+title: Welcome!
+---
+
+{% for post in site.posts limit:15 %}
+  {% include excerpt.html %}
+{% endfor %}
+
+<div class="floatr mr20">
+  <a href="/archive.html">&laquo; Archives</a>
+</div>
+
