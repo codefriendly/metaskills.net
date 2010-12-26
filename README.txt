@@ -41,22 +41,12 @@ Misc notes on setting up a development environment. Rarely needs to be done, but
 
 = Developing
 
-After all things are installed, here are some development helpers.
+After all things are installed, consult each file in the tasks directory for 
+development tips. Some other details include.
   
   1) Build zepto.
      $ cd ~/Repositories/zepto && git checkout v0.3 && rake && 
        cp dist/zepto.min.js ~/Repositories/metaskills.net/resource/zepto.js
-
-  2) Handy to watch for scss file changes while writing.
-     $ sass --scss --watch _sass:_site/resource --style compact --no-cache
-  
-  3) Optimize PNG files.
-     $ find assets resource -name "*.png" -exec optipng -o7 {} \;
-  
-  4) Create the site and tidy it.
-     $ setopt rmstarsilent
-     $ rm -rf _site/* && sass --style compressed _sass/site.scss:resource/site.css && 
-       bundle exec jekyll && find _site -name "*.html" -exec tidy -config $(pwd)/tidy.conf {} \;
 
 
 

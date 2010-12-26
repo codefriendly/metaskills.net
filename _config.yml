@@ -7,3 +7,4 @@ exclude:
 - Gemfile.lock
 - README.textile
 - tidy.conf
+- tasks

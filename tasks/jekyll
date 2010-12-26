@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# Create the site and tidy it.
+
+setopt rmstarsilent
+
+rm -rf _site/* && \
+  sass --style compressed _sass/site.scss:resource/site.css && \
+  bundle exec jekyll && \
+  find _site -name "*.html" -exec tidy -config $(pwd)/tidy.conf {} \;
+

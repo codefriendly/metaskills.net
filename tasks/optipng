@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# Optimize PNG files.
+
+find assets resource -name "*.png" -exec optipng -o7 {} \;
+
