@@ -11,7 +11,7 @@ AddCharset utf-8 .html .css .js .xml .json .rss
 
 # Rewriting!
 Options +FollowSymlinks
-RewriteEngine On
+RewriteEngine on
 
 # Mephisto To Jekyll (Pages)
 RewriteRule ^colophon$ /pages/colophon.html [L]
@@ -100,5 +100,22 @@ RewriteRule ^2006/1/28/cooking-with-drupal$ /2006/01/28/cooking-with-drupal/ [L]
 RewriteRule ^2006/1/11/the-best-font-for-mac-programmers-profont$ /2006/01/11/the-best-font-for-mac-programmers-profont/ [L]
 RewriteRule ^2005/12/22/textmate-by-programmers-for-efficiency-experts$ /2005/12/22/textmate-by-programmers-for-efficiency-experts/ [L]
 RewriteRule ^2005/12/19/how-to-setup-a-simple-mysql-backup-script$ /2005/12/19/how-to-setup-a-simple-mysql-backup-script/ [L]
+# Drupal To Mephisto=>Jekyll (Pages)
+RewriteRule ^blog/colophon/who-is-to-blame-for-this$ http://%{HTTP_HOST}/pages/colophon.html [R=301,L]
+RewriteRule ^blog/colophon/ken-collins-resume$ http://%{HTTP_HOST}/pages/resume.html [R=301,L]
+RewriteRule ^blog/colophon$ http://%{HTTP_HOST}/pages/colophon.html [R=301,L]
+# Drupal To Mephisto=>Jekyll (Posts)
+RewriteRule ^blog/heuristics/sysadmin/getting-on-good-terms-with-the-os-x-shell$ http://%{HTTP_HOST}/2006/03/19/getting-on-good-terms-with-the-os-x-shell/ [R=301,L]
+RewriteRule ^blog/heuristics/programming/ruby/rake-task-to-read-and-write-the-activerecord-schema-version-table$ http://%{HTTP_HOST}/2007/01/31/rake-task-to-read-and-write-the-activerecord-schema-version-table/ [R=301,L]
+RewriteRule ^blog/heuristics/sysadmin/how-to-control-browser-caching-with-apache-2$ http://%{HTTP_HOST}/2006/02/19/how-to-control-browser-caching-with-apache-2/ [R=301,L]
+RewriteRule ^blog/heuristics/networking/mini-network-with-a-big-xserve-style$ http://%{HTTP_HOST}/2006/02/05/mini-network-with-a-big-xserve-style/ [R=301,L]
+RewriteRule ^blog/heuristics/programming/ruby/custom-rake-task-to-unload-fixtures$ http://%{HTTP_HOST}/2006/10/02/custom-rake-task-to-unload-fixtures/ [R=301,L]
+RewriteRule ^blog/heuristics/usability/quake-style-terminal-window-on-os-x$ http://%{HTTP_HOST}/2006/06/13/quake-style-terminal-window-on-os-x/ [R=301,L]
+RewriteRule ^blog/heuristics/drupal/flying-light-configuring-drupal-and-lighttpd$ http://%{HTTP_HOST}/2006/06/30/flying-light-configuring-drupal-and-lighttpd/ [R=301,L]
+RewriteRule ^blog/heuristics/networking/a-review-of-digg-com-traffic-and-cdns$ http://%{HTTP_HOST}/2006/02/16/a-review-of-digg-com-traffic-and-cdns/ [R=301,L]
+RewriteRule ^blog/heuristics/database/how-to-setup-a-simple-mysql-backup-script$ http://%{HTTP_HOST}/2005/12/19/how-to-setup-a-simple-mysql-backup-script/ [R=301,L]
+RewriteRule ^/blog/heuristics/apple/back-in-black$ http://%{HTTP_HOST}/2006/06/06/back-in-black/ [R=301,L]
+RewriteRule ^blog/heuristics/programming/ruby/my-own-soup-to-nuts-recipe-for-ruby-on-rails-on-os-x$ http://%{HTTP_HOST}/2006/05/29/my-own-soup-to-nuts-recipe-for-ruby-on-rails-on-os-x/ [R=301,L]
+RewriteRule ^blog/lifestyle/if-microsoft-designed-the-ipod-packaging$ http://%{HTTP_HOST}/2006/03/02/if-microsoft-designed-the-ipod-packaging/ [R=301,L]
 
 
