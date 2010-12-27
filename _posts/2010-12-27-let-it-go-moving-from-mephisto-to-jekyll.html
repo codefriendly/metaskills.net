@@ -17,7 +17,7 @@ categories:
 <h2>Migrating Mephisto Data</h2>
 
 <p>
-  So maybe you have an old Mephisto install that you would like to migrate to Jekyll? If so, I have <a href="">posted a gist</a> of some rails 3 models that I used to export my data from MySQL to static files following the format required by Jekyll. Simply populate a new rails 3 project with these, fire up a console and do <code>Site.export_jekyll</code>. This will create a folder in <code>tmp/jekyll_posts</code> and write a file for each Mephisto article. The posts will contain the YAML front matter for jekyll and hopefully a good starting point of the categories you had assigned to that post. As a bonus, the export will create a <code>tmp/jekyll_posts/rewrites.txt</code> file that will be very useful to include in a .htaccess file of your jekyll project. An example below.
+  So maybe you have an old Mephisto install that you would like to migrate to Jekyll? If so, I have <a href="https://gist.github.com/756111">posted a gist</a> of some rails 3 models that I used to export my data from MySQL to static files following the format required by Jekyll. Simply populate a new rails 3 project with these, fire up a console and do <code>Site.export_jekyll</code>. This will create a folder in <code>tmp/jekyll_posts</code> and write a file for each Mephisto article. The posts will contain the YAML front matter for jekyll and hopefully a good starting point of the categories you had assigned to that post. As a bonus, the export will create a <code>tmp/jekyll_posts/rewrites.txt</code> file that will be very useful to include in a .htaccess file of your jekyll project. An example below.
 </p>
 
 {% highlight apache %}
