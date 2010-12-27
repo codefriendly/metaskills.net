@@ -1,19 +1,4 @@
 
-= Todo
-
-* Custom 404 Page.
-* POST LAUNCH
-  - Apache Setting.
-    * Video types - AddType video/mp4 .mp4
-    * Fonts - .ttf - AddType font/truetype ttf
-  - Hook up a google sitemap.
-  - Blog Post On Move!
-    Thank @necolas for tips on pseudo generated content with CSS. AppleTV links.
-    Talk about zepto with "this" and "that" (backbone) examples.
-    * http://dev.metaskills.net/2008/9/28/jack-has_many-things
-    * http://dev.metaskills.net/2008/8/18/in-hell-oo-for-homemarks
-  
-
 = Development Setup
 
 Misc notes on setting up a development environment. Rarely needs to be done, but wanted to document my personal setup.

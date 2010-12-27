@@ -1,4 +1,7 @@
 
+# Error Docs
+ErrorDocument 404 /404.html
+
 # HTML5 Boilerplate http://html5boilerplate.com/
 <FilesMatch "\.(ttf|otf|eot|woff|font.css)$">
   <IfModule mod_headers.c>
