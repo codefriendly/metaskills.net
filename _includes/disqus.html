@@ -1,6 +1,8 @@
 
 <script type="text/javascript">
-  // var disqus_developer = 1;
+  {% unless env_deploy %}
+  var disqus_developer = 1;
+  {% endunless %}
   var disqus_shortname = 'metaskillsnet';
   var disqus_identifier = '{% if page.disqus_id %}{{ page.disqus_id }}{% else %}{{ page.url }}{% endif %}';
   var disqus_title = '{{ page.title }}';
