@@ -4,6 +4,6 @@ pygments: true
 exclude:
 - Gemfile
 - Gemfile.lock
-- README.textile
+- README.txt
 - tidy.conf
 - tasks
