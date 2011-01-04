@@ -29,6 +29,7 @@ var MetaPygmentize = {
     this.convert('o',  'k',   ['*','&','+','/','=']);
     this.convert('nx', 'k',   ['$','$$']);
     this.convert('k',  'kjs', ['this']);
+    this.convert('kp', 'sr',  ['public','private','protected']);
   },
   
   arrayInclude: function(array, obj) {

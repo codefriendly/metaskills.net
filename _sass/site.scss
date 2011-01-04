@@ -877,7 +877,7 @@ $tmc_nt: rgb(48,48,255);
 .highlight .sh    { color: #d14 } /* Literal.String.Heredoc */
 .highlight .si    { color: $tmc } /* Literal.String.Interpol */
 .highlight .sx    { color: $tmc_s } /* Literal.String.Other */
-.highlight .sr    { color: #009926 } /* Literal.String.Regex */
+.highlight .sr    { color: $tmc_y } /* Literal.String.Regex */
 .highlight .s1    { color: $tmc_s } /* Literal.String.Single */
 .highlight .ss    { color: $tmc_i } /* Literal.String.Symbol */
 .highlight .bp    { color: #999999 } /* Name.Builtin.Pseudo */
