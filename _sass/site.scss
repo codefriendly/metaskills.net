@@ -373,8 +373,10 @@ $dsq-bubleft: 50px;
     }
     #dsq-toolbar-dropdown-wrap h4 { font-size:14px; }
     #dsq-comments-title { margin-top:15px; }
+    #dsq-content .dsq-moderator .dsq-comment-header { background:none; background-color:rgba(0,216,60,0.1); }
     .dsq-full-comment {
       .dsq-comment-header {
+        @include vndr-border-radius-all(6px);
         .dsq-header-avatar { padding-left:8px; }
         .dsq-comment-cite { @include font-metamed(16px); }
       }
