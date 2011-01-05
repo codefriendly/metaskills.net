@@ -1,9 +1,11 @@
-module Jekyll
-  module Filters
+module MetaSkills
+  class DisqusDeveloper < Liquid::Tag
 
-    def env_deploy
-      ENV['JEKYLL_DEPLOY'] == 'true'
+    def render(context)
+      ENV['JEKYLL_DEPLOY'] == 'true' ? '' : 'var disqus_developer = 1;'
     end
-  
+    
   end
 end
+
+Liquid::Template.register_tag 'disqus_developer', MetaSkills::DisqusDeveloper
