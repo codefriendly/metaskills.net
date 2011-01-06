@@ -341,8 +341,8 @@ $color-strong: #66ff66;
       background-color: rgba(0,0,0,0.8);
       @include vndr-border-radius-all(4px)
     }
-    &:before { bottom: 8px; left: 2px; @include vndr-box-shadow(7px, 7px, 10px, rgba(0,0,0,0.7)); @include vndr-rotate(-3); }
-    &:after { bottom: 8px; right: 10px; @include vndr-box-shadow(7px, 7px, 10px, rgba(0,0,0,0.7)); @include vndr-rotate(3); } 
+    &:before { bottom: 8px; left: 0px; @include vndr-box-shadow(3px, 9px, 10px, rgb(0,0,0)); @include vndr-rotate(-3); }
+    &:after { bottom: 8px; right: 10px; @include vndr-box-shadow(7px, 9px, 10px, rgb(0,0,0)); @include vndr-rotate(3); } 
     img, object {
       padding: 13px;
       border: 1px solid #000;
