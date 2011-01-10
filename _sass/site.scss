@@ -455,6 +455,7 @@ $dsq-bubleft: 50px;
     @include resetanchors;
     ul { list-style:none; }
     a { display:block; width:180px; margin-bottom:12px; }
+    #badge_js { height:35px; @include sprite(17,0); a { text-index:-3000px; } }
     #badge_ios { height:32px; @include sprite(1,0); }
     #badge_railscore { height:32px; @include sprite(3,0); }
     #badge_pragalumni { height:58px; @include sprite(5,0); }

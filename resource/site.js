@@ -58,6 +58,11 @@ var MetaSkills = {
   
   appendContentForAppleTvNavigation: function() {
     $('#page nav a').append('<span></span>');
+  },
+  
+  hideSeoContent: function() {
+    $('#badge_js').html('');
+    $('#badge_js').text('');
   }
   
 };
@@ -67,6 +72,7 @@ var MetaSkills = {
 
 $(document).ready(function(){
   MetaSkills.appendContentForAppleTvNavigation();
+  MetaSkills.hideSeoContent();
   MetaPygmentize.process();
 })
 
