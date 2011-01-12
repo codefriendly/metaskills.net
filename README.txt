@@ -1,4 +1,9 @@
 
+= Todo
+
+  * Implement Site Search: http://kwpolska.co.cc/
+
+
 = Development Setup
 
 Misc notes on setting up a development environment. Rarely needs to be done, but wanted to document my personal setup.
