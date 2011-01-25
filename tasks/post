@@ -4,7 +4,7 @@
 require 'rubygems'
 
 
-ROOT_DIR = File.join(File.dirname(__FILE__), '/..')
+ROOT_DIR = File.expand_path File.join(File.dirname(__FILE__), '/..')
 
 title = ARGV[0]
 
@@ -14,7 +14,7 @@ unless title
 end
 
 datetime = (Time.now + 30*60).strftime('%Y-%m-%d')
-slug = title.downcase.gsub(/[&$:-]/,'').gsub(' ','-')
+slug = title.downcase.gsub('::','-').gsub('/','-').gsub(' ','-').gsub(/&|\$|:|]/,'')
 path = "#{ROOT_DIR}/_posts/#{datetime}-#{slug}.html"
 header = %|---
 layout: post
