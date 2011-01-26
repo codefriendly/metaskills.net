@@ -14,7 +14,7 @@ layout: nil
    <email>ken@metaskills.net</email>
  </author>
 
- {% for post in site.posts limit:10 %}
+ {% for post in site.posts limit:15 %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
    <link href="http://metaskills.net{{ post.url }}"/>
