@@ -19,8 +19,9 @@ AddType text/cache-manifest .manifest
 # Rewriting!
 Options +FollowSymlinks
 RewriteEngine on
-# Mephisto To Jekyll (Feed)
-RewriteRule ^feed/atom\.xml$ /atom.xml [L]
+# Feeds to Feedburner!
+RewriteRule ^atom\.xml$ http://feeds.feedburner.com/metaskills [R=301,L]
+RewriteRule ^feed/atom\.xml$ http://feeds.feedburner.com/metaskills [R=301,L]
 # Mephisto To Jekyll (Pages)
 RewriteRule ^colophon$ /pages/colophon.html [L]
 RewriteRule ^colophon/ken-collins-resume$ /pages/resume.html [L]
