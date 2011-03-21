@@ -18,9 +18,13 @@ categories:
 <h2>Installation</h2>
 
 <p>
-  Installing the PDFKit gem is a no brainer. The hard part is getting the wkhtmltopdf binaries for you platform installed. Thankfully the google project page hosts a batch of static binaries that work on just about every platform. So <a href="http://code.google.com/p/wkhtmltopdf/downloads/list">go to their download page</a> and pick the statically compiled binary that meets your needs. I highly suggest that you get the latest 0.10.0rc2 since some topics below take advantage of recent bug fixes. I have tested both the OSX and i386 on RHEL with success and the release candidate seems very production ready.
+  Installing the PDFKit gem is a no brainer. The hard part is getting the wkhtmltopdf binaries for you platform installed. Thankfully the google project page hosts a batch of static binaries that work on just about every platform. So <a href="http://code.google.com/p/wkhtmltopdf/downloads/list">go to their download page</a> and pick the statically compiled binary that meets your needs. I highly suggest that you get the latest 0.10.0rc2 since some topics below take advantage of recent bug fixes. I have tested both the OSX and i386 on RHEL with success and the release candidate seems very production ready. I suggest placing wkhtmltopdf in <code>/usr/local/bin/wkhtmltopdf</code>.
 </p>
 
+<pre class="command">
+$ which wkhtmltopdf
+/usr/local/bin/wkhtmltopdf
+</pre>
 
 <h2>The Basic Requirements</h2>
 
