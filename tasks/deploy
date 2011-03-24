@@ -3,6 +3,6 @@
 # Build and deploy to mini.
 
 env JEKYLL_DEPLOY=true ./tasks/jekyll && \
-  rsync -avz --delete _site/ mini:/Library/WebServer/hosts/metaskills.net
+  rsync -avz --delete _site/ ../metaskills.github.com
 
 
