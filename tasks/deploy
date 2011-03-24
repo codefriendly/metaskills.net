@@ -2,15 +2,10 @@
 
 # Build and deploy to mini.
 
-currentdir=$(pwd)
-
 env JEKYLL_DEPLOY=true ./tasks/jekyll && \
   rsync -az --delete --exclude '.git' _site/ ~/Repositories/metaskills.github.com && \
   cd ~/Repositories/metaskills.github.com && \
   git add . && \
   gca -m "Automatic deploy commit." && \
-  grbmc && \
-  cd currentdir
-  
-
+  grbmc
 
