@@ -23,7 +23,10 @@ Misc notes on setting up a development environment. Rarely needs to be done, but
   3) Clone zepto.
      $ cd ~/Repositories && git clone git://github.com/madrobby/zepto.git && cd zepto
      $ git checkout v0.3
-
+  
+  4) Make a .git/hooks/post-push hook with this. My grbmc uses this hook.
+     #!/usr/bin/env zsh
+     /Users/kencollins/Repositories/metaskills.net/tasks/deploy
 
 
 = Developing
