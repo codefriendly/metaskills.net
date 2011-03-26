@@ -215,12 +215,11 @@ $color-strong: #66ff66;
     position: relative;
     margin: 10px 0 15px 0; 
     padding: 13px 13px 13px 45px; 
-    color: #000; 
+    color: #fff;
     @include vndr-border-radius-all(6px);
-    a, a:link, a:visited, a:hover, a:active { 
-      color:rgb(255,189,0); 
-      border-bottom: 1px dashed #999;
-    }
+    @include font-droidsans(14px);
+    a, a:link, a:visited, a:active { color: #fff; border-bottom: 1px dashed #999; font-weight: bold !important; }
+    a:hover { color: #999; }
     &:before { 
       content: ""; 
       display: block; 
@@ -232,17 +231,13 @@ $color-strong: #66ff66;
     }
   }
   .flash_warn { 
-    color: #fff;
     border: 2px solid rgb(255,189,0); 
     background-color: rgba(255,189,0,0.3);
-    a, a:link, a:visited, a:hover, a:active { color:#fc9; border-bottom: 1px dashed #999; }
     &:before { @include sprite(0,3); }
   }
   .flash_info { 
-    color: #fff;
     border: 2px solid rgb(0,102,255); 
     background-color: rgba(0,102,255,0.3);
-    a, a:link, a:visited, a:hover, a:active { color:#69f; border-bottom: 1px dashed #999; }
     &:before { @include sprite(0,2); }
   }
 }

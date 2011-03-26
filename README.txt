@@ -54,7 +54,7 @@ development tips. Some other details include.
     ...
   {% endhighlight %}
 
-  <aside class="flash_message">...</aside>
+  <aside class="flash_info">...</aside>
   <aside class="flash_warn">...</aside>
 
 
