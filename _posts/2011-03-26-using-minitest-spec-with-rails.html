@@ -1,0 +1,65 @@
+---
+layout: post
+title: Using MiniTest::Spec With Rails
+categories: 
+  - ruby-rails
+---
+
+<p>
+  So after a few blog post on the subject of MiniTest::Spec, I finally have a simple testing stack for Rails 3 that leverages MiniTest's spec DSL. I introduce to you the <a href="http://github.com/metaskills/mini_specunit">MiniSpecUnit</a> gem. MiniSpecUnit defines a <code>Test::Unit::TestCase</code> class that subclasses MiniTest::Spec. It implements only what is needed to make rails happy. It is not drop in replacement for the real Test::Unit::TestCase that is included with ruby 1.9.
+</p>
+
+<p>
+  Once you bundle the gem in your Rails application, it will satisfy the <code>require "test/unit/testcase"</code> from ActiveSupport's test case. Tricking it to use MiniTest::Spec instead of MiniTest::Unit. Here is an example Gemfile that shows the usage of MiniSpecUnit as well as two other MiniTest gems that I have made. The first is <a href="/2011/03/22/mini-backtrace-for-minitest-and-rails/">MiniBacktrace</a> which allows you to leverage the <code>Rails.backtrace_cleaner</code> using MiniTest. The other is <a href="/2011/01/25/from-test-unit-shoulda-to-minitest-spec-minishoulda/">MiniShoulda</a> which builds a simple Shoulda syntax on top of MiniTest::Spec.
+</p>
+
+{% highlight ruby %}
+group :test do
+  gem 'minitest'          # At least v2.0.2 if using MiniShoulda.
+  gem 'mini_specunit'     # The goods! Force MiniTest::Spec instead of MiniTest::Unit.
+  gem 'mini_backtrace'    # Use Rails.backtrace_cleaner with MiniTest.
+  gem 'mini_shoulda'      # A small Shoulda syntax on top of MiniTest::Spec.
+end
+{% endhighlight %}
+
+<p>
+  Since MinitTest::Spec is built on top of MiniTest::Unit, there is not a lot that can go wrong. With MiniSpecUnit, we finally have a working solution by replacing MiniTest::Spec as the superclass for ActiveSupport::TestCase when using Rails. This solution is drop dead simple and does not require to you to recreate a new test case in your <code>test_helper.rb</code> and change all your cases to subclass that. About the only gotcha is a few missing assertions available in Test::Unit. If you encounter these, I encourage you to rewrite them to the modern MiniTest::Spec assertion style. I commonly use this <a href="http://cheat.errtheblog.com/s/minitest/1">cheat sheet</a> to remember them. For example:
+</p>
+
+{% highlight ruby %}
+# This:
+assert_not_nil @foo.bar
+
+# Would Become This:
+@foo.bar.wont_be_nil
+{% endhighlight %}
+
+
+
+<h2>Functional Tests With ActionController::TestCase</h2>
+
+<p>
+  One problem you may have with your functional tests is a nil <code>@controller</code> instance variable in <code>describe</code> or <code>context</code> blocks. Resulting in the "<em>RuntimeError: @controller is nil: make sure you set it in your test's setup method.</em>" message. This is easy to fix, all you have to do is be explicit about your controller that you are testing like so.
+</p>
+
+{% highlight ruby %}
+class UsersControllerTest < ActionController::TestCase
+  tests UsersController
+  ...
+end
+{% endhighlight %}
+
+
+<h2>Broken Describe Scopes</h2>
+
+<p>
+  In my article, <a href="/2011/01/25/from-test-unit-shoulda-to-minitest-spec-minishoulda/"><em>From Test::Unit & Shoulda To MiniTest::Spec & MiniShoulda</em></a>, I cover a patch to MiniTest that would fix "undefined local variable or method" errors when using describe/context scopes. I submitted a <a href="https://github.com/seattlerb/minitest/pull/9">patch and pull request</a> to Ryan Davis that I believe was applied. At the time of this article, there is no release version of MiniTest that includes <a href="http://github.com/metaskills/mini_shoulda/blob/master/lib/mini_shoulda/minitest_describe_patch.rb">this patch</a> that I have in MiniShoulda. So if you find yourself with errors in describe/context blocks, consider bundling the MiniSholda gem to fix it till a new version of MiniTest is released.
+</p>
+
+
+<h2>In Closing</h2>
+
+<p>
+  I have only tested the above stack in the latest Rails edge, 3.1.beta and ruby 1.9.2. I doubt there are issues on older versions of Rails with different Ruby versions. If you apply these gems to success, I would love to hear about it. Happy testing!
+</p>
+
