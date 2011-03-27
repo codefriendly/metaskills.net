@@ -6,7 +6,7 @@ categories:
 ---
 
 <p>
-  So after a few blog post on the subject of MiniTest::Spec, I finally have a simple testing stack for Rails 3 that leverages MiniTest's spec DSL. I introduce to you the <a href="http://github.com/metaskills/mini_specunit">MiniSpecUnit</a> gem. MiniSpecUnit defines a <code>Test::Unit::TestCase</code> class that subclasses MiniTest::Spec. It implements only what is needed to make rails happy. It is not drop in replacement for the real Test::Unit::TestCase that is included with ruby 1.9.
+  So after a few blog post on the subject of MiniTest::Spec, I finally have a simple testing stack for Rails 3 that leverages MiniTest's spec DSL. I introduce to you the <a href="http://github.com/metaskills/mini_specunit">MiniSpecUnit</a> gem. MiniSpecUnit defines a <code>Test::Unit::TestCase</code> class that subclasses MiniTest::Spec. It implements only what is needed to make rails happy. It is not a drop in replacement for the real Test::Unit::TestCase that is included with ruby 1.9.
 </p>
 
 <p>
@@ -23,7 +23,7 @@ end
 {% endhighlight %}
 
 <p>
-  Since MinitTest::Spec is built on top of MiniTest::Unit, there is not a lot that can go wrong. With MiniSpecUnit, we finally have a working solution by replacing MiniTest::Spec as the superclass for ActiveSupport::TestCase when using Rails. This solution is drop dead simple and does not require to you to recreate a new test case in your <code>test_helper.rb</code> and change all your cases to subclass that. About the only gotcha is a few missing assertions available in Test::Unit. If you encounter these, I encourage you to rewrite them to the modern MiniTest::Spec assertion style. I commonly use this <a href="http://cheat.errtheblog.com/s/minitest/1">cheat sheet</a> to remember them. For example:
+  Since MinitTest::Spec is built on top of MiniTest::Unit, there is not a lot that can go wrong. With MiniSpecUnit, we finally have a working solution by replacing MiniTest::Spec as the superclass for ActiveSupport::TestCase when using Rails. This solution is drop dead simple and does not require you to recreate a new test case in your <code>test_helper.rb</code> and change all your cases to subclass that new test case. About the only gotcha is a few missing assertions available in Test::Unit. If you encounter these, I encourage you to rewrite them to the modern MiniTest::Spec assertion style. I commonly use this <a href="http://cheat.errtheblog.com/s/minitest/1">cheat sheet</a> to remember them. For example:
 </p>
 
 {% highlight ruby %}
