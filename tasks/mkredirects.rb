@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 OLD_PERMALINKS_TO_NEW_URLS = [
+  # Mephisto To Jekyll (Posts)
   ["/2010/8/19/how-to-clean-a-campfire-room-of-uploads", "/2010/08/19/how-to-clean-a-campfire-room-of-uploads/"],
   ["/2010/8/6/protip-exclude-your-rvm-install-from-timemachine-backups", "/2010/08/06/protip-exclude-your-rvm-install-from-timemachine-backups/"],
   ["/2010/7/30/the-rvm-ruby-api", "/2010/07/30/the-rvm-ruby-api/"],
