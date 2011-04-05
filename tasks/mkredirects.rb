@@ -64,7 +64,7 @@ OLD_PERMALINKS_TO_NEW_URLS = [
 
 OLD_PERMALINKS_TO_NEW_URLS.each do |data|
   permalink, new_url = data
-  filename = "#{permalink.gsub('/','')}_redirect.html"
+  filename = "#{permalink.sub(/^\//,'').gsub('/','-')}_redirect.html"
   front_matter = %|--- 
 layout: redirect
 permalink: #{permalink}
