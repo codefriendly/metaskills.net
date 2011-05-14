@@ -6,4 +6,6 @@ exclude:
 - Gemfile.lock
 - README.txt
 - tidy.conf
+- config.ru
 - tasks
+- public
