@@ -5,3 +5,4 @@ _cache/
 .bundle
 z_metatheme
 .sass-cache
+tmp
