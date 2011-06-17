@@ -16,5 +16,5 @@ rsync -az --delete --exclude '.git' _site/ ~/Repositories/metaskills.github.com 
   gca -m "Automatic deploy commit." && \
   grbmc
 
-
+./tasks/jekyll 
 
