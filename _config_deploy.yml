@@ -11,4 +11,4 @@ exclude:
 - tasks
 - public
 - tmp
-deploying: false
+deploying: true

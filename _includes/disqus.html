@@ -1,4 +1,5 @@
 
+{% if site.deploying %}
 <script type="text/javascript">
   var disqus_shortname = 'metaskillsnet';
   var disqus_identifier = '{% if page.disqus_id %}{{ page.disqus_id }}{% else %}{{ page.url }}{% endif %}';
@@ -9,4 +10,4 @@
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
-
+{% endif %}
