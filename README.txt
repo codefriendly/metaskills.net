@@ -11,8 +11,8 @@ Misc notes on setting up a development environment. Rarely needs to be done, but
   1) Install some deps.
      $ sudo port install optipng
      $ sudo port install tidy
-     $ sudo port install py26-pygments
-       Add /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin 
+     $ sudo port install py27-pygments
+       Add /opt/local/Library/Frameworks/Python.framework/Versions/Current/bin 
        to $PATH for pygmentize binary.
      $ bundle install
 
