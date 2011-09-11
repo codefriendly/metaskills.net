@@ -3,7 +3,7 @@
 # Create the site and tidy it.
 
 env RM_STAR_SILENT=true rm -rf _site && mkdir _site && \
-  be sass --style compact _sass/site.scss:resource/site.css && \
+  be sass --scss --style compressed _sass/site.scss:resource/site.css && \
   be jekyll && \
   find _site -name "*.html" -exec tidy -config $(pwd)/tidy.conf {} \;
 
