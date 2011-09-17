@@ -8,6 +8,9 @@ categories:
 ---
 
 <p>
+  <span class="photofancy floatr ml20 mb20">
+    <img src="/assets/evilruby.jpg" alt="Ruby Is Evil!" width="248" height="195" />
+  </span>
   One part of Objective-C that I like is being able to send messages to nil objects safely and more so their <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html">KVC</a> and <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html">KVO</a> patterns. In Ruby I often use the <code>#try</code> method to safely send messages objects that may be nil at runtime. But one thing I always wanted was a nice way to send a key path, basically a string of methods signatures, to an object in the same way. I give you my simple <code>#try_keypath</code> method :)
 </p>
 
