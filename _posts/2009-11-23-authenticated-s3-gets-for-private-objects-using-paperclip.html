@@ -7,6 +7,10 @@ categories:
   - ruby-rails
 ---
 
+<aside class="flash_info">
+  UPDATE: [10/18/2011] I now use Fog vs AWS::S3 with Paperclip. I have included a Fog specific example below.
+</aside>
+
 <p>
   Yea I know, I am probably the last person on earth that is just getting around to using <a href="http://github.com/thoughtbot/paperclip">Paperclip</a>. To be honest, most of my file upload code was written way before Paperclip or even AttachementFu was ever conceived. And frankly, I do not do much social app coding on the side - so the need never came up. But that changed recently and I wanted a really really good way of leveraging AWS::S3 storage with the best local app security while maintaining tight control over the files.
 </p>
@@ -95,6 +99,33 @@ module Paperclip
     end
 
   end
+end
+{% endhighlight %}
+
+
+<h2>UPDATE: Fog Example</h2>
+
+<p>
+  Here is an updated <code>#authenticated_s3_get_url</code> that I use with Fog as the backend storage for S3. This example illustrates 2 things. First that the bucket is named as your CNAME record which is also enforced in the <code>:fog_host</code>. I do this so that I can generate URLs via Paperclip or Fog and always have my custom domain in place. When I gsub the "s3.amazonaws.com" out, I am left with just my CNAME domain/bucket name. Lastly, if you want to generate "https" URLs, use the <code>#get_https_url</code> method.
+</p>
+
+{% highlight ruby %}
+class MyDownload
+
+  has_attached_file :attachment, 
+                    :storage => :fog, 
+                    :fog_credentials => {...},
+                    :fog_directory => 'mybucket.domain.net',
+                    :fog_public => false,
+                    :fog_host => 'http://mybucket.domain.net',
+                    :path => lambda { |attachment| ":id_partition/#{attachment.instance.random_secret}/:filename" }  
+  
+  def authenticated_s3_get_url(expires = nil)
+    expires ||= 10.minutes.from_now
+    url = attachment.send(:directory).files.get_http_url attachment.path, expires
+    url.gsub! /s3.amazonaws.com\//, ''
+  end
+  
 end
 {% endhighlight %}
 
