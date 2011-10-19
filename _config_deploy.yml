@@ -11,4 +11,5 @@ exclude:
 - tasks
 - public
 - tmp
+host: metaskills.net
 deploying: true

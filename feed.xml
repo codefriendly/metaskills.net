@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>MetaSkills.net</title>
- <link href="http://metaskills.net/feed.xml" rel="self"/>
- <link href="http://metaskills.net/"/>
+ <link href="http://{{ site.host }}/feed.xml" rel="self"/>
+ <link href="http://{{ site.host }}/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://metaskills.net/</id>
+ <id>http://{{ site.host }}/</id>
  <author>
    <name>Ken Collins</name>
    <email>ken@metaskills.net</email>
@@ -17,9 +17,9 @@ layout: nil
  {% for post in site.posts limit:15 %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
-   <link href="http://metaskills.net{{ post.url }}"/>
+   <link href="http://{{ site.host }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://metaskills.net{{ post.id }}</id>
+   <id>http://{{ site.host }}{{ post.id }}</id>
    <content type="html">
      <![CDATA[{{ post.content }}]]>
     </content>

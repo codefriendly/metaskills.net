@@ -7,7 +7,7 @@ layout: nil
         xmlns:video="http://www.sitemaps.org/schemas/sitemap-video/1.1">
   {% for post in site.posts %}
   <url> 
-    <loc>http://metaskills.net{{ post.url }}</loc> 
+    <loc>http://{{ site.host }}{{ post.url }}</loc> 
     {% if post.lastmod %}
     <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
     {% else %}
