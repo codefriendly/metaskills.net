@@ -5,8 +5,14 @@ categories:
   - colophon
 ---
 
-<aside class="flash_warn">
-  A bit outdated and mostly here for a history lesson. Besides, if you are reading my resume to learn about my occupation, you are looking in the wrong place.
+
+
+<aside class="flash_info">
+  Every page on my blog is print friendly. So give it a try and get some hard copy!
+</aside>
+
+<aside class="flash_warn printable">
+  As an long time blogger and open source software advocate, I highly suggest learning about my skills from other related sources. The <a href="http://github.com/metaskills">software I write</a>, <a href="http://metaskills.net/archive.html">information I publish</a>, and <a href="http://www.meetup.com/ruby-130/">technology I advocate</a> paint a better picture of what I do and love about my craft.
 </aside>
 
 
@@ -34,14 +40,14 @@ categories:
 <h2>Summary</h2>
 
 <p>
-  I am a ruby/rails specialist that thrives on providing elegant solutions to complex problems based on a love for efficiency, working smarter, and seeing positive results. I am a very strong believer in using idiomatic coding conventions in a test driven development process because it helps small teams understand peer code and remain agile. I take ownership of projects, have a strong work ethic, and require no hand holding.
+  I am a Ruby/Rails specialist that thrives on providing elegant solutions to complex problems based on a love for efficiency, working smarter, and seeing positive results. I am a very strong believer in using idiomatic coding conventions in a test driven development process because it helps small teams understand peer code and remain agile. I take ownership of projects, have a strong work ethic, and require no hand holding.
 </p>
 
 
 <h2>Highlights of Qualifications</h2>
 
 <p>
-  <strong>PROGRAMMING SKILLS:</strong> Ruby, JavaScript, and XHTML/CSS. I am incredibly proficient in Ruby and have collaborated on quite a few open source projects. To date, I have been programming web applications using Ruby and JavaScript professionally for more than 3 years. My XHTML/CSS skills far exceed most programmers since I have been developing web sites for more than 10 years and have been doing compliant presentation layer XHTML for more than 6 years.
+  <strong>PROGRAMMING SKILLS:</strong> Ruby, JavaScript, and HTML5/CSS3. I am incredibly proficient in Ruby and have collaborated on quite a few open source projects. To date, I have been programming web applications using Ruby and JavaScript professionally for {{ site.time | date: "%Y" | minus:2005 }} years. My XHTML/CSS skills far exceed most programmers since I have been developing web sites for {{ site.time | date: "%Y" | minus:1996 }} years and have been doing compliant presentation layer XHTML for {{ site.time | date: "%Y" | minus:2004 }} years.
 </p>
 
 <p>
@@ -77,7 +83,7 @@ categories:
 <article class="resume decisiv">
   
   <p>
-    Joined a small development team and assumed lead developer for 2 core Rails applications actively being ported from Java to Ruby. Redesigned and wrote the whole presentation layer for both applications, which now also includes custom AJAX LinkRenders for WillPaginate. Ported components from Java/Struts to Ruby/Rails while rewriting SQL Server stored procedures to ruby class/instance methods. Champion and developed unit/functional testing processes in both applications. This included writing low level SQL Server rake tasks which tunneled commands via SSH to window boxes for cloning schemas, and replicating stored procedures for test databases to rewriting both applications authentication systems to idiomatic rails libraries that include test helpers for functional testing while still maintaining backward compatibility to SSO services for legacy Java components. Create and maintain numerous libraries/plugins that extend the rails framework for the business model. These happen at almost every component to the framework but I specialize in ActiveRecord plugins to support legacy schemas and multi platform systems. Wrote all PDF::Writer generator classes that abstract out typical verbose PDF::Writer code to a friendlier interface.
+    Joined a small development team and assumed lead developer for 2 core Rails applications actively being ported from Java to Ruby. Redesigned and wrote the whole presentation layer for both applications, which now also includes custom AJAX LinkRenders for WillPaginate. Ported components from Java/Struts to Ruby/Rails while rewriting SQL Server stored procedures to ruby class/instance methods. Champion and developed unit/functional testing processes in both applications. This included writing low level SQL Server rake tasks which tunneled commands via SSH to window boxes for cloning schemas, and replicating stored procedures for test databases to rewriting both applications authentication systems to idiomatic Rails libraries that include test helpers for functional testing while still maintaining backward compatibility to SSO services for legacy Java components. Create and maintain numerous libraries/plugins that extend the Rails framework for the business model. These happen at almost every component to the framework but I specialize in ActiveRecord plugins to support legacy schemas and multi platform systems. Wrote all PDF::Writer generator classes that abstract out typical verbose PDF::Writer code to a friendlier interface.
   </p>
   
   <br />
@@ -90,17 +96,28 @@ categories:
   Software &amp; Network Engineer - 2005 to 2006
 </h4>
 
-<article class="resume decipher">
+<article class="resume img290 decipher">
+  
+  <img src="/assets/resume/profexp-decipher.png" width="528" height="290" />
   
   <p>
-    As the sole developer created a greenfield rails eCommerce application tailored for the consumer coupon industry. Due to the unique nature of the digital goods, virtual inventorying and security, the entire application included strict business rules on the monthly inventory per retailer campaign that had timeout hooks in the front end shopping cart. Digital goods were compiled and delivered via a custom Java application per transaction that created serialized coupons with barcodes for that specific transaction by the central rails application. Made extensive use of ImageMagick and the GNU Barcode ruby wrappers. Developed payment processing utilizing both the direct and express checkout methods of PayPal's NVP API. This app never made it to public view and most details are still patent pending. Built a community marketing site for the company's upcoming trading card game (TCG) called FightKlub. The majority of my involvement for this application involved developing customizations to Mephisto/Beast and deploying them into production. These sites can be currently found at <a href="http://www.decipher.com/">decipher.com</a> and include Prototype animations, custom liquid templates, and core extensions to Beast to register new founding mentors.
+    As the sole developer created a multi-tenant Rails eCommerce application tailored for the coupon industry. Due to the unique nature of the digital goods, virtual inventorying and security, the entire application included strict business rules on the monthly inventory per retailer campaign that had timeout hooks in the front end shopping cart. Digital goods were compiled and delivered via a custom Java application per transaction that created serialized coupons with barcodes for that specific transaction by the central Rails application. Made extensive use of ImageMagick and the GNU Barcode Ruby wrappers. Developed payment processing utilizing both the direct and express checkout methods of PayPal's NVP API. 
+  </p>
+  
+  <p>
+    Built a community marketing site for the company's upcoming trading card game (TCG) called FightKlub. The majority of my involvement for this application involved developing customizations to Mephisto/Beast and deploying them into production. These sites can be currently found at <a href="http://www.decipher.com/">decipher.com</a> and include Prototype animations, custom liquid templates, and core extensions to Beast to register new founding mentors.
   </p>
 
   <p>
     Moved entire company from Microsoft ActiveDirectory/Exchange services to Apple XServes using OpenDirectory/Postfix/Cyrus. Also moved all non legacy .Net applications and websites to those existing XServes. Troubleshooted critical routing errors by predecessors and firewall configurations which also involved setting up new gigabit Cisco equipment to maintain companies DMZ and existing VLANs to offsite warehouses.
   </p>
   
-  <br />
+  <ul>
+    <li>Working With Rails Prior 1.0 Release</li>
+    <li>Expert Level ImageMagick Usage</li>
+    <li>PayPal API Development For Front &amp; Back Office</li>
+    <li>Ops Experience Setting Up Email, DNS, Switches &amp; Firewalls</li>
+  </ul>
   
 </article>
 
@@ -110,7 +127,9 @@ categories:
   Marketing Director - 2004 to 2005
 </h4>
 
-<article class="resume arcamax">
+<article class="resume img310 arcamax">
+  
+  <img src="/assets/resume/profexp-arcamax.png" />
   
   <p>
     Joined the Executive Committee to help provide steerage for the company's new business unit that focused entirely on eCommerce sales of closeout <a href="http://www.planetcdrom.com/" title="Arcamax, Inc. - Planet CD-ROM">CD-ROM Software</a> and <a href="http://www.planetdvdnow.com/" title="Arcamax, Inc. - Planet DVD Now">DVD Movie</a> titles. It was my responsibility to maintain the profitability of the company, which relied heavily upon my previous Online Marketing experience and my technical prowess to leverage their existing IT infrastructure and Internet Publishing assets.
@@ -161,8 +180,6 @@ categories:
   </p>
   -->
   
-  <div class="center"><img src="/assets/resume/profexp-arcamax.png" /></div>
-  
 </article>
 
 
@@ -171,13 +188,18 @@ categories:
   Vice President - 2004 to Present
 </h4>
 
-<article class="resume swissdisk">
+<article class="resume img310 swissdisk">
+  
+  <img src="/assets/resume/profexp-swissdisk.png" />
   
   <p>
     In the later part of 2004, I partnered with my brother <a href="http://www.linkedin.com/in/benmcollins" title="Ben Collins Resume">Ben Collins</a> to start up a small company in the niche market of the online storage industry. Even though our company was bought out, I still contribute by maintaining a position on the Board of Directors and continue my prior creative work and online marketing efforts.
   </p>
   
-  <div class="center"><img src="/assets/resume/profexp-swissdisk.png" /></div>
+  <ul>
+    <li>Logo, Website &amp; Identity Design</li>
+    <li>Implement &amp; Theme Drupal CMS</li>
+  </ul>
   
 </article>
 
@@ -187,7 +209,9 @@ categories:
   Technical Director - 1999 to 2004
 </h4>
 
-<article class="resume stratum">
+<article class="resume img310 stratum">
+  
+  <img src="/assets/resume/profexp-stratum.png" />
   
   <!--
   <p>
@@ -203,7 +227,11 @@ categories:
     Developed and managed many solutions for large-scale projects throughout the company. Successes were attributed to a utilization of strong organizational skills, standard management processes, and a hands-on understanding of numerous UNIX, Windows and Internet development practices. Maintained the highest customer satisfaction rating and strict adherence to project and financial milestones.
   </p>
   
-  <div class="center"><img src="/assets/resume/profexp-stratum.png" /></div>
+  <ul>
+    <li>Directed Both Creative &amp; Technical Teams</li>
+    <li>Local Addy Award Winner For Design/Development</li>
+    <li>Vertical Marketing Experience In Travel/Tourism &amp; The Food Industry</li>
+  </ul>
   
 </article>
 
@@ -213,7 +241,9 @@ categories:
   Product Development &amp; Affiliate Support - 1998 to 1999
 </h4>
 
-<article class="resume infinet">
+<article class="resume img270 infinet">
+  
+  <img src="/assets/resume/profexp-infinet.png" />
   
   <p>
     Worked to obtain lead technician by providing strong affiliate support, documentation of skills, and the ability to train new/existing staff. Provided the department with new efficient processes and applications.
@@ -227,7 +257,10 @@ categories:
     Provided design and print services for the Human Resources Department's latest campaign of collateral pieces for their employment workshops.
   </p>
   
-  <div class="center"><img src="/assets/resume/profexp-infinet.png" /></div>
+  <ul>
+    <li>Design, Development &amp; Test National CD-ROM Software Install</li>
+    <li>Lead Affiliate Technical Support</li>
+  </ul>
   
 </article>
 
@@ -237,8 +270,10 @@ categories:
   Account Manager &amp; Design - 1994 to 1998
 </h4>
 
-<article class="resume macgraphics">
+<article class="resume img270 macgraphics">
 
+  <img src="/assets/resume/profexp-macgraphics.png" />
+  
   <p>
     Honed previous design, typography &amp; layout experience in a full-service boutique agency during the cusp of the digital media age. This allowed me to gain invaluable  knowledge and skills in the mechanics of traditional design/layout while using the earliest computer applications.
   </p>
@@ -251,7 +286,11 @@ categories:
     Created a new line-of-business for Internet Marketing at the onset of the development of other new-media companies. This was done by strengthening an existing client relationship in the Travel-Tourism/Hospitality vertical of the business. I was responsible for hiring and training new staff for this market.
   </p>
   
-  <div class="center"><img src="/assets/resume/profexp-macgraphics.png" /></div>
+  <ul>
+    <li>Website Development During The Onset Of The Internet</li>
+    <li>Strong Page Layout &amp; PhotoShop Skills</li>
+    <li>Experience With Single To 4-Color Printing</li>
+  </ul>
   
 </article>
 
