@@ -22,15 +22,18 @@ categories:
 </ul>
 
 
-<h2>NamedScope Plugin</h2>
+<h2>Less-Rails &amp; Less-Rails-Bootstrap </h2>
 
 <p>
-  This one is for all those left behind on rails 2.0.4 or even gasp... rails 1.2.6. This is an incredibly well tested backport of NamedScope. It even comes with those fancy .first, .last, and .all methods that can be used on classes and associations. This can be incredible useful if you are looking to upgrade your app in a way that is forward compatible.
+  When <a href="http://twitter.github.com/bootstrap/">Twitter's Bootstrap</a> was first released, I decided to give it a try and I assumed there was support in the Rails asset pipeline for it. I was mistaken. Even thought Tilt under Sprockets could render less files with the less.rb and therubyracer gems, there was no easy way to hook up the less load paths in a single place. Nor was there a way to expose helpers familiar to those using <a href="https://github.com/rails/sass-rails">sass-rails</a> like <code>asset-data-url</code>. Thus was born these two gems. Both leverage <code>Rails::Engine</code> or <code>Rails::Railtie</code> models that hook into the low level internals of the Rails boot process to hook into the asset pipeline. I even take advantage of therubyracer to add functions to Less.js that hook right back into Ruby!
 </p>
 
 <ul>
-  <li><a href="http://github.com/metaskills/named_scope/tree/master">NamedScope Plugin on Github</a></li>
+  <li><a href="https://github.com/metaskills/less-rails">Less-Rails On Github</a></li>
+  <li><a href="https://github.com/metaskills/less-rails-bootstrap">Less-Rails-Bootstrap On Github</a></li>
+  <li><a href="/2011/09/26/less-is-more-using-twitter-bootstrap-in-the-rails-3-1-asset-pipeline/">LESS Is More - Using Twitter's Bootstrap In The Rails 3.1 Asset Pipeline</a></li>
 </ul>
+
 
 
 <h2>GroupedScope Plugin</h2>
@@ -67,7 +70,7 @@ categories:
 </p>
 
 <p>
-  HomeMarks went thru its third rewrite a few months ago for Rails 3 and is currently deployed on Heroku. I also recently just finised my first native Objective-C iPhone app too. I am currently working on the native iPad version and will post updates here too. When that happens I will rewrite the rails application a 4th time using CoffeeScript & Backbone.js for the front end vs Prototype.
+  HomeMarks went thru its third rewrite a few months ago for Rails 3 and is currently deployed on Heroku. I also recently just finished my first native Objective-C iPhone app too. I am currently working on the native iPad version and will post updates here too. When that happens I will rewrite the rails application a 4th time using CoffeeScript & Spine.js.
 </p>
 
 <ul>
