@@ -20,11 +20,7 @@ Misc notes on setting up a development environment. Rarely needs to be done, but
      $ cd ~/Library/Application\ Support/TextMate/Bundles
      $ git clone git://github.com/kuroir/SCSS.tmbundle.git "SCSS.tmbundle"
   
-  3) Clone zepto.
-     $ cd ~/Repositories && git clone git://github.com/madrobby/zepto.git && cd zepto
-     $ git checkout v0.3
-  
-  4) Setup git hooks.
+  3) Setup git hooks.
      .git/hooks/pre-commit
      #!/usr/bin/env zsh
      /Users/kencollins/Repositories/metaskills.net/tasks/jekyll
@@ -36,12 +32,7 @@ Misc notes on setting up a development environment. Rarely needs to be done, but
 = Developing
 
 After all things are installed, consult each file in the tasks directory for 
-development tips. Some other details include.
-  
-  1) Build zepto.
-     $ cd ~/Repositories/zepto && git checkout v0.3 && rake && 
-       cp dist/zepto.min.js ~/Repositories/metaskills.net/resource/zepto.js
-
+development tips.
 
 
 = CSS Conventions

@@ -42,7 +42,7 @@ var MetaPygmentize = {
   
   convert: function(fromClass, toClass, texts) {
     var spans = $('div.highlight span.' + fromClass);
-    spans.each(function(s){
+    spans.each(function(i,s){
       var span = $(s);
       var text = span.text();
       var target = MetaPygmentize.arrayInclude(texts,text);
