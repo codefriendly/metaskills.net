@@ -34,18 +34,18 @@ categories:
 </p>
 
 {% highlight css %}
-@myWhite: rgb(240,240,240);
-@myGray:  rgb(140,140,140);
-@myBlack: rgb(30,30,30);
+$myWhite: rgb(240,240,240);
+$myGray:  rgb(140,140,140);
+$myBlack: rgb(30,30,30);
 
-.myColorClasses(@property) {
-  &.white   { @property: @myWhite; }
-  &.gray    { @property: @myGray; }
-  &.black   { @property: @myBlack; }
+@mixin myColorClasses($property) {
+  &.white   { $property: $myWhite; }
+  &.gray    { $property: $myGray; }
+  &.black   { $property: $myBlack; }
 }
 
 .box {
-  .myColorClasses("background-color");
+  @include myColorClasses("background-color");
 }
 {% endhighlight %}
 
