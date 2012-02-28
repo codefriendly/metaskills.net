@@ -39,13 +39,13 @@ $myGray:  rgb(140,140,140);
 $myBlack: rgb(30,30,30);
 
 @mixin myColorClasses($property) {
-  &.white   { $property: $myWhite; }
-  &.gray    { $property: $myGray; }
-  &.black   { $property: $myBlack; }
+  &.white   { #{$property}: $myWhite; }
+  &.gray    { #{$property}: $myGray; }
+  &.black   { #{$property}: $myBlack; }
 }
 
 .box {
-  @include myColorClasses("background-color");
+  @include myColorClasses(background-color);
 }
 {% endhighlight %}
 
