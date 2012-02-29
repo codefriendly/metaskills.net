@@ -153,7 +153,7 @@ $color-strong: #66ff66;
     color: #fff; 
     background-color: none; 
     text-decoration: none;
-    @include font-metamed(14px);
+    @include font-metamed(15px);
     font-weight: 100;
     letter-spacing: 1px;
     padding: 5px 8px 6px 12px;
@@ -218,6 +218,7 @@ $color-strong: #66ff66;
     color: #fff;
     @include vndr-border-radius-all(6px);
     @include font-droidsans(14px);
+    line-height: 17px;
     a, a:link, a:visited, a:active { color: #fff; border-bottom: 1px dashed #999; font-weight: bold !important; }
     a:hover { color: #999; }
     &:before { 
@@ -444,8 +445,8 @@ $dsq-bubleft: 50px;
     article {
       margin-bottom: 10px;
       @include resetanchors;
-      h4 { font-size:14px; width:70%; }
-      p { font-size:12px; margin-top:0px; }
+      h4 { font-size:15px; width:90%; margin-bottom: 0px; }
+      p { font-size:13px; margin-top:0px; }
       a:hover { color:$color-link; }
     }
   }
@@ -475,7 +476,7 @@ $dsq-bubleft: 50px;
     width: $c2width;
     @include resetanchors;
     a:hover { color: $color-link; }
-    ul { font-size: 14px; padding-left: 18px; }
+    ul { font-size: 15px; padding-left: 18px; }
     ul li { margin: 2px 0; }
   }
 }
@@ -496,13 +497,13 @@ $dsq-bubleft: 50px;
         border: none;
         a, a:link, a:visited, a:hover, a:active { color:$color-link; background-color:none; text-decoration:none; border:none; }
       }
-      time { @include font-metamed(16px); }
+      time { @include font-metamed(18px); }
     }
     p { 
       float: left;
       width: $c6width;
       margin: 0;
-      font-size: 15px;
+      font-size: 16px;
     }
   }
 }
@@ -530,8 +531,8 @@ $dsq-bubleft: 50px;
     pre.command, pre.code, pre.text { padding-bottom:16px; }
     pre.text { &:before { display:none; } }
     /* other */
-    ul { @include font-droidsans(16px); margin: 4px 0; padding-left: 18px; }
-    ul li { margin: 4px 0; }
+    ul { @include font-droidsans(16px); margin: 4px 0; padding-left: 18px; margin-left: 10px; line-height: 20px; }
+    ul li { margin: 5px 0; }
     p strong { color:$color-strong; }
     img.shadow { margin-bottom:10px; @include vndr-box-shadow(7px, 7px, 8px, rgba(0,0,0,0.7)); }
     a.nobor, a.nobor:link, a.nobor:visited, a.nobor:hover, a.nobor:active { border:none; }
@@ -544,7 +545,7 @@ $dsq-bubleft: 50px;
 /* Layout - Default */
 
 body {
-  @include font-inconsolata(16px);
+  @include font-inconsolata(18px);
   color: #f2f2f2; 
   background: {
     color: #0d0d0d;
@@ -621,7 +622,7 @@ body {
       position: fixed;
       width: $c2width;
       top: $hdrheight - $hdrlogoheight + 10px;
-      padding-top: $hdrlogoheight + 10px;
+      padding-top: $hdrlogoheight + 12px;
       div {
         font-size: 11px;
         position: absolute;
@@ -630,7 +631,9 @@ body {
         left: 64px;
         @include resetanchors;
       }
+      h3 { }
       ul {
+        margin-top: 10px;
         li {
           position: relative; 
           @include cmpnt-appletv_links;
@@ -683,12 +686,12 @@ body {
       }
     }
   }
-  h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; }
+  h1, h2, h3, h4 { @include font-droidsans(32px); line-height: 1em; padding: 3px 0; }
   h1 { font-size: 34px; width: 60%; margin: 0 0 10px 0; text-shadow: 2px 2px 1px #000; }
   h2 { font-size: 24px; line-height:1.3em; border-bottom: 1px dashed rgba(255,255,255,0.2); margin: 35px 0 10px 0; }
   h3 { font-size: 18px; line-height:1.3em; border-top: 1px dashed rgba(255,255,255,0.2); border-bottom: 1px dashed rgba(255,255,255,0.2); margin-bottom:5px; }
   h4 { font-size: 16px; line-height:1.3em; margin-bottom:5px; }
-  p { margin: 15px 0; @include font-droidsans(16px); line-height: 1.4em; }
+  p { margin: 15px 0; @include font-droidsans(17px); line-height: 1.5em; }
   table th { text-align:right; font-weight:bold; padding-right:8px; }
   .left { text-align:left; }
   .right { text-align:right; }
