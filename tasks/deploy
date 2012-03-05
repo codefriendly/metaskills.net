@@ -10,12 +10,21 @@ mv _config_deploy.yml _config.yml
 mv _config.yml _config_deploy.yml
 mv _config_dev.yml _config.yml
 
-rsync -az --delete --exclude '.git' _site/ ~/Repositories/metaskills.github.com && \
-  cd ~/Repositories/metaskills.github.com && \
-  git add . && \
-  gca -m "Automatic deploy commit." && \
-  grbmc && \
-  cd ~/Repositories/metaskills.net && \
-  ./tasks/jekyll 
+cd ~/Repositories/metaskills.github.com
+gco master
+gb -D master_me
+git pull
+gco -b master_me
+
+cd ~/Repositories/metaskills.net
+rsync -az --delete --exclude '.git' _site/ ~/Repositories/metaskills.github.com 
+
+cd ~/Repositories/metaskills.github.com
+git add . 
+gca -m "Automatic deploy commit."
+grbmc
+
+cd ~/Repositories/metaskills.net
+./tasks/jekyll 
 
 
