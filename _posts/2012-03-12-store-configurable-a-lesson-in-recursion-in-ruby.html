@@ -7,7 +7,7 @@ categories:
 ---
 
 <p>
-  When ActiveRecord 3.2 was released there was a small addition called <a href="http://api.rubyonrails.org/classes/ActiveRecord/Store.html">ActiveRecord::Store</a> which bills itself as a simple key/value store for your models. The example usage code looks like this.
+  When ActiveRecord 3.2 was released there was a small addition called <a href="http://api.rubyonrails.org/classes/ActiveRecord/Store.html">ActiveRecord::Store</a> which bills itself as a simple key/value store for your models. The code below is pulled right from their example usage.
 </p>
 
 {% highlight ruby %}
@@ -54,7 +54,7 @@ end
 {% endhighlight %}
 
 <p>
-  Rather than talking about how StoreConfigurable might be a good for you, I would instead like to discuss how my first practical usage of recursion in Ruby is implemented in StoreConfigurable. That along with how to leverage default Hash values is the topic for this post.
+  Rather than talking about how StoreConfigurable might be a good fit for you, I would instead like to discuss how my first practical usage of recursion in Ruby is implemented in StoreConfigurable. That along with how to leverage default Hash values is the topic for this post.
 </p>
 
 
@@ -81,7 +81,7 @@ hash[:foo]                  # => "Missing foo for hash with id 283829283."
 <h2>Recursion</h2>
 
 <p>
-  Recurion in Ruby can take many forms. My solution for StoreConfigurable was to always make the hash returned by the proxy object one that can replicate itself for key misses. Here is a fundamental example to make your own Hash object return new instances of itself when keys are missing.
+  Recurion in Ruby can take many forms. My solution for StoreConfigurable was to always make the hash returned by the proxy object self replicate itself for key misses. Here is a fundamental example to make your own Hash object return new instances of itself when keys are missing.
 </p>
 
 {% highlight ruby %}
@@ -101,11 +101,11 @@ hash                      # => {:foo=>{}, :a=>{:b=>{:c=>{}}}}
 {% endhighlight %}
 
 <p>
-  In this example, I create a <a href="http://www.ruby-doc.org/core-1.9.3/Proc.html">Proc</a> object via the lambda keyword and I use this as the block argument when you create an instance of <code>RecursiveHash</code> via the super method by using the <code>&amp;</code> syntax to pass an existing Proc as a block. Hope I have not lost so far :)
+  In this example, I create a <a href="http://www.ruby-doc.org/core-1.9.3/Proc.html">Proc</a> object via the lambda keyword and I use this as the block argument when you create an instance of <code>RecursiveHash</code> via the super method. Here I am using the <code>&amp;</code> syntax to pass an existing Proc as a block. Hope I have not lost you so far :)
 </p>
 
 <p>
-  So default hashes in Ruby and simple recursion techniques are what make up some of the key points of StoreConfigurable. I also use recursion when loading the hash values from the YAML stored in the database. Here is what that technique looks like. Hopefully this dive into Ruby or maybe StoreConfigurable is helpful!
+  So default hashes in Ruby and simple recursion techniques are what make up some of the key points of StoreConfigurable. I also use recursion when loading the hash values from the YAML stored in the database. Here is what that technique looks like.
 </p>
 
 {% highlight ruby %}
@@ -120,6 +120,9 @@ end
 data.each { |k,v| loader.call(config, k, v) }
 {% endhighlight %}
 
+<p>
+  Hopefully this dive into Ruby or maybe StoreConfigurable is helpful!
+</p>
 
 <h2>Resources</h2>
 
