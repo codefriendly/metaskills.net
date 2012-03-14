@@ -7,7 +7,7 @@ categories:
 ---
 
 <p>
-  Last week I had the pleasure of rewriting 4 years of legacy PDF::Writer code to <a href="http://github.com/jdpace/PDFKit">PDFKit</a>. Why? Well drawing pdfs in ruby using libraries like PDF::Writer is like composing a webpage with an Etch A Sketch. In short, its a damn chore that involves a bunch of code that mixes both data and presentation. Sure there are gems like <a href="http://prawn.majesticseacreature.com/">Prawn</a> that make this much easier, but nothing beats drawing your pdf code in native HTML and CSS, and that is where <a href="http://code.google.com/p/wkhtmltopdf/">wkhtmltopdf</a> comes in.
+  Last week I had the pleasure of rewriting 4 years of legacy PDF::Writer code to <a href="http://github.com/pdfkit/PDFKit">PDFKit</a>. Why? Well drawing pdfs in ruby using libraries like PDF::Writer is like composing a webpage with an Etch A Sketch. In short, its a damn chore that involves a bunch of code that mixes both data and presentation. Sure there are gems like <a href="http://prawn.majesticseacreature.com/">Prawn</a> that make this much easier, but nothing beats drawing your pdf code in native HTML and CSS, and that is where <a href="http://code.google.com/p/wkhtmltopdf/">wkhtmltopdf</a> comes in.
 </p>
 
 <p>
@@ -29,7 +29,7 @@ $ which wkhtmltopdf
 <h2>The Basic Requirements</h2>
 
 <p>
-  I knew that HTML to PDF generation has its drawbacks, specifically with common headers/footers and page breaks. I happily found out that wkhtmltopdf has a solution for all these problems and can layout PDF pages with pixel perfect precision. So let's skip over the <a href="https://github.com/jdpace/PDFKit/wiki">basics</a> and get right down to using PDFKit like a pro. We are going to build out the Rails HTML/CSS layouts and templates that will solve a series of common problems.
+  I knew that HTML to PDF generation has its drawbacks, specifically with common headers/footers and page breaks. I happily found out that wkhtmltopdf has a solution for all these problems and can layout PDF pages with pixel perfect precision. So let's skip over the <a href="https://github.com/pdfkit/PDFKit/wiki">basics</a> and get right down to using PDFKit like a pro. We are going to build out the Rails HTML/CSS layouts and templates that will solve a series of common problems.
 </p>
 
 <p>
