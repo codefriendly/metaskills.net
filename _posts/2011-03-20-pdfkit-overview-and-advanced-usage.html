@@ -43,6 +43,11 @@ $ which wkhtmltopdf
   Sometimes it is useful to start at the end. So the first thing we need is a new layout for all of our pdf templates to use. Here is a <a href="http://haml-lang.com/">HAML</a> file that I recommend you name <code>app/views/layouts/pdf.html.pdf.haml</code>. Did you see that name? <strong>This is important!</strong> because Rails allows us to specify template names that can service more than one mime type format. So in this case, the layout will be found when rendering both HTML and .pdf formats. 
 </p>
 
+<aside class="flash_warn">
+  Somewhere along the way to Rails 3, dual mime type support was lost. Now to render a template/partial for multiple mime types you must remove them all together from the name. Thereby making the file a catch-all for any mime type. In this case, pdf.haml would work.
+</aside>
+
+
 {% highlight ruby %}
 !!! 5
 %html{:lang => 'en'}
